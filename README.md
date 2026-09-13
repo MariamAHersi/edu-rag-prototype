@@ -1,4 +1,4 @@
-#AI-Powered Assessment Repository
+# AI-Powered Assessment Repository
 
 A prototype Retrieval-Augmented Generation (RAG) system developed during my **Data Analyst – Digital Repository Internship at the University of Roehampton**.
 
