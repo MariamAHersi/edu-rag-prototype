@@ -83,7 +83,6 @@ Current areas of development include:
 * [x] Research into AI applications in higher education
 * [x] Extract text from PDF assessment briefs
 * [x] Extract text from Word documents
-* [x] Process and clean document content
 * [ ] Implement document chunking
 * [ ] Generate embeddings
 * [ ] Implement semantic search
@@ -157,33 +156,6 @@ The technologies used in the prototype may include:
 * APIs
 
 Specific tools and frameworks will be documented as the prototype develops.
-
-## 📁 Repository Structure
-
-```text
-rag-assessment-repository/
-│
-├── assessment_briefs/
-│   ├── example.pdf
-│   └── example.docx
-│
-├── notebooks/
-│   └── document_exploration.ipynb
-│
-├── src/
-│   ├── document_processing/
-│   ├── embeddings/
-│   ├── retrieval/
-│   └── rag/
-│
-├── tests/
-│
-├── requirements.txt
-│
-└── README.md
-```
-
-The structure may change as the prototype develops.
 
 ## 🎓 Internship Context
 
