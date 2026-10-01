@@ -1,0 +1,317 @@
+--- Page 1 ---
+
+| Programme | All BSc Computing Programmes | - | - |
+| --- | --- | --- | --- |
+| Module Title | Databases | - | - |
+| Module Code | CMP-C106-0 | - | - |
+| Module Level | 4 | Assessment Type(s) | Coursework |
+| - | None | - | 60% (20% from Submission of Coursework- 2(Implementation) and (40% from In Class Demonstration/Presentation) |
+| - | - | % contribution to module | - |
+| Word Length / Duration | - | - | - |
+| - | - | mark | - |
+| - | - | - | - |
+| - | - | - | - |
+| Deadline (date & time) for | 22/04/2026 | Format/Location of | Moodle Submission via Coursework – 2 submission link |
+| Submission | - | submission | - |
+| Assessment Feedback date: | 20/05/2026 | - | - |
+| Learning Outcomes • LO1: Practice database implementation process. • LO2: Create a relational database schema in SQL that incorporates key, | - | Employability and Professional Skills This assessment develops students’ employability and professional competencies by requiring them to apply database design principles to a real-world implementation scenario, mirroring industry-level tasks and | - |
+
+--- Page 2 ---
+
+| entity integrity, and referential integrity constraints. • LO3: Evaluate a set of query processing strategies and select the optimal strategy. • LO4: Use SQL to create tables and retrieve (SELECT) information from a database. | collaborative workflows. It strengthens both technical capability and professional behaviours essential for workplace readiness. • Applying technical knowledge to build a functional, industry-standard relational database • Using SQL effectively for database creation, constraint management, and data manipulation • Problem-solving and debugging during the implementation of a physical data model • Working collaboratively, demonstrating contribution, teamwork, and shared responsibility |
+| --- | --- |
+| Assessment Requirements This is a continues work from coursework1. Please stay in the same group. Please clearly indicate all students’ name and IDs in your submission. Task: In this coursework, you are required to implement the database you designed in Coursework 1. You will use DDL statements to create the database and develop the necessary data structures to fulfil its intended purpose. Your work will be assessed through both a written submission and a lab-based SQL assessment. This coursework contributes 60% of the overall module grade and is divided into two components: Support file and Reflection Report submission worth 20% and In Class lab-based SQL demonstration and Presentation worth 40%. | - |
+
+--- Page 3 ---
+
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+          Submission Requirements (20%)                                                                             
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+           In this submission, you are required to upload two files to Moodle:                                      
+            •  File1– Database Implementation Code (.SQL file OR .TXT file)                                         
+            •  File 2 – A single PDF file containing the following:                                                 
+                                                                                                                    
+                                                                                                                    
+            •  Contribution from both group members:                                                                
+                 o  Student 1 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section)
+                                                                                                                    
+                 o  Student 2 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section)
+                 o                                                                                                  
+            •  Individual reflections from each member:                                                             
+                 o  Student 1 – individual reflection (250–300 words)                                               
+                                                                                                                    
+                 o  Student 2 – individual reflection (250–300 words)                                               
+            •  Each reflection should address:                                                                      
+                 o  What you have learned from both coursework 1 and Coursework 2                                   
+                                                                                                                    
+                 o  The challenges you encountered during the database design and implementation process            
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+
+--- Page 4 ---
+
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+          To do this, you should:                                                                                   
+                                                                                                                    
+                1. First, modify ERD and physical data model according to feedback received for coursework1 if necessary. (NOT require
+                  submission on this)                                                                               
+                                                                                                                    
+                2. Then, use SQL statement to implement database based on the revised physical data model in step1： 
+                     a. Create tables.                                                                              
+                     b. Set appropriate constraints which including column data types, primary key and foreign keys.
+                                                                                                                    
+                     c. Consider if each column allows NULL value or NOT.                                           
+                     d. Insert meaningful values into each table (at least insert at least 5 records to each table for retrieving purpose in lab
+                       assessment).                                                                                 
+                                                                                                                    
+          NOTE: you can use ‘EmployeeInfo’ schema as example to prepare your SQL code that you chose for your Coursework.
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+
+--- Page 5 ---
+
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+          In Class Demonstration and Presentation (40%)                                                             
+                                                                                                                    
+           Lab assessment will be conducted on week-13 and Week-14, the implemented database will be examined in this assessment from 3
+           perspectives (20%):                                                                                      
+                                                                                                                    
+             1. All tables are created properly based on physical data model.                                       
+             2. Appropriate constraints are set including data types, primary and foreign keys.                     
+             3. Meaningful sample data is populated into each table.                                                
+                                                                                                                    
+           The understanding of SQL will be also examined in lab session in the form of (20%):                      
+                                                                                                                    
+             1. Tutor makes 1 question for each student based on the content of your database SQL operations.       
+             2. You are expected to write SQL solutions to obtain the request results by executing the query in the given time (5 to 7minutes)
+                                                                                                                    
+             3. The examined SQL coverage as follow:                                                                
+                                                                                                                    
+                  a. Inserting appropriate values into tables.                                                      
+                  b. Perform SELECT operations using:                                                               
+                                                                                                                    
+                        i. Special operators.                                                                       
+                       ii. Comparison/mathematical operators.                                                       
+                                                                                                                    
+                       iii. Logical operators.                                                                      
+                                                                                                                    
+                       iv. Aggregation functions.                                                                   
+                       v. Ordering operations.                                                                      
+                                                                                                                    
+                       vi. Grouping operations.                                                                     
+                       vii. Joining tables (inner, outer, self, and/or left/right).                                 
+                                                                                                                    
+                      viii. Nested queries.                                                                         
+                                                                                                                    
+                  c. Defining database views.                                                                       
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+
+--- Page 6 ---
+
+| - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Marking Criteria Criteria Excellent Satisfactory Not Satisfactory Not Attempted SQL naming All names are easy to Names follow the Names need work and are Names are too short or too conventions how understand, consistent and conventions although sometimes unsuitable. cryptic, inconsistent, or do closely is the follow guidelines. some could be better. not follow any convention. naming convention for tables, columns, etc. followed. Constraints: All constraints are set Most constraints are Constraints are set, but most Most of the constraints are How Constrains properly. e.g. data types for properly set, but some of them are unsuitable, need not set. Like primary key and are set for tables column values are properly can be modified to to be modified. foreign keys are not set. and reflect set, primary key and foreign most appropriate relationships key are correctly settings. between tables. considered and set. SQL code Quality Code quality follows Code quality needs SQL codes used are simple No SQL code provided, or structures of code, guidelines. work. queries only. SQL code provided is very use of enough poorly formatted. complex queries with understanding. SQL correctness All queries work correctly. Almost all of the Some queries do not work No output provided from how correct is the queries work correctly, correctly, or output is SQL, or output is incorrect. output of the SQL. or output is correct incorrect. almost all the time. | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | Criteria | - | - | Excellent | - | - | Satisfactory | - | - | Not Satisfactory | - | - | Not Attempted | - |
+| SQL naming conventions how closely is the naming convention for tables, columns, etc. followed. | - | - | All names are easy to understand, consistent and follow guidelines. | - | - | Names follow the conventions although some could be better. | - | - | Names need work and are sometimes unsuitable. | - | - | Names are too short or too cryptic, inconsistent, or do not follow any convention. | - | - |
+| Constraints: How Constrains are set for tables and reflect relationships between tables. | - | - | - | All constraints are set | - | Most constraints are properly set, but some can be modified to most appropriate settings. | - | - | Constraints are set, but most of them are unsuitable, need to be modified. | - | - | Most of the constraints are not set. Like primary key and foreign keys are not set. | - | - |
+| - | - | - | - | properly. e.g. data types for | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | column values are properly | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | set, primary key and foreign | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | key are correctly | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | considered and | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | set. | - | - | - | - | - | - | - | - | - | - |
+| - | SQL code Quality | - | Code quality follows guidelines. | Code quality follows | - | Code quality needs work. | - | - | SQL codes used are simple queries only. | - | - | No SQL code provided, or SQL code provided is very poorly formatted. | - | - |
+| - | structures of code, | - | - | guidelines. | - | - | - | - | - | - | - | - | - | - |
+| - | use of enough | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | complex queries | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | with | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | understanding. | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| SQL correctness how correct is the output of the SQL. | - | - | All queries work correctly. | - | - | Almost all of the queries work correctly, or output is correct almost all the time. | - | - | Some queries do not work correctly, or output is incorrect. | - | - | No output provided from SQL, or output is incorrect. | - | - |
+
+| Constraints: |
+| --- |
+| How Constrains |
+| are set for tables |
+| and reflect |
+| relationships |
+| between tables. |
+
+| Most constraints are |
+| --- |
+| properly set, but some |
+| can be modified to |
+| most appropriate |
+| settings. |
+
+| Constraints are set, but most |
+| --- |
+| of them are unsuitable, need |
+| to be modified. |
+
+| Most of the constraints are |
+| --- |
+| not set. Like primary key and |
+| foreign keys are not set. |
+
+| Code quality needs |
+| --- |
+| work. |
+
+| SQL codes used are simple |
+| --- |
+| queries only. |
+
+| No SQL code provided, or |
+| --- |
+| SQL code provided is very |
+| poorly formatted. |
+
+--- Page 7 ---
+
+| SQL execution how smoothly does the SQL execute – are there any bugs? | - | - | Solutions executed correctly, obtain the desired results. | - | Queries executed | - | Some query solutions have syntax errors that mean they do not execute properly. | No SQL solutions provided, or most have syntax errors causing problems. | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| - | - | - | - | - | correctly although | - | - | - | - |
+| - | - | - | - | - | there are some syntax | - | - | - | - |
+| - | - | - | - | - | errors, desired results | - | - | - | - |
+| - | - | - | - | - | are basically obtained. | - | - | - | - |
+| - | Submission ability | - | Correct files submitted only with no issues. | Correct files submitted only but some issues with files provided. | Correct files submitted | - | Correct files submitted but with unwanted files provided and possibly issues in files provided. | Incorrect files submitted. | - |
+| - | to provide a | - | - | - | only but some issues | - | - | - | - |
+| - | - | - | - | - | with files provided. | - | - | - | - |
+| - | submission that | - | - | - | - | - | - | - | - |
+| - | meets the | - | - | - | - | - | - | - | - |
+| - | requirements given. | - | - | - | - | - | - | - | - |
+| Presentation ability to show the independently work on SQL | Presentation ability | - | Correct SQL solution prepared to question independently | - | Correct SQL | - | No correct SQL solution prepared independently / Search solution online | No solution is given. | - |
+| - | to show the | - | - | - | solution prepared to | - | - | - | - |
+| - | independently work | - | - | - | question by discuss | - | - | - | - |
+| - | on SQL | - | - | - | with others | - | - | - | - |
+| - | - | - | - | - | / Sudo | - | - | - | - |
+| - | - | - | - | - | SQL | - | - | - | - |
+| - | - | - | - | - | solution prepared | - | - | - | - |
+| - | - | - | - | - | independently | - | - | - | - |
+| Assessment Success Guidance To achieve maximum success in this task: • Follow your revised design carefully: Ensure your database implementation strictly matches the improved physical data model from Coursework 1, including correct tables, relationships, and naming conventions. • Set constraints accurately: Apply appropriate data types, primary keys, foreign keys, and NULL/NOT NULL rules. This is essential for demonstrating correct relational structure and for meeting the rubric’s “Excellent” category. • Populate meaningful sample data: Insert at least five realistic and coherent records per table. This data will be used in your lab assessment queries, so make sure values make sense and reflect real-world scenarios. | - | - | - | - | - | - | - | - | - |
+
+| SQL execution how |
+| --- |
+| smoothly does the |
+| SQL execute – are |
+| there any bugs? |
+
+| Solutions executed correctly, |
+| --- |
+| obtain the desired results. |
+
+| Some query solutions have |
+| --- |
+| syntax errors that mean they |
+| do not execute properly. |
+
+| No SQL solutions provided, |
+| --- |
+| or most have syntax errors |
+| causing problems. |
+
+| Correct files submitted only |
+| --- |
+| with no issues. |
+
+| Correct files submitted but |
+| --- |
+| with unwanted files provided |
+| and possibly issues in files |
+| provided. |
+
+| Correct SQL solution prepared |
+| --- |
+| to question independently |
+
+| No correct SQL solution |
+| --- |
+| prepared independently |
+| / Search solution |
+| online |
+
+--- Page 8 ---
+
+| • Write clean, well-structured SQL code: Use clear formatting, consistent naming, and a variety of SQL features (joins, aggregations, nested queries, grouping, views). Demonstrate beyond basic SELECT queries to achieve full marks. • Prepare for the lab SQL demonstration: Understand your own database thoroughly, as each group member will answer one simple and one complex SQL question based on your implementation. Practice writing queries without relying on external help. • Submit the correct files and complete reflections: Upload both required files (SQL file + PDF). Clearly describe each member’s contribution and provide thoughtful reflections (250–300 words each) on learning, challenges, and skills gained. |
+| --- |
+| Assessment Guidance Support and Formative Feedback You may refer to the lecture notes and lab exercises from Weeks 2 and 4 available on Moodle to support the development of this coursework. |
+| Contact for Queries/ who you can contact for further information or queries Should you have any questions or require support, please contact the module tutors, Wei Li and Kimia Aksir. Their contact information can be found at the top of the Moodle page. |
+| Use of Artificial Intelligence (AI) The assessment is designed so that the use of AI during the assessment is irrelevant. You are welcome to use AI to support learning and preparation for this assessment. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI by using the following link. Please read and apply: https://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/4a%20AI%20principles%20and%20guidance% 20-for%20Senate.docx *You can find the student guidance on the use of AI in the Library and Nest |
+| Referencing Students do not need another resource, book, article to complete this assignment. In case they use another online/offline resource, they must cite it in the References section, at the end of the report. If you do so, please use IEEE style: https://www.citethemrighttutorial.com/course-modules/ieee |
+
+--- Page 9 ---
+
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| --- |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: • Have I fully answered the assessment brief? • Have I met the word count and formatting requirements? • Is my referencing complete and accurate? • Have I declared any AI use honestly? • Have I proofread my work? • Am I submitting through the correct platform before the deadline? |
+
+| Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time |
+| --- |
+| or attending an exam. |
+| The University offers the ability for students to request additional time to complete an assessment or to defer an examination to |
+| a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton |
+| Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating |
+| circumstances portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 |
+| days late, the mark will be capped at 40% (delete as appropriate); if it is over 14 days late, it will not be marked. |

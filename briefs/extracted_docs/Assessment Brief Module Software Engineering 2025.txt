@@ -1,0 +1,524 @@
+--- Page 1 ---
+
+| - | BSc Computer Science, BEng Software Engineering, BSc Cyber Security, BSc Computing and Digital Technologies, BSc Business and Computing | - | - |
+| --- | --- | --- | --- |
+| Programme | - | - | - |
+| - | - | - | - |
+| Module Title | Software Engineering | - | - |
+| Module Code | CMP-N204-0 | - | - |
+| Module Level | 5 | Assessment Type(s) | Group project |
+| - | - | % contribution to | 100% |
+| Word Length / Duration | - | - | - |
+| - | - | module mark | - |
+| - | - | - | - |
+| Deadline (date & time) for | 1 May | Format/Location of | Moodle |
+| Submission | - | submission | - |
+| Assessment Feedback | - | - | - |
+| - | - | - | - |
+| date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the learning outcomes listed below. By successfully completing this assessment, you will be able… • Describe the relative advantages and disadvantages among several• major process models • Interpret a given requirements model for a simple software syste•m • Work as a member of a development team recognising the • different roles within a team and different ways of organising teams • Demonstrate the capability to use • software tools in support of the development of a software produc•t of medium size | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skill(s) which is(are) critical in professional context and jobs. By successfully completing this assessment, you will be able to … Work effectively as a team using industry standard tools Develop a specification for an application with given constraints Develop reliable code to meet given requirements Demonstrate skills in code version control Discuss testing and deployment strategies, and implement a simple deployment pipeline | - |
+
+| • Describe the relative advantages |
+| --- |
+| and disadvantages among several• |
+| major process models |
+| • Interpret a given requirements |
+| model for a simple software syste•m |
+| • Work as a member of a |
+| development team recognising the |
+| • different roles within a team and |
+| different ways of organising teams |
+| • Demonstrate the capability to use |
+| • software tools in support of the |
+| development of a software produc•t |
+| of medium size |
+
+--- Page 2 ---
+
+| • | Demonstrate effective team working including good collaboration and problem- solving |
+| --- | --- |
+| Assessment Requirements | - |
+| Overview | - |
+| Students will work in groups of 3 or 4 people. | - |
+| Each group will produce a ‘full stack’, dynamic web application which can be deployed using | - |
+| Continuous Integration/Continuous Deployment techniques. | - |
+| Technologies | - |
+| The technologies used in the module are as follows: | - |
+| Frontend: | - |
+| • HTML • CSS • JavaScript • PUG templating system | - |
+| Backend: | - |
+| • Node.js • Express.js • MySQL database | - |
+| DevOps and CI/CD: | - |
+| • Docker • Git • Github actions | - |
+| Project management: | - |
+| • Github project | - |
+| Your application must be built using the tools and techniques taught in the module. | - |
+| Theme | - |
+| For 2026, our theme will be “Sharing, exchange and building community”. | - |
+| To address the theme, students should consider how they can use their skills to help solve real and specific problems, for example: waste, climate change and cost of living crisis, and/or support and develop their interests and hobbies. They will do this by creating a | - |
+
+| • HTML |
+| --- |
+| • CSS |
+| • JavaScript |
+| • PUG templating system |
+
+| • Node.js |
+| --- |
+| • Express.js |
+| • MySQL database |
+
+| • Docker |
+| --- |
+| • Git |
+| • Github actions |
+
+--- Page 3 ---
+
+| dynamic, database driven web application through which users can exchange goods or services co-operatively, for mutual benefit rather than financial gain. Each group will choose one of the project ideas presented by the staff team - indicative examples below. They can suggest their own idea which will need to be validated by a member of the staff team by the end of week 2. Indicative project ideas • Minimising food waste by sharing excess food • Study buddies: peer support for students • Ride sharing to university • Book and record swap • Community languages – teach and learn • Circular fashion – re-make and mend • Sharing outfits for job interviews, special occasions etc • Running and cycling buddies • Game tips and tricks • Recipe swap The groups will be expected to consider usability, security and ethics as they develop their application. While all groups will start with basic functionality, the projects will allow increasing creative input and unique ideas as they develop. |
+| --- |
+| Deliverables |
+| You will work on the project using a ‘scrum’ project management methodology. This means |
+| that you will work as a team to deliver your project iteratively. |
+| Your progress will be discussed weekly during ‘stand-up ‘meetings in lab time with your lecturer, and formally via the code-review assessment points. The following details the deliverables for each sprint: Sprint 1: Review point: Lab of Week 4 The aim of this sprint is to check that the project workflow is set-up for the team, you have clarified your project idea and adopted a code of conduct. |
+
+--- Page 4 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Checklist Submission 1                                                  
+          The following must be in place:                                         
+                                                                                  
+            • GitHub repository for coursework set-up and at least one commit from every group
+               member                                                             
+            • Product Backlog created and kanban board in Github project created  
+                                                                                  
+            • Scaffolding files added to github and README file customised for your project
+            • Each member of the team able to run the development environment using Docker
+            • A single PDF document with:                                         
+                   Your group members and group name                             
+                   Project description refined                                   
+                   Code of Conduct                                               
+                                                                                  
+                   At least two ‘Personas’                                       
+                   Ethical issues identified                                     
+                   Meeting records completed                                     
+                                                                                  
+          Sprint 2: Lab of Week 6 (Career week)                                   
+                                                                                  
+          The aim of this sprint is to assemble the initial requirements and ensure that specifications
+          are ready for sprint 3.                                                 
+                                                                                  
+          Checklist Submission 2                                                  
+                                                                                  
+          The following must be in place:                                         
+                                                                                  
+            •  A single PDF Document with:                                        
+                                                                                  
+                   Features for your application defined as user stories         
+                   Use case diagram                                              
+                   Sprint 3 specification prepared with at least: user stories, wireframes, activity
+                    diagrams.                                                     
+                   Other artefacts may be included such as sequence diagrams, ERD diagram,
+                    class diagram, designs, colour schemes                        
+            •  A screenshot of your Kanban board                                  
+                                                                                  
+            •  Github link                                                        
+            •  All students up to date with lab work and ready to start development
+            •  Meeting records completed                                          
+                                                                                  
+          Sprint 3: Review Lab of week 10                                         
+                                                                                  
+          The aim of this sprint is to begin the application development by creating some simple
+          features. All members of the team must show that they can build the development
+          environment and have contributed code. For your sprint review you will be expected to be
+          able to have your database populated and be able to run your code       
+                                                                                  
+          Checklist Submission 3                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 5 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Initial requirements implemented using MySQL, Express and PUG, using Docker containers for
+          the team development environment and demonstration. To include at minimum (these pages
+          must use data pulled from your database):                               
+                                                                                  
+            •  Users list page                                                    
+            •  User profile page                                                  
+            •  Listing page                                                       
+            •  Detail page                                                        
+            •  Tags/categories                                                    
+                                                                                  
+                                                                                  
+                                                                                  
+          A single PDF document with:                                             
+                                                                                  
+            •  The user stories you implemented in sprint 3 (Can be copied from Sprint 2
+               documentation)                                                     
+            •  Database design                                                    
+            •  A breakdown of tasks and developers allocated (from Github project)
+            •  Github repository and github project links                         
+                                                                                  
+            •  A screenshot of metrics from github showing that all team members are participating
+            •  A screenshot of your kanban board                                  
+            •  Meeting records                                                    
+                                                                                  
+                                                                                  
+          In your sprint 3 review, you will plan your final sprint which will be tailored to each groups
+                                                                                  
+          progress                                                                
+                                                                                  
+                                                                                  
+          Sprint 4: To be presented in Week 13/14                                 
+                                                                                  
+          The aim of this sprint is to complete your ‘MVP’ to by adding features and refining your design
+          as much as possible. The scope of your sprint 4 will be tailored to each group and will be
+          determined in your sprint 3 review meeting.                             
+                                                                                  
+          You will also add some CI/CD workflows using github actions.            
+                                                                                  
+          Groups will present to the whole class in weeks 13 and 14.              
+          Checklist Submission 4                                                  
+                                                                                  
+          Web application: Intermediate and/or advanced requirements implemented to include at
+          least some of:                                                          
+                                                                                  
+            • User login                                                          
+            •  Basic matching algorithm                                           
+            •  User points or ratings                                             
+            •  Advanced ratings or points system                                  
+                                                                                  
+            •  In-app messaging                                                   
+            •  Advanced matching algorithm / recommendations                      
+            • Use of external APIs where relevant (eg. Transport, maps, weather)  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 6 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          DevOps and CI/CD                                                        
+                                                                                  
+            • Application runs in Docker containers                               
+            • At least one github action implemented                              
+                                                                                  
+          Presentation                                                            
+          A presentation of your application idea, ethical issues and and MVP during week 12. Ppt file
+          to be uploaded to Moodle.                                               
+                                                                                  
+                                                                                  
+                                                                                  
+          Individual Assessment                                                   
+                                                                                  
+                                                                                  
+          Individual contributions to the team will be assessed based on attendance at the various
+                                                                                  
+          meetings and code reviews, and via the metrics gathered from tools such as GitHub.
+          Individual contributions can lead to a scaling of the overall coursework grade if the module
+          team have evidence that illustrates a lack of contribution to the team deliverable.
+                                                                                  
+          The coursework must be delivered as part of a team. If anyone is dismissed from their team
+          this means they cannot deliver the coursework and is at high risk of failure for the whole
+          module. Dismissal from a team involved the following process:           
+                                                                                  
+                                                                                  
+            ▪ An individual is evidenced as breaching the code of conduct as set-out by the student
+                                                                                  
+               team                                                               
+            ▪ Evidence is presented at the next available meeting with a member of the module
+               delivery team                                                      
+            ▪ The individual evidenced will have the opportunity to explain any mitigating
+               circumstances either to the student team or privately to a member of the module
+               delivery team                                                      
+            ▪ The module delivery team retains the right to the final decision of whether the
+               dismissal is warranted                                             
+                                                                                  
+                                                                                  
+                                                                                  
+          Any dismissed team member has a week to appeal the decision to the module team with
+          suitable evidence provided.                                             
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 7 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          ___________________________________________________________________________
+                                                                                  
+          Code Review Meetings                                                    
+                                                                                  
+                                                                                  
+                                                                                  
+          Sprints are graded via work handed in in Moodle and code review meetings.
+                                                                                  
+          The meetings will take place during the lab sessions. Each group will be given 10 minutes
+          maximum for the code review. Your group will be allocated a time for the code review. The
+          details of the individual review points are below. These meetings must be attended at the
+          stated time. Guidelines for grading the group:                          
+                                                                                  
+                                                                                  
+                                                                                  
+            ▪ Being late for the meeting or not being ready when the meeting starts may result in
+               the grade for that review being capped at 40%                      
+                                                                                  
+                                                                                  
+            ▪ No attendance by any group member at the meeting will mean the code review will
+                                                                                  
+               be marked at 0%                                                    
+                                                                                  
+                                                                                  
+            ▪ All team members should attend the code review; however commitments and other
+               considerations will be taken into account. Individuals attendance at reviews will be
+               monitored to ensure the team is contributing collectively to the project.
+                                                                                  
+                                                                                  
+                                                                                  
+            ▪ Being ready means that you are ready to present the points for the code review. This
+               means that you have a computer with your application ready to run and/or your
+               documentation ready for display.                                   
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 8 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          ___________________________________________________________________________
+                                                                                  
+          Individual component                                                    
+                                                                                  
+          20% of coursework                                                       
+                                                                                  
+          The individual reflection element of this assignment has two parts:     
+                                                                                  
+            1. A STAR story.                                                      
+            2. A short reflection on your experience of the module and any lessons learned that
+               you will apply to your Final Year Project.                         
+                                                                                  
+          Task 1: STAR Story                                                      
+                                                                                  
+                                                                                  
+          The STAR method (Situation, Task, Action, Result) is a commonly used way to evaluate
+          candidates during job interviews. It is comprised of 4 steps:           
+                                                                                  
+            •  Situation: Describe the situation and when it took place.          
+            •  Task: Explain the task and what was the goal.                      
+            •  Action: Provide details about the action you took to attain this.  
+                                                                                  
+            •  Result: Conclude with the result of your action.                   
+                                                                                  
+                                                                                  
+                                                                                  
+          The STAR method is preferred by many job recruiters because it gathers information
+          about candidates' real experiences, and what they actually did in real situations.
+                                                                                  
+          A STAR story is not a theoretical explanation of what you think should be done, or where
+          you tell the interviewer what you think is the desired ‘right answer’.  
+                                                                                  
+          We are asking you to do this to give you an opportunity to practice this method and
+                                                                                  
+          prepare you for future interviews. We also want to help you understand how you can
+          use your experiences at university to illustrate your personal strengths and allow you to
+          stand out from other candidates by telling stories about real situations.
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 9 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          You can find many useful examples online, for example:                  
+                                                                                  
+          https://nationalcareers.service.gov.uk/careers-advice/interview-advice/the-star-
+          method                                                                  
+                                                                                  
+          https://www.betterup.com/blog/star-interview-method                     
+                                                                                  
+          Your Task:                                                              
+                                                                                  
+          Please choose one of the following questions and answer it using the STAR method.
+          That means you should explicitly write a paragraph about each of the sections (i.e.,
+          describe the situation, describe the task, describe the action you took to address this
+                                                                                  
+          task, and describe the result).                                         
+                                                                                  
+          Things to remember:                                                     
+                                                                                  
+            •  You must write about a real situation that you faced during your coursework.
+            •  Do not use AI for this assignment. If you hand in an answer that is generic and
+               which your lecturer cannot recognize from the work you have done, your work
+               will not be able to pass.                                          
+            •  You should not name names in your group or apportion blame. If you need to
+               refer to something somebody else has done, please just refer to ‘a group
+                                                                                  
+               member’.                                                           
+            •  You should be able to tell your STAR story from a positive perspective. Even if
+               things went wrong, a good STAR story can show that you took effective action to
+               resolve a difficult situation.                                     
+                                                                                  
+          The questions: Please choose one:                                       
+                                                                                  
+            •  Tell me about a time when there was a disagreement in your team.   
+            •  Tell me about a time when you were stuck on a task.                
+            •  Tell me about a time when your project seemed to be stuck in a rut and not
+                                                                                  
+               moving ahead at the required pace.                                 
+            •  Tell me about a time you were concerned that a deadline might be missed.
+            •  Tell me about a time when you had to correct a colleague's work.   
+            •  Tell me about a time when you had to challenge the actions of someone in your
+               team.                                                              
+            •  Tell me about a time when you made a wrong decision                
+                                                                                  
+            •  Tell me about a time when you had to shift priorities              
+                                                                                  
+          Remember STAR: Situation, Task, Action, Result. Your answer must have a well-defined
+          short paragraph about each of these.                                    
+                                                                                  
+          Task 2: Module Reflection                                               
+                                                                                  
+          Please write a paragraph (do not use AI) in which you consider the main lessons learned
+          from this module. Write about how you will use these lessons learned when you are
+          devising your final year project.                                       
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 10 ---
+
+| You may wish to think about issues such as: • Time management. • Things that you found interesting. • Things that you realized you were good at. • New topics that you thought you might want to explore further. • Aspirations you may have to create a project that could address a problem you have recognized in your everyday environment. |
+| --- |
+| - |
+| - |
+| - |
+| - |
+| - |
+| - |
+| - |
+| - |
+| Marking Criteria See marking rubrics at: |
+| - |
+| Use of Artificial Intelligence (AI) Students may use AI to improve the quality of their code, help solve bugs and suggest/explain possible solutions. Students may not use AI to generate complete features for their application. Students should not submit any code that they cannot explain or do not fully understand. Students may use AI to aid brainstorming and improve the quality of their writing, but they must not use AI to generate complete ideas and/or specifications |
+
+--- Page 11 ---
+
+| The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI here*. *You can find the student guidance on the use of AI in the Library and Nest |
+| --- |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: Have I fully answered the assessment brief? Have I met the word count and formatting requirements? Is my referencing complete and accurate? Have I declared any AI use honestly? Have I proofread my work? Am I submitting through the correct platform before the deadline? |
+
+| Sometimes circumstances outside of your control may affect your studies and |
+| --- |
+| might prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete |
+| an assessment or to defer an examination to a later date. If you are finding |
+| yourself in such a situation, please speak to your Academic Guidance Tutor, the |
+| Roehampton Student Union (RSU) or someone in the Wellbeing team first, who |
+| can support you. Further details can be found on the mitigating circumstances |
+| portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late |
+| penalties will apply. If work is submitted up to 14 days late, the mark will be |
+| capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be |
+| marked. |

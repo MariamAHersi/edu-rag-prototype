@@ -1,0 +1,122 @@
+--- Page 1 ---
+
+| Programme | BSc Computing and Digital Industries | - | - |
+| --- | --- | --- | --- |
+| Module Title | Creative Coding | - | - |
+| Module Code | DES-C102-0 | - | - |
+| - | Year 1 | - | Multiple choice quiz (60 marks) and code submission (40 marks) |
+| Module Level | - | Assessment Type(s) | - |
+| - | - | - | - |
+| Word Length / | N/A | % contribution to | 25 |
+| Duration | - | module mark | - |
+| - | See Assessment table on Moodle | - | Quiz: available on Moodle Code: Zip file, uploaded to “Minibrief 2” on Moodle |
+| Deadline (date & | - | - | - |
+| - | - | Format/Location of | - |
+| time) for | - | - | - |
+| - | - | submission | - |
+| Submission | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+| Assessment | See Moodle | - | - |
+| - | - | - | - |
+| Feedback date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the learning outcomes listed below. By successfully completing this assessment, you will be able to: - Synthesise and apply ideas and information relevant to the production of a specific piece of work. - Create an intuitive user interaction. | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skill(s) which is(are) critical in professional context and jobs. By successfully completing this assessment, you will be able to: - Create design work using p5.js - Understand basic coding structures - Apply technical skills to meet a design specification - | - |
+
+--- Page 2 ---
+
+| Assessment Requirements Multiple choice questions: this is a 12 question test available on Moodle under “Minibrief 2”. The test may be completed open book (i.e. the use of notes and the internet is permitted and encouraged) and is worth a maximum of 60 marks. The test may only be attempted once – as such, it is strongly recommended that students complete it in one sitting. Creative coding section: create an interactive fish tank animation. The animation must feature a fish that follows the mouse cursor around the screen and blows bubbles. Additional marks are available for decoration, both of the fish itself and of the environment, as well as for code readability. This is worth a maximum of 40 marks. Recommended steps: 1. Create a fish out of basic shapes such as triangles, ellipses and circles. 2. Make the fish follow the mouse cursor, perhaps by using translate() or co-ordinate addition. 3. Using arrays, make bubbles that follow the mouse cursor, drifting upwards after each frame. 4. Add a “wobble” to the circles using random(). 5. Using map() and fill(), make the bubbles gradually fade away. |
+| --- |
+| Marking Criteria Available from: https://moodle.roehampton.ac.uk/pluginfile.php/5439511/mod_resource/content/2/BA %20Digital%20Design%20Assessment%20Criteria%20.pdf |
+| Assessment Success Guidance - Review lecture slides and handout exercises from the previous weeks of term to ensure that you have a strong understanding of the techniques required. - Talk to your tutor if you are struggling to understand any of the tasks. - Ensure that your submissions are made on time and formatted correctly. - Consult the p5.js documentation (https://p5js.org/reference/) for technical assistance. |
+| Assessment Guidance Support and Formative Feedback In-class time to work on this assessment will be available in the week before the submission deadline. |
+| Contact for Queries/ who you can contact for further information or queries Contact the module tutor Harry Solomons (harry.solomons@roehampton.ac.uk) |
+| Use of Artificial Intelligence (AI) 1. The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated |
+
+--- Page 3 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+               outputs. Please make sure you read and understand the assessment guidelines and
+               ask your Module Leader if you have any questions.                  
+                                                                                  
+          2025 AI Student Guide                                                   
+          What AI Can and Can’t Do                                                
+                                                                                  
+            •  AI can become a useful learning assistant and help you:            
+            •  Summarise articles and concepts.                                   
+            •  Brainstorm ideas.                                                  
+                                                                                  
+            •  Improve your writing (grammar, spelling, structure).               
+            •  Find sources for initial searches (always verify them!).           
+                                                                                  
+            •  Quiz you on your knowledge.                                        
+            •  Help you develop a studying schedule.                              
+                                                                                  
+            •  Organise and summarise your notes.                                 
+            •  Develop your critical thinking skills, through interactive dialogue.
+            •  Develop your inquiring skills.                                     
+                                                                                  
+          AI should not be used to:                                               
+            •  Create entire assessments for you. Always check the assessment guidance about
+               what is permitted and what is not. AI should not simply do the work for you.
+                                                                                  
+            •  Take exams or quizzes on your behalf.                              
+            •  Generate ideas or arguments that you don’t understand (although AI can explain
+               ideas and arguments to you).                                       
+                                                                                  
+            •  Fake citations or research.                                        
+          Stay Honest and Transparent                                             
+            •  Acknowledge all use of AI, just as you would for other help; Cite AI generated
+               content.                                                           
+                                                                                  
+            •  Don’t submit AI-generated work as your own—it’s considered academic
+               misconduct.                                                        
+            •  Remember: AI can make mistakes! Always fact-check before using its output.
+                                                                                  
+            •  Remember: AI can be biased and reproduce inappropriate or excluding social
+               stereotypes.                                                       
+            •  Make sure you read critically to verify the AI outputs. You are responsible for the
+                                                                                  
+               outputs generated by AI tools.                                     
+            •  You need to have a good understanding and knowledge of the subject to critically
+               evaluate AI outputs and prompt further.                            
+          Use AI to Learn, Not as a Shortcut                                      
+                                                                                  
+            •  AI is a tool, not a replacement for your own thinking. Use it to:  
+            •  Get help structuring your thoughts.                                
+                                                                                  
+            •  Check your understanding of a topic.                               
+            •  Improve your writing, creative process or knowledge development while keeping
+               your unique voice and using your own skills.                       
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 4 ---
+
+| • To test your knowledge. • Avoid relying on AI so much that you miss out on developing your skills and alienating your-self from your studies and education. • Early research studies on the effects of AI on people indicate that over-use and - reliance on AI can alienate people from their own tasks and negatively impact the long-term learning of students and professional development of workers. Learning about the subject of study well is paramount to check what AI is producing for accuracy and appropriateness and be able to prompt and interrogate it further, using your knowledge and critical skills. |
+| --- |
+| Referencing Any references should use the Harvard format. For help with this, please consult Cite Them Right in the “Useful Resources” section on Moodle. |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: Have I fully answered the assessment brief? Have I met the word count and formatting requirements? Is my referencing complete and accurate? Have I declared any AI use honestly? Have I proofread my work? Am I submitting through the correct platform before the deadline? |
+
+| Sometimes circumstances outside of your control may affect your studies and might |
+| --- |
+| prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete an |
+| assessment or to defer an examination to a later date. If you are finding yourself in such a |
+| situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union |
+| (RSU) or someone in the Wellbeing team first, who can support you. Further details can |
+| be found on the mitigating circumstances portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties |
+| will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% |
+| (delete as appropriate); if it is over 14 days late, it will not be marked. |

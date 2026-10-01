@@ -1,0 +1,68 @@
+--- Page 1 ---
+
+| Programme | MSc Web Development | - | - |
+| --- | --- | --- | --- |
+| Module Title | Web Design 2 | - | - |
+| Module Code | DIG-L002-0 | - | - |
+| - | Year 1 | Assessment | Project Presentation |
+| Module Level | - | - | - |
+| - | - | Type(s) | - |
+| - | - | - | - |
+| Word Length / | 5 minutes | % contribution to | 20 |
+| Duration | - | module mark | - |
+| - | See Assessment table on Moodle | - | Given in class, with PDF of slides uploaded to Moodle |
+| Deadline (date & | - | - | - |
+| - | - | Format/Location | - |
+| time) for | - | - | - |
+| - | - | of submission | - |
+| Submission | - | - | - |
+| - | - | - | - |
+| - | - | - | - |
+| Assessment | See Moodle | - | - |
+| - | - | - | - |
+| Feedback date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the learning outcomes listed below. By successfully completing this assessment, you will be able to: - Show a systematic understanding of the foundations of programming for front-end (client-side) Web design (HTML, CSS, JavaScript), and the technical infrastructure for making web sites available to the public - Incorporate Human-Computer Interaction (HCI) principles into technical work - Perform user research to enable digital product development - Show the ability to analyse own professional practice critically, to respond to feedback and to learn from this process. | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skill(s) which is(are) critical in professional context and jobs. By successfully completing this assessment, you will be able to: - Develop professional-standard web sites - Draw from HCI and UX Design principles in the design and development of web solutions - Document your own work in a professional-standard portfolio | - |
+
+--- Page 2 ---
+
+| Assessment Requirements Students to present their project ideas demonstrating a good understanding of topics relating to research, design, and execution. In the presentation, students must: • Website Pitch: Use the presentation to "pitch" their website, showcasing its features and highlighting how it meets the criteria for accessibility, ethics, and future developments. • Research Process: Discuss the research process that was undertaken to create their website. This can include wireframing, usability research, information architecture maps, and other techniques used to determine the user's needs and how to best meet them. Explain the methods used to gather information and how it influenced the design and functionality of the website. Showcasing the research process will demonstrate the students' attention to detail and ability to create a well-designed user-centered website. • Technical Implementation: Discuss the technical aspects of building their website, such as the development tools and platforms used, coding languages, and other technologies involved. Explain how they approached the technical challenges they encountered and how they overcame them. • Analytics: Describe what metrics and tools will be used to monitor and track user behaviour and discuss how this will improve data-driven decision making. Explain how user-privacy plays a role into implementing analytics on the website. • Ethical Responsibilities: Explain the ethical considerations that should be taken into account when creating a website, such as privacy, data protection, and intellectual property rights. • Accessibility: Discuss the importance of making websites accessible to all users, including those with disabilities, and the various techniques and tools that can be used to achieve this. |
+| --- |
+| Marking Criteria • Technical discussion [40%] o Have you demonstrated an understanding of the technical work required to produce your final web site? o Are your platforms and technologies suited to the requirements of your site? o Have you demonstrated an understanding of the analytic requirements of keeping your site operational? • Design discussion [40%] o Has your research process engaged thoroughly with the design questions underpinning your website? o Does your presentation show evidence of user research, wireframing, and prototyping in your development process? o Have you adequately engaged with questions of ethical responsibility and accessibility? |
+
+--- Page 3 ---
+
+| • Style and presentation [20%] o Are your slides clear and communicative? o Is your presentation clear and effective at communicating your key points? |
+| --- |
+| Assessment Success Guidance • Prepare your presentation in advance so that you can rehearse it, to ensure its length and content meet the assessment requirements. • Make sure you have addressed each of the points laid out in the assessment brief. • Begin your research process early, and ensure that you document it thoroughly throughout your process, so that you have evidence to incorporate into your presentation. |
+| Assessment Guidance Support and Formative Feedback • Formative feedback on your ideas will be offered in the weeks leading up to your presentation. |
+| Contact for Queries/ who you can contact for further information or queries Contact the module tutor Harry Solomons (harry.solomons@roehampton.ac.uk) |
+| Use of Artificial Intelligence (AI) 1. The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. 2025 AI Student Guide What AI Can and Can’t Do • AI can become a useful learning assistant and help you: • Summarise articles and concepts. • Brainstorm ideas. • Improve your writing (grammar, spelling, structure). • Find sources for initial searches (always verify them!). • Quiz you on your knowledge. • Help you develop a studying schedule. • Organise and summarise your notes. • Develop your critical thinking skills, through interactive dialogue. • Develop your inquiring skills. AI should not be used to: • Create entire assessments for you. Always check the assessment guidance about what is permitted and what is not. AI should not simply do the work for you. • Take exams or quizzes on your behalf. • Generate ideas or arguments that you don’t understand (although AI can explain ideas and arguments to you). |
+
+--- Page 4 ---
+
+| • Fake citations or research. Stay Honest and Transparent • Acknowledge all use of AI, just as you would for other help; Cite AI generated content. • Don’t submit AI-generated work as your own—it’s considered academic misconduct. • Remember: AI can make mistakes! Always fact-check before using its output. • Remember: AI can be biased and reproduce inappropriate or excluding social stereotypes. • Make sure you read critically to verify the AI outputs. You are responsible for the outputs generated by AI tools. • You need to have a good understanding and knowledge of the subject to critically evaluate AI outputs and prompt further. Use AI to Learn, Not as a Shortcut • AI is a tool, not a replacement for your own thinking. Use it to: • Get help structuring your thoughts. • Check your understanding of a topic. • Improve your writing, creative process or knowledge development while keeping your unique voice and using your own skills. • To test your knowledge. • Avoid relying on AI so much that you miss out on developing your skills and alienating your-self from your studies and education. • Early research studies on the effects of AI on people indicate that over-use and - reliance on AI can alienate people from their own tasks and negatively impact the long-term learning of students and professional development of workers. Learning about the subject of study well is paramount to check what AI is producing for accuracy and appropriateness and be able to prompt and interrogate it further, using your knowledge and critical skills. |
+| --- |
+| Referencing Any references should use the Harvard format. For help with this, please consult Cite Them Right in the “Useful Resources” section on Moodle. |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. |
+
+| Sometimes circumstances outside of your control may affect your studies and might |
+| --- |
+| prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete an |
+| assessment or to defer an examination to a later date. If you are finding yourself in such a |
+| situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union |
+| (RSU) or someone in the Wellbeing team first, who can support you. Further details can |
+| be found on the mitigating circumstances portal. |
+
+--- Page 5 ---
+
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| --- |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: Have I fully answered the assessment brief? Have I met the word count and formatting requirements? Is my referencing complete and accurate? Have I declared any AI use honestly? Have I proofread my work? Am I submitting through the correct platform before the deadline? |
+
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties |
+| --- |
+| will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% |
+| (delete as appropriate); if it is over 14 days late, it will not be marked. |

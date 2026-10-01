@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Machine Learning — COMP2025</title>
+<style>
+  :root{
+    --teal-900:#04353a;
+    --teal-700:#04656a;
+    --teal-600:#0d7c80;
+    --paper:#f7f9fa;
+    --card:#ffffff;
+    --line:#e2e8e8;
+    --ink:#1c2b2c;
+    --ink-soft:#5b6b6c;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;}
+  body{
+    font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+
+  /*Logo font*/
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  /* Top nav */
+  .topbar{
+    background:var(--teal-900);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    padding:0.9rem 1.5rem;
+  }
+
+  .topbar .brand{font-weight:700;font-size:1.05rem;white-space:nowrap;}
+  .topbar nav{display:flex;gap:1.5rem;font-size:0.92rem;opacity:0.9;}
+  .topbar .spacer{flex:1;}
+  .avatar{
+    width:32px;height:32px;border-radius:50%;
+    background:#0d7c80;color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:0.8rem;font-weight:600;
+  }
+
+  /* Layout */
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  .sidebar{
+    width:200px; padding:1.5rem 1rem; flex-shrink:0;
+  }
+  .sidebar a{
+    display:block; padding:0.55rem 0.7rem; margin-bottom:0.2rem;
+    color:var(--ink-soft); text-decoration:none; border-radius:8px; font-size:0.92rem;
+  }
+  .sidebar a.active{background:var(--card); color:var(--teal-700); font-weight:600; border:1px solid var(--line);}
+
+  .main{flex:1; padding:1.5rem 1.5rem 4rem;}
+  .course-head{display:flex; gap:1rem; align-items:center; margin-bottom:1.2rem;}
+  .course-thumb{width:64px;height:64px;border-radius:10px; background:linear-gradient(135deg,#0d7c80,#04353a); object-fit:cover; flex-shrink:0;}  .course-head h1{margin:0; font-size:1.4rem;}
+  .course-head p{margin:0.15rem 0 0; color:var(--ink-soft); font-size:0.9rem;}
+
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:1.1rem 1.3rem; margin-bottom:1rem;
+  }
+  .card h2{font-size:1rem; margin:0 0 0.6rem;}
+  .card p{margin:0; color:var(--ink-soft); font-size:0.88rem; line-height:1.5;}
+  .module-row{
+    display:flex; align-items:center; gap:0.7rem; padding:0.6rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  .module-row:last-child{border-bottom:none;}
+  .module-row .icon{
+    width:34px;height:34px;border-radius:8px;background:#eef4f4;
+    display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;
+  }
+  .module-row .title{font-weight:600; font-size:0.9rem;}
+  .module-row .sub{font-size:0.8rem; color:var(--ink-soft);}
+
+  /* Floating widget button */
+  .widget-btn{
+    position:fixed; bottom:24px; right:24px;
+    bottom:calc(24px + env(safe-area-inset-bottom,0px));
+    width:40px;height:40px;border-radius:50%;
+    background:var(--teal-700); color:#fff; border:none;
+    box-shadow:0 6px 18px rgba(4,53,58,0.35);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.5rem; cursor:pointer;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .widget-btn:hover{transform:scale(1.06); box-shadow:0 8px 22px rgba(4,53,58,0.45);}
+  .widget-tooltip{
+    position:fixed; bottom:calc(94px + env(safe-area-inset-bottom,0px)); right:24px;
+    background:var(--teal-900); color:#fff; padding:0.5rem 0.8rem;
+    border-radius:8px; font-size:0.82rem; white-space:nowrap;
+    opacity:0; pointer-events:none; transition:opacity 0.15s ease;
+  }
+  .widget-btn:hover + .widget-tooltip{opacity:1;}
+
+  @media (max-width:720px){
+    .sidebar{display:none;}
+    .topbar nav{display:none;}
+  }
+  .sparkle {
+  color: white;
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="brand">
+        <img src="roehampton-logo.png" alt="University of Roehampton logo">
+        University of Roehampton</div>
+    <nav>
+      <span>Home</span><span>Dashboard</span><span>My courses</span>
+    </nav>
+    <div class="spacer"></div>
+    <div class="avatar">MH</div>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <a class="active">Course home</a>
+      <a>Announcements</a>
+      <a>Modules</a>
+      <a>Assessments</a>
+      <a>Grades</a>
+      <a>People</a>
+      <a>Files</a>
+    </div>
+
+    <div class="main">
+      <div class="course-head">
+         <img class="course-thumb" src="course-thumb.jpg" alt="Machine Learning course thumbnail">
+        <div>
+          <h1>Machine Learning</h1>
+          <p>COMP2025</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Announcements</h2>
+        <p><strong>Welcome to Machine Learning!</strong><br>
+        Please check the course page regularly for updates on assignments and lab schedules.</p>
+      </div>
+
+      <div class="card">
+        <h2>Modules</h2>
+        <div class="module-row">
+          <div>
+            <div class="title">Week 1 — Introduction to Machine Learning</div>
+            <div class="sub">Resources, readings and activities</div>
+          </div>
+        </div>
+        <div class="module-row">
+          <div>
+            <div class="title">Week 2 — Supervised Learning</div>
+            <div class="sub">Lecture notes, practicals and assessment details</div>
+          </div>
+        </div>
+        <div class="module-row">
+          <div>
+            <div class="title">Week 3 — Unsupervised Learning</div>
+            <div class="sub">Learning materials and discussion forum</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Upcoming assessments</h2>
+        <div class="module-row">
+          <div>
+            <div class="title">Assignment 1 — Data Preprocessing and Model Evaluation</div>
+            <div class="sub">Due: 26 Sep 2026, 23:59</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating widget launcher -->
+  <button class="widget-btn" onclick="window.open('https://REPLACE-WITH-YOUR-STREAMLIT-URL.streamlit.app', '_blank')">
+    <span class="sparkle">✦</span>
+  </button>
+  <div class="widget-tooltip">Ask the AI Learning Assistant</div>
+
+</body>
+</html>

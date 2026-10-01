@@ -1,3 +1,4 @@
 # Extraction
 pdfplumber
 python-docx
+sentence-transformers

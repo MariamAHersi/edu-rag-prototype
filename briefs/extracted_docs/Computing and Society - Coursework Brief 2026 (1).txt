@@ -1,0 +1,392 @@
+--- Page 1 ---
+
+| Programme: | BSc Computing Programme | - | - |
+| --- | --- | --- | --- |
+| Module Title | Computing and Society | - | - |
+| Module Code | CMP020C105S | - | - |
+| - | 4 | - | Written slides and Individual presentation |
+| Module Level | - | Assessment Type(s) | - |
+| - | - | - | - |
+| - | N/A | - | 100% Assessed component (60% slides + 40% Presentation) |
+| Word Length / | - | % contribution to | - |
+| Duration | - | module mark | - |
+| - | - | - | - |
+| Deadline (date & | 8 April 2026 | - | Power point slide in PDF format, submit it to Moodle submission box |
+| - | - | Format/Location of | - |
+| time) for | - | - | - |
+| - | - | submission | - |
+| Submission | - | - | - |
+| - | - | - | - |
+| Assessment | - | - | - |
+| - | - | - | - |
+| Feedback date: | - | - | - |
+| - | - | - | - |
+| • Learning Outcomes • This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following learning outcomes. • By successfully completing this assessment, you will be able to: • Evaluate the efficacy of a given design and implementation using empirical data. • Evaluate ethical/social tradeoffs in technical decisions. • Create and conduct a simple usability test for an existing software application. • Illustrate global social and environmental impacts of computer use and disposal (e-waste). | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skills which is critical in professional context and jobs. By successfully completing this assessment, you will be able to: • Analyse and evaluate the user experience of an existing e- commerce platform using empirical data. • Design and conduct a simple usability test, including planning tasks, engaging participants, and interpreting findings to produce actionable recommendations. | - |
+
+--- Page 2 ---
+
+| • Compare the HCI issues in individual interaction with group interaction. • Characterise and contrast the concepts of copyright, patenting, and trademarks. | • Critically assess intellectual property, legal, ethical, and environmental considerations surrounding a real-world digital service. • Apply IEEE-standard academic referencing and use credible sources to support arguments in a professional presentation. • Present complex technical and societal issues clearly and professionally using appropriately structured slides and oral communication. |
+| --- | --- |
+| Marking Criteria The rubric for the Module is available on Moodle | - |
+| Title: E-Commerce UX, Usability, and Societal Impacts: Assessment description ASSIGNMENT STRUCTURE This assignment comprises five interconnected tasks. Tasks 1–4 are preparatory work and, Task 5 is the final assessed presentation that integrates all prior work. Assessed component (60% slides + 40% Presentation) TASK 1: SELECTION OF E-COMMERCE PLATFORM You will select a distinctive e-commerce application or website for detailed research on user experience. This will form the focus of all subsequent tasks. Step 1: Choose Your Platform Select an e-commerce platform that interests you. Do not select Amazon. The following link provides a starting list of options, but you are not limited to these: https://www.tigren.com/blog/ecommerce-companies/ Step 2: Document the Platform Gather basic information about your chosen platform: • Name and description: What is it? Who uses it? | - |
+
+--- Page 3 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            •  Key features: What are 3–5 discrete, user-facing features?         
+            •  User roles: Who are the primary user types (e.g. buyer, seller, admin)?
+            •  Business model: How does it make money?                            
+                                                                                  
+            •  Reach: Geographic scope, user base size (if available)             
+          TASK 2: USER  EXPERIENCE   RESEARCH    – EXPLORE  METHOD                
+                                                                                  
+                                                                                  
+          You will choose one Explore' UX research method and use it to document and analyse a specific
+          feature of your chosen e-commerce platform.                             
+                                                                                  
+          Step 1: Identify and List Features                                      
+                                                                                  
+          A feature is "a discrete piece of functionality desired by stakeholders." Identify 3–5 features of
+          your chosen platform and, for each, identify which user role(s) benefit from it.
+                                                                                  
+          Example:                                                                
+            •  Feature: Product reviews                                           
+                                                                                  
+            •  User roles: Buyer (to inform purchase decisions), Seller (to receive feedback)
+                                                                                  
+          Step 2: Choose an 'Explore' Method and Conduct Research                 
+          Select one of the following UX research methods and apply it to analyse a single feature in
+                                                                                  
+          depth:                                                                  
+          Persona                                                                 
+                                                                                  
+            •  Create 1–2 detailed personas representing your target users.       
+               Use the Nielsen Norman Group resource:                             
+                                                                                  
+               https://www.nngroup.com/articles/personas-are-living-documents/    
+          Journey Mapping                                                         
+                                                                                  
+            •  Map the end-to-end user journey for a specific task involving your chosen feature.
+               Use: https://www.nngroup.com/articles/journey-mapping-101/         
+                                                                                  
+          User Story Mapping                                                      
+                                                                                  
+            •  Break down user goals into user stories and tasks.                 
+               Use: https://www.nngroup.com/articles/user-story-mapping/          
+                                                                                  
+          Use class resources (Moodle, Week 2) and in-class activities to support your method choice.
+                                                                                  
+          Step 3: Conduct User Interviews                                         
+                                                                                  
+          Interview at least 2 users of your chosen e-commerce platform to gather qualitative data. These
+          users should represent different user roles or perspectives (e.g. a frequent buyer and a first-
+          time user).                                                             
+                                                                                  
+          Topics to explore:                                                      
+                                                                                  
+            •  How do they currently use the feature you are analysing?           
+            •  What problems or friction points do they encounter?                
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 4 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            •  What would improve their experience?                               
+                                                                                  
+          Documentation: Record key insights, direct quotes, and observations.    
+          Step 4: Analyse and Synthesise                                          
+                                                                                  
+          Use your chosen method to synthesise your interview data. You may examine the same feature
+          from multiple user perspectives (e.g. both buyer and seller viewpoints).
+                                                                                  
+            •  Your chosen UX method                                              
+                                                                                  
+            •  1–2 key personas, user stories, or journey map                     
+            •  Summary of user needs and pain points (informed by interviews)     
+                                                                                  
+          TASK 3: USABILITY  TESTING                                              
+                                                                                  
+          You will conduct a ‘think-aloud' usability test’ to evaluate a feature of your chosen e-
+          commerce platform and gather evidence for recommendations.              
+                                                                                  
+          Step 1: Plan Your Test                                                  
+                                                                                  
+            •  Feature to test: Use the feature you identified in Task 2          
+            •  Participants: Recruit 2–3 participants (can include the same users as Task 2, or new
+               ones)                                                              
+                                                                                  
+            •  Tasks to perform: Design 2–3 realistic tasks that use your chosen feature
+          Step 2: Execute the Test                                                
+                                                                                  
+            •  Use the Think-Aloud Test Template available on Moodle              
+            •  Ask participants to verbalise their thoughts as they perform tasks 
+                                                                                  
+            •  Observe and note difficulties, confusion, successes, and unexpected behaviour
+            •  Ask clarifying questions (e.g. "Why did you click there?" or "What are you looking for?")
+                                                                                  
+          Step 3: Analyse the Data and Generate Recommendations                   
+                                                                                  
+            •  Identify usability issues from your observations                   
+            •  Categorise issues by severity (critical, major, minor)             
+            •  For each issue, propose concrete recommendations for improvement   
+            •  Categorise recommendations as:                                     
+                                                                                  
+                 -  'Easy wins' Quick, low-cost fixes with notable benefits       
+                 -  'Sound investments': More complex improvements that deliver substantial long-
+                    term value                                                    
+                                                                                  
+          TASK 4: INTELLECTUAL   PROPERTY,  LEGAL/ETHICAL,    AND                 
+                                                                                  
+          ENVIRONMENTAL     IMPACTS                                               
+                                                                                  
+          You will conduct critical research into the societal and environmental impacts of your chosen e-
+          commerce platform.                                                      
+                                                                                  
+          1. Key Facts                                                            
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 5 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Expand on details about your case study:                                
+            •  Number of users / user base demographics                           
+            •  Geographic reach                                                   
+            •  Annual revenue or funding (if public)                              
+                                                                                  
+            •  Company ownership and structure                                    
+          2. Intellectual Property                                                
+                                                                                  
+          Examine intellectual property (IP) crucial to your case study:          
+            •  Software licenses: Is the platform open-source, proprietary, or a hybrid?
+            •  Content licenses: What rights do users have to their uploaded content (photos, reviews,
+                                                                                  
+               descriptions)?                                                     
+            •  Trademarks and patents: What IP protections does the platform hold?
+            •  Critical analysis: How do IP regimes affect users, usage patterns, and the business
+               model? Do they create competitive advantages or barriers to entry? 
+          3. Legal, Ethical, and Social Issues                                    
+                                                                                  
+          Identify and analyse trade-offs in the platform's design and operation: 
+            •  Privacy: What data is collected? How is it used? Are there clear consent mechanisms?
+                                                                                  
+            •  Labour rights: How are workers treated (e.g. warehouse staff, content moderators,
+               delivery drivers)?                                                 
+            •  Human rights: Are there supply-chain or third-party concerns?      
+            •  Surveillance and bias: Does the platform use algorithmic decision-making? Are there
+                                                                                  
+               known biases?                                                      
+            •  Emerging technology issues: If applicable, discuss AI, recommendation algorithms, or
+               automated moderation                                               
+            •  Trade-offs: Have rights (labour, privacy, autonomy) been compromised for business
+                                                                                  
+               goals? Conversely, has the platform adopted inclusive or fair-trade models, even if they
+               increase costs?                                                    
+                                                                                  
+          4. Environmental Impacts                                                
+          Consider the environmental footprint of the platform and its effects:   
+                                                                                  
+            •  Computational impacts: Energy use of servers, data centres, infrastructure
+            •  Service design impacts: How has platform design influenced user behaviour and
+                                                                                  
+               environmental outcomes?                                            
+                 -  Example: Uber and Zipcar reduce private car ownership; fashion e-commerce
+                    platforms may increase consumption and waste                  
+                 -  Example: Delivery services generate packaging waste and carbon emissions
+            •  Net environmental effect: Is the platform's overall environmental impact positive,
+                                                                                  
+               negative, or mixed?                                                
+                                                                                  
+          5. Conclusion and Synthesis                                             
+          Summarise your research. What are your key findings? Can you apply your findings to draw
+                                                                                  
+          conclusions and/or make recommendations for your case study and perhaps more widely?
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 6 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Evidence and Referencing                                                
+            •  All claims must be supported by credible sources:                  
+                                                                                  
+                 -  Academic journals (via Springer Link, Google Scholar, etc.)   
+                 -  Industry reports and case studies                             
+                 -  News articles and investigative journalism                    
+                 -  Company transparency reports or official statements           
+                 -  Government or regulatory documents                            
+                                                                                  
+          Use IEEE referencing format (numbered citations in brackets [1], [2], etc., with a numbered
+          reference list at the end).                                             
+                                                                                  
+          TASK 5: FINAL PRESENTATION                                              
+                                                                                  
+                                                                                  
+          You will produce a single, cohesive PowerPoint presentation that integrates Tasks 1–4 and
+          deliver it live in class.                                               
+                                                                                  
+          Presentation Structure (Suggested)                                      
+            1. Recommended slide breakdown (total ~10–12 content slides)          
+                                                                                  
+            2. Title Slide (Student name, student ID, module code, submission date)
+            3. Platform Overview (1 slide) – Name, description, key features      
+            4. UX Research Method & Findings (2–3 slides) – Method chosen, user personas/stories,
+               interview insights, pain points                                    
+            5. Usability Testing (2–3 slides) – Methodology, key issues, recommendations
+                                                                                  
+            6. Intellectual Property Analysis (1 slide) – Key IP, licences, protections
+            7. Legal, Ethical, and Social Analysis (2 slides) – Privacy, labour, bias, trade-offs
+            8. Environmental Impacts** (1 slide) – Computational and design impacts
+            9. Conclusions and Recommendations (1 slide) – Summary, key findings, future directions
+            10. References Slide (1 slide) – Numbered IEEE reference list         
+                                                                                  
+          Design and Professional Quality Standards                               
+                                                                                  
+          -Font size: Minimum 18pt for body text; 28pt+ for headings              
+                                                                                  
+          - Readability: Use high contrast between text and background; avoid walls of text
+                                                                                  
+          - Visuals: Include screenshots of the platform, personas, journey maps, process diagrams, and
+          data visualisations (if applicable)                                     
+                                                                                  
+          - Consistency: Use a coherent colour scheme and font family throughout  
+          - Citations: Each claim should be backed by an inline citation (e.g. "[1]" placed after the claim)
+                                                                                  
+          with a corresponding numbered reference on the references slide         
+          Submission Instructions                                                 
+                                                                                  
+          1. Save your presentation using the filename format                     
+          `YourName_StudentID_CMP020C105S.pptx`                                   
+          2. Export a PDF copy with the same filename: `YourName_StudentID_CMP020C105S.pdf`
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 7 ---
+
+| 3. Upload to Moodle via the submission link |
+| --- |
+| Assessment Guidance Support and Formative Feedback A detailed programme of activities can be found here |
+| Contact for Queries/ who you can contact for further information or queries Contact the module leader for additional support |
+| Ethical Requirements Reference any work that it is not your own |
+| Use of Artificial Intelligence (AI) The assessment is designed so the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI here*. *You can find the student guidance on the use of AI in the Library and Nest |
+| Referencing Referencing should be done following IEEE style Information can be found at the library web site |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. |
+| If work is submitted up to 14 days late, the mark will be capped at 40%; if it is over 14 days late, it |
+| will not be marked. |
+| - |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: • Have I fully answered the assessment brief? • Have I reached the required word count/number of pages? |
+
+| Sometimes circumstances outside of your control may affect your studies and might prevent |
+| --- |
+| you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete an |
+| assessment or to defer an examination to a later date. If you are finding yourself in such a |
+| situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union |
+| (RSU) or someone in the Wellbeing team first, who can support you. Further details can be |
+| found on the mitigating circumstances portal. |
+
+--- Page 8 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+            •  Have I included illustrations to support the text?                 
+            •  Have I included all activities as an appendix?                     
+                                                                                  
+            •  Is my referencing complete and accurate?                           
+                                                                                  
+            •  Have I declared any AI use honestly?                               
+            •  Have I proofread my work?                                          
+                                                                                  
+            •  Am I submitting through the correct platform before the deadline?  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  

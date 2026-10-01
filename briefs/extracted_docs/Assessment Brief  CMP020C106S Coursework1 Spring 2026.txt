@@ -1,0 +1,304 @@
+--- Page 1 ---
+
+| Programme | All BSc Computing Programmes | - | - |
+| --- | --- | --- | --- |
+| Module Title | Database | - | - |
+| Module Code | CMP020C106S | - | - |
+| Module Level | 4 | Assessment Type(s) | Report |
+| - | None | % contribution to | %40 |
+| Word Length / Duration | - | - | - |
+| - | - | module mark | - |
+| - | - | - | - |
+| Deadline (date & time) for | 4th of March 2026 | Format/Location of | Moodle Report Submission |
+| Submission | - | submission | - |
+| Assessment Feedback | 1st of April, 2026 | - | - |
+| - | - | - | - |
+| date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes LO1: Practise business database design | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skills, which are critical in professional contexts and employment settings. By successfully completing this assessment, you will be able to: • Apply analytical and problem-solving skills to translate business requirements into effective database designs. • Use equivalent industry-standard tools and techniques to develop Entity Relationship Diagrams (ERDs) and physical data models. • Demonstrate attention to detail and accuracy in data modelling and documentation. • Communicate technical concepts clearly and professionally in a business context. | - |
+
+--- Page 2 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+           Assessment Requirements                                                
+                                                                                  
+          This is a group work (up to 2 students per group). Each of team member may
+          receive same mark for their submission.                                 
+                                                                                  
+          Please clearly indicate all students’ name and IDs in your submission.  
+                                                                                  
+                                                                                  
+                                                                                  
+          Task:                                                                   
+                                                                                  
+          In this section, you are expected to describe an overview of your idea of the DBMS you
+          want to design and develop, what are the business questions based on what you will
+          cover in your system. You will need a good logical relational database management
+                                                                                  
+          system representation (ERD) based on your proposed idea. This includes Formal Data
+          Modelling with detailed features of your system.                        
+                                                                                  
+          Your submission must be a single report (PDF) and should contain:       
+                                                                                  
+            •  Business system summary based on the chosen topic.                 
+                 •  Describe your business idea in detail.                        
+                 •  Describe work objectives.                                     
+                                                                                  
+                                                                                  
+            •  An ERD (logical schema) of your proposed idea using an appropriate tool (It is
+               required that you ERD contains 12-14 distinguish Entity sets in it).
+                 •  Indicate key attribute for each entity set.                   
+                 •  Indicate cardinality for each relationship.                   
+                                                                                  
+                 •  Indicate participation for each entity related to each relationship.
+                                                                                  
+            •  A diagram (physical data model) which fully match the ERD, should clearly
+               shows:                                                             
+                                                                                  
+                 •  All tables                                                    
+                 •  Columns within each table                                     
+                 •  Constraints including data types and Keys (Primary Key and Foreign Key)
+                                                                                  
+                                                                                  
+          Deliverables (what you will need to submit): a single report (PDF)      
+                                                                                  
+          Additional Information:                                                 
+                                                                                  
+          To properly design your business database, you may need to perform some literature
+          review. If you have used ideas from anywhere other than the lecture notes and tutorial
+          examples (e.g., from a book, the Internet, or a fellow student) then include a reference
+                                                                                  
+          showing where ideas came from and label your content carefully to show which parts are
+          borrowed.                                                               
+                                                                                  
+          Please be aware that diagrams in your submission must be fully original.
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 3 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+          Diagram For Examples:                                                   
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 4 ---
+
+| Marking Criteria | - | - | - | - | - | - | - | - | - | - | - | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Criteria | - | - | Excellent | - | - | Satisfactory | - | Not | - | - | Not | - |
+| - | - | - | - | - | - | - | - | Satisfactory | - | - | Attempted | - |
+| Idea: the suitability of the idea for a RDBMS | - | - | The idea requires a RDBMS and has been well specified. | - | - | The idea would require a RDBMS to manage although the idea is not fully specified. | Idea is simple and could be managed without a RDBMS. | - | - | No idea provided or idea unsuitable. | - | - |
+| Purpose of RDBMS: how well defined the purpose of the DBMS is. | - | - | - | The RDBMS | - | The RDBMS purpose is clearly defined although does not clearly represent a good use for a DBMS. | The RDBMS purpose is not clearly defined. | - | - | Purpose of the DBMS not given, or purpose ill defined. | - | - |
+| - | - | - | - | purpose is | - | - | - | - | - | - | - | - |
+| - | - | - | - | clearly defined | - | - | - | - | - | - | - | - |
+| - | - | - | - | and | - | - | - | - | - | - | - | - |
+| - | - | - | - | represents a | - | - | - | - | - | - | - | - |
+| - | - | - | - | good use of a | - | - | - | - | - | - | - | - |
+| - | - | - | - | DBMS. | - | - | - | - | - | - | - | - |
+| - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | Entity | - | ERD provided is correct and fully complete for the problem at hand. | ERD provided | - | ERD provided is basically correct, need improvement to fully address the defined database problem. | ERD provided has some omissions and incorrect features. | - | - | No ERD provided or ERD is grossly misleading. | - | - |
+| - | Relationship | - | - | is correct and | - | - | - | - | - | - | - | - |
+| - | - | - | - | fully complete | - | - | - | - | - | - | - | - |
+| - | Diagram: | - | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | for the | - | - | - | - | - | - | - | - |
+| - | The quality of | - | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | problem at | - | - | - | - | - | - | - | - |
+| - | the physical | - | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | hand. | - | - | - | - | - | - | - | - |
+| - | data model | - | - | - | - | - | - | - | - | - | - | - |
+| - | provided. | - | - | - | - | - | - | - | - | - | - | - |
+| Physical Data Model: The quality of the physical data model provided. | - | - | Data model is correct and fully match ERD provided Fully address the problem at hand. | - | - | Data model provided is correct although not fully complete. | Data model has some omissions and incorrect features. | - | - | No data model provided, or data model is grossly misleading. | - | - |
+| Submission: To provide a submission that meets the requirements given. | - | - | Correct files submitted with no issues. | - | - | Correct files submitted only but some issues with files provided, e.g. improper format of submission. | - | Correct files | - | Incorrect files submitted. | - | - |
+| - | - | - | - | - | - | - | - | submitted but | - | - | - | - |
+| - | - | - | - | - | - | - | - | with | - | - | - | - |
+| - | - | - | - | - | - | - | - | unwanted | - | - | - | - |
+| - | - | - | - | - | - | - | - | files provided | - | - | - | - |
+| - | - | - | - | - | - | - | - | and possibly | - | - | - | - |
+| - | - | - | - | - | - | - | - | issues in files | - | - | - | - |
+| - | - | - | - | - | - | - | - | provided. | - | - | - | - |
+| - | - | - | - | - | - | - | - | - | - | - | - | - |
+| - | - | - | - | - | - | - | - | - | - | - | - | - |
+
+| Purpose of |
+| --- |
+| RDBMS: |
+| how well defined |
+| the purpose of |
+| the DBMS is. |
+
+| The RDBMS purpose |
+| --- |
+| is clearly defined |
+| although does not |
+| clearly represent a |
+| good use for a |
+| DBMS. |
+| - |
+
+| The RDBMS |
+| --- |
+| purpose is |
+| not clearly |
+| defined. |
+| - |
+
+| Purpose of the |
+| --- |
+| DBMS not |
+| given, or |
+| purpose ill |
+| defined. |
+| - |
+
+| ERD provided is |
+| --- |
+| basically correct, |
+| need improvement |
+| to fully address the |
+| defined database |
+| problem. |
+| - |
+
+| ERD provided |
+| --- |
+| has some |
+| omissions |
+| and incorrect |
+| features. |
+| - |
+
+| No ERD |
+| --- |
+| provided or |
+| ERD is grossly |
+| misleading. |
+| - |
+
+| Submission: |
+| --- |
+| To provide a |
+| submission that |
+| meets the |
+| requirements |
+| given. |
+
+| Correct files |
+| --- |
+| submitted |
+| with no issues. |
+| - |
+
+| Correct files |
+| --- |
+| submitted only but |
+| some issues with |
+| files provided, e.g. |
+| improper format of |
+| submission. |
+| - |
+
+| Incorrect files |
+| --- |
+| submitted. |
+| - |
+
+--- Page 5 ---
+
+| Assessment Success Guidance To achieve maximum success in this task: • Select a suitable business idea that clearly requires a relational database (complex data, multiple entities, clear relationships). • Define clear objectives and key business questions your system will address. • Develop a detailed and accurate ERD with 12–14 entities, showing primary keys, relationships, cardinality, and participation. • Create a consistent physical data model that fully matches your ERD, including tables, data types, and key constraints. • Present a professional, well-structured report (single PDF) with clear sections and original, well-labelled diagrams. • Demonstrate professionalism through clear communication, correct referencing, and attention to detail. |
+| --- |
+| Assessment Guidance Support and Formative Feedback You may refer to the lecture notes and lab exercises from Weeks 2 and 4 available on Moodle to support the development of this coursework. |
+| Contact for Queries/ who you can contact for further information or queries Should you have any questions or require support, please contact the module tutors, Wei Li and Kimia Aksir. Their contact information can be found at the top of the Moodle page. |
+| Use of Artificial Intelligence (AI) The assessment is designed so that the use of AI during the assessment is irrelevant or impossible. You are welcome to use AI to support learning and preparation for this assessment. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI by using the following link. Please read and apply: https://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/ 4a%20AI%20principles%20and%20guidance%20-for%20Senate.docx *You can find the student guidance on the use of AI in the Library and Nest |
+| Referencing Students do not need another resource, book, article to complete this assignment. In case they use another online/offline resource, they must cite it in the References section, at the end of the report. |
+
+--- Page 6 ---
+
+| If you do so, please use IEEE style: https://www.citethemrighttutorial.com/course- modules/ieee |
+| --- |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: • Have I fully answered the assessment brief? • Have I met the word count and formatting requirements? • Is my referencing complete and accurate? • Have I declared any AI use honestly? • Have I proofread my work? • Am I submitting through the correct platform before the deadline? |
+
+| Sometimes circumstances outside of your control may affect your studies and |
+| --- |
+| might prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete |
+| an assessment or to defer an examination to a later date. If you are finding |
+| yourself in such a situation, please speak to your Academic Guidance Tutor, the |
+| Roehampton Student Union (RSU) or someone in the Wellbeing team first, who |
+| can support you. Further details can be found on the mitigating circumstances |
+| portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late |
+| penalties will apply. If work is submitted up to 14 days late, the mark will be |
+| capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be |
+| marked. |

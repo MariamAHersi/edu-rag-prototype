@@ -1,0 +1,190 @@
+--- Page 1 ---
+
+| Programme | BSc Computing and Digital Industries | - | - |
+| --- | --- | --- | --- |
+| Module Title | Creative Coding | - | - |
+| Module Code | DES-C102-0 | - | - |
+| Module Level | Year 1 | Assessment Type(s) | Code submission |
+| Word Length / | N/A | % contribution to | 25 |
+| Duration | - | module mark | - |
+| Deadline (date & | See Assessment table on Moodle | - | Zip file, uploaded to “Minibrief 1” on Moodle |
+| - | - | Format/Location of | - |
+| time) for | - | - | - |
+| - | - | submission | - |
+| Submission | - | - | - |
+| - | - | - | - |
+| Assessment | See Moodle | - | - |
+| - | - | - | - |
+| Feedback date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the learning outcomes listed below. By successfully completing this assessment, you will be able to: - Synthesise and apply ideas and information relevant to the production of a specific piece of work. | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skill(s) which is(are) critical in professional context and jobs. By successfully completing this assessment, you will be able to: - Create design work using p5.js - Understand basic coding structures - Apply technical skills to meet a design specification | - |
+| Assessment Requirements For this assessment, you are to create three images using p5.js, as detailed below. Please submit a .zip file containing all three code snippets you have used to produce each image. Instructions on producing this will be given in class. The assignment is intended to allow you to demonstrate your understanding the concepts in p5.js which we have covered so far. The program to produce your final image should use the following concepts and commands at least once. | - | - | - |
+
+--- Page 2 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+           a) Variables                                                           
+                                                                                  
+           b) Nested loops                                                        
+           c) background(…)                                                       
+                                                                                  
+           d) map(…)                                                              
+                                                                                  
+           e) fill(…)                                                             
+           f) circle(…)                                                           
+                                                                                  
+           g) push()                                                              
+                                                                                  
+           h) pop()                                                               
+                                                                                  
+           i) scale(…)                                                            
+           j) translate(…)                                                        
+                                                                                  
+                                                                                  
+                                                                                  
+           Image 1                                                                
+                                                                                  
+           Create a row of 10 circles in an evenly spaced                         
+           horizontal line, as seen in the image to the                           
+           right. The left-most circle should have a black                        
+           fill, and the right-most circle should have a red                      
+           fill, with the rest of the circles transitioning                       
+           evenly between the two colours. The                                    
+           background should be grey. The exact colour of                         
+                                                                                  
+           the background, the size of the circles, and the                       
+           positioning of the line on the screen are all                          
+           irrelevant.                                                            
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+           Image 2                                                                
+                                                                                  
+           Create a ten-by-ten grid of evenly spaced circles,                     
+           as seen in the image to the right. The circles                         
+           should transition in colour evenly between black                       
+           in the bottom left, red in the bottom right, green                     
+                                                                                  
+           in the top left, and yellow in the top right.                          
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 3 ---
+
+| Image 3 Building upon image 2, overlay ten of these grids on top of one-another, using scale to give a 3D appearance, as shown in the image to the right. The grids should get increasingly blue the further back they have been drawn. For exact details on the colour and the scale for each layer, please consult the table below. |
+| --- |
+| Marking Criteria Available from: https://moodle.roehampton.ac.uk/pluginfile.php/5439511/mod_resource/content/2/BA %20Digital%20Design%20Assessment%20Criteria%20.pdf |
+| Assessment Success Guidance - Review lecture slides and handout exercises from the previous weeks of term to ensure that you have a strong understanding of the techniques required. - Talk to your tutor if you are struggling to understand any of the tasks. - Ensure that your submissions are made on time and formatted correctly. - Consult the p5.js documentation (https://p5js.org/reference/) for technical assistance. |
+| Assessment Guidance Support and Formative Feedback In-class time to work on this assessment will be available in the week before the submission deadline. |
+
+--- Page 4 ---
+
+| Contact for Queries/ who you can contact for further information or queries Contact the module tutor Harry Solomons (harry.solomons@roehampton.ac.uk) |
+| --- |
+| Use of Artificial Intelligence (AI) 1. The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. 2025 AI Student Guide What AI Can and Can’t Do • AI can become a useful learning assistant and help you: • Summarise articles and concepts. • Brainstorm ideas. • Improve your writing (grammar, spelling, structure). • Find sources for initial searches (always verify them!). • Quiz you on your knowledge. • Help you develop a studying schedule. • Organise and summarise your notes. • Develop your critical thinking skills, through interactive dialogue. • Develop your inquiring skills. AI should not be used to: • Create entire assessments for you. Always check the assessment guidance about what is permitted and what is not. AI should not simply do the work for you. • Take exams or quizzes on your behalf. • Generate ideas or arguments that you don’t understand (although AI can explain ideas and arguments to you). • Fake citations or research. Stay Honest and Transparent • Acknowledge all use of AI, just as you would for other help; Cite AI generated content. • Don’t submit AI-generated work as your own—it’s considered academic misconduct. • Remember: AI can make mistakes! Always fact-check before using its output. • Remember: AI can be biased and reproduce inappropriate or excluding social stereotypes. • Make sure you read critically to verify the AI outputs. You are responsible for the outputs generated by AI tools. |
+
+--- Page 5 ---
+
+| • You need to have a good understanding and knowledge of the subject to critically evaluate AI outputs and prompt further. Use AI to Learn, Not as a Shortcut • AI is a tool, not a replacement for your own thinking. Use it to: • Get help structuring your thoughts. • Check your understanding of a topic. • Improve your writing, creative process or knowledge development while keeping your unique voice and using your own skills. • To test your knowledge. • Avoid relying on AI so much that you miss out on developing your skills and alienating your-self from your studies and education. • Early research studies on the effects of AI on people indicate that over-use and - reliance on AI can alienate people from their own tasks and negatively impact the long-term learning of students and professional development of workers. Learning about the subject of study well is paramount to check what AI is producing for accuracy and appropriateness and be able to prompt and interrogate it further, using your knowledge and critical skills. |
+| --- |
+| Referencing Any references should use the Harvard format. For help with this, please consult Cite Them Right in the “Useful Resources” section on Moodle. |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: Have I fully answered the assessment brief? |
+
+| Sometimes circumstances outside of your control may affect your studies and might |
+| --- |
+| prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete an |
+| assessment or to defer an examination to a later date. If you are finding yourself in such a |
+| situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union |
+| (RSU) or someone in the Wellbeing team first, who can support you. Further details can |
+| be found on the mitigating circumstances portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties |
+| will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% |
+| (delete as appropriate); if it is over 14 days late, it will not be marked. |
+
+--- Page 6 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+        •  Have I met the word count and formatting requirements?                 
+                                                                                  
+        •  Is my referencing complete and accurate?                               
+        •  Have I declared any AI use honestly?                                   
+                                                                                  
+        •  Have I proofread my work?                                              
+                                                                                  
+        •  Am I submitting through the correct platform before the deadline?      
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  

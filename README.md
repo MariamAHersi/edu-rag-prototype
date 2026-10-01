@@ -44,6 +44,17 @@ AI Response
 
 The system retrieves relevant information from the assessment documents before generating a response. This helps ground the AI's answers in the information contained within the university documents.
 
+### How to Run Your Integrated Prototype
+
+1. Open your terminal in your project directory.
+2. Launch the app with Streamlit:
+   ```bash
+   streamlit run app.py
+   ```
+3. A web browser window will pop up at `http://localhost:8501`.
+
+
+
 ## 📚 Documents
 
 The prototype currently focuses on assessment-related documents, including:
@@ -107,6 +118,8 @@ A potential student interface could allow students to ask questions such as:
 > "What should I include in my submission?"
 
 The system would retrieve information from the relevant university documents before generating a response.
+
+It would also allow students to upload a draft assignment and recieve feedback. 
 
 ### Educator-facing
 

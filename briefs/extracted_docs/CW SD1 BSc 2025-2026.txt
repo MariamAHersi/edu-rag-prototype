@@ -1,0 +1,351 @@
+--- Page 1 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+     LAST UPDATED: 2ND SEPTEMBER 2025 BY SAYED POURIA TALEBI                      
+     S             D                  1 C                 S                       
+       OFTWARE       EVELOPMENT           OURSEWORK         PECIFICATION          
+                                                                                  
+                                                                                  
+     This course starts your software deployment journey by introducing the key programming concepts on which the rest
+     of the course is built. The focus here is on a solid foundational knowledge of Python’s syntax and semantics. To evaluate
+     progress and highlight any gaps in understanding, this coursework will provide a set of challenging tasks and
+     programming requirements, as well as ample time to reach an adequate solution to them.
+                                                                                  
+     Coursework Midpoint Review Submission date: Open Submission Date via CodeGrade in Moodle by 17:00 hours GMT.
+                                                                                  
+     Coursework Final Submission date: 11th Dec 2025 via CodeGrade in Moodle by 17:00 hours GMT.
+                                                                                  
+     Contribution:                                                                
+                                                                                  
+     Coursework Midpoint Review is optional and does not contribute to your coursework mark.
+                                                                                  
+     Coursework Final Submission is 100% of the total coursework mark.            
+                                                                                  
+     Aim: To gauge understanding on the correct use of variables and objects, data types and the ability to abstract data, as
+     well as, develop students’ fluency in programming languages and software development.
+                                                                                  
+     Learning Outcomes:                                                           
+                                                                                  
+       1- Design, implement, test, and debug a program that uses each of the following fundamental programming
+          constructs; basic computation, simple I/O, standard conditional and iterative structures, the definition of
+                                                                                  
+          functions, and parameter passing.                                       
+       2- Analyse and explain the behaviour of simple programs involving the fundamental programming constructs,
+          such as variables, expressions, assignments, I/O, control constructs, functions, and parameter passing.
+       3- Identify the relative strengths and weaknesses among multiple designs or implementations for a problem.
+       4- Use a programming language to implement, test, and debug algorithms for solving simple problems.
+                                                                                  
+     Grading Advice: While fully functioning programs and its documentation that meet all the requirements are the goal of
+     the test, the programs and the rationale for their design, implementation, testing and debugging will be assessed for
+                                                                                  
+     efficiency, simplicity, creativity, and good style. Please read the Grading Rubric and bring any questions you may have
+     to your tutor during the class.                                              
+                                                                                  
+     To complete this coursework, you will design the behaviour of simple programs involving the fundamental programming
+     constructs, e.g. variables, expressions, assignments, I/O, and control constructs.
+                                                                                  
+                                                                                  
+     PROBLEM DESCRIPTION                                                          
+                                                                                  
+     A university has hired our Software Development company to modernize their student assessment system. As we know,
+     universities evaluate students based on various components throughout the academic year. There are several aspects
+     to determining a student's overall performance, such as their attendance, coursework submissions, exam results, and
+     participation. The university administration wishes to implement a categorical marking system to provide more detailed
+     and standardised feedback to students. You have been tasked to create a program that automates this calculation and
+                                                                                  
+     categorisation process.                                                      
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 2 ---
+
+| No. | Category | Overall Mark |
+| --- | --- | --- |
+| 1 | Gold Standard | 100 |
+| 2 | Upper First | 82, 85, 92 |
+| 3 | First | 72, 75, 78 |
+| 4 | Upper Second | 62, 65, 68 |
+| 5 | Lower Second | 52, 55, 58 |
+| 6 | Third | 42, 45, 48 |
+| 7 | Condonable Fail | 32, 35, 38 |
+| 8 | Fail | 5, 15, 25 |
+| 9 | No Submission | 0 |
+
+--- Page 3 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+     COURSEWORK Midpoint Review                                                   
+                                                                                  
+                                                                                  
+     There are two tasks you need to complete for this Milestone:                 
+                                                                                  
+     Task 1. Craft a program in Python which has the features listed below:       
+                                                                                  
+       a. Your program should use the input() function that includes message text to instruct the user to enter each
+          student’s data.                                                         
+       b. Use an appropriate data structure to create and store this dataset, which contains the student’s ID, and
+                                                                                  
+          overall score.                                                          
+       c. Your program calculates the overall rate for each student, using the four main criteria described above
+          (coursework 1, coursework 2, coursework 3 and final test)               
+       d. Your program should estimate the suitable category for each student by using the category dataset provided.
+          For instance, if the overall score of the student is between 72 and 78, the output should be: First
+       e. The computed score should be printed out as an integer (no decimals).   
+                                                                                  
+     Task 2: Write a brief reflection on your code (~500 words), which may include but not limited to the discussions about
+                                                                                  
+     topics below.                                                                
+                                                                                  
+       •  How did you decompose the problem and why?                              
+       •  Do you think flowchart helpful when you write a program and why?        
+       •  Have you met any difficulties/bugs during this coursework, and how did you tackle it?
+       •  What did you think is the most difficult part in this coursework?       
+                                                                                  
+       •  What have you learnt from investigating this problem?                   
+       •  Which part(s) in your code design is your favourite and why?            
+       •  If you had no time limit, how would you improve your program?           
+                                                                                  
+     Resources on reflection can be found at: https://libguides.hull.ac.uk/reflectivewriting/reflection1a
+                                                                                  
+     Submission Requirements: Please submit your code as a Python (*.py), Jupyter Notebook (*.ipynb) or directly in
+     CodeGrade’s editor (instructions will be provided during class). You must submit a python code (*.py or *ipynb)
+     containing the code for your program and personal reflection on your code (Task 1 and Task 2) to CodeGrade on Moodle.
+     Your program should contain full documentation explaining your implementation (comment your code). Submitted files
+                                                                                  
+     should have your name, ID number and date of last update.                    
+                                                                                  
+     Feedback: Your code will be automatically graded by CodeGrade. You also have the opportunity to fine tune and remove
+     mistakes from your initial code by asking for feedback during the class. This will help you in your Coursework Final
+     Submission.                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 4 ---
+
+| No. | Category | Overall Mark |
+| --- | --- | --- |
+| 1 | Gold Standard | 100 |
+| 2 | Upper First | 82, 85, 92 |
+| 3 | First | 72, 75, 78 |
+| 4 | Upper Second | 62, 65, 68 |
+| 5 | Lower Second | 52, 55, 58 |
+| 6 | Third | 42, 45, 48 |
+| 7 | Condonable Fail | 32, 35, 38 |
+| 8 | Fail | 5, 15, 25 |
+| 9 | No Submission | 0 |
+
+--- Page 5 ---
+
+| -- ----------------- ---------- --- ------- -------------- | - |
+| --- | --- |
+| - | 13 Lieke Martens 1992-12-16 29 86.6667 Upper-First |
+| - | 02 Cristiano Ronaldo 1985-02-05 37 73.3333 First |
+| - | 24 Lucy Bronze 1991-10-28 31 50 Third |
+
+| -- ------------ -------- ---- ---- ---- ------------ |
+| --- |
+| 13 Lieke Martens 1992-12-16 29 86.6667 85 Upper-First |
+| 02 Cristiano Ronaldo 1985-02-05 37 73.3333 75 First |
+| 24 Lucy Bronze 1991-10-28 31 50 52 Third |
+
+--- Page 6 ---
+
+| Welcome to the Student Grading System First, let's set up the module configuration. |
+| --- |
+| - |
+| Enter module name: Advanced Programming |
+| How many assessment components does this module have? 3 |
+| Component 1 name: Midterm Exam |
+| Component 1 weight (%): 30 |
+| Component 2 name: Final Project |
+| Component 2 weight (%): 40 |
+| Component 3 name: Participation |
+| Component 3 weight (%): 30 |
+| Module configuration complete. |
+| - |
+| Now, let's enter student information and grades. |
+| - |
+| Student 1: |
+| ID: 01 |
+| Name: John Doe |
+| Date of Birth (YYYY-MM-DD): 1995-05-15 |
+| Midterm Exam score: 75 |
+| Final Project score: 82 |
+| Participation score: 90 |
+| - |
+| Results: |
+| UID | Name | D.o.B | Age | Raw Score | Rounded Score | Category |
+| -----|--------------|----------------|------ |---------------|---------------------|--------- |
+
+--- Page 7 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+     01 | John Doe | 1995-05-15 | 28 |82.6 | 82 | Upper First                     
+                                                                                  
+                                                                                  
+     Submission Requirements: Submit your code via Codegrade as a Jupyter notebook named:
+                                                                                  
+                                  student_category.ipynb                          
+                                                                                  
+     The program file should contain full documentation explaining your implementation (comment your code). Your file
+     should have your name, ID number and date of last update.                    
+                                                                                  
+     Feedback: Feedback will be given automatically through Codegrade via Moodle. 
+     Marking Scheme: Grades will be based on number of components completed. You will be assessed on
+                                                                                  
+       •  Solution: the completeness of the code, documentation, and reflection to meet the specification given.
+       •  Design: ability to decompose a problem into coherent and reusable parts.
+       •  Correctness: ability to create solution that reliably produces correct answers or appropriate results.
+       •  Logic: ability to use correct program structures appropriate to the problem domain.
+                                                                                  
+       •  Clarity: ability to format and document code for human consumption (PEP-8) and reflection.
+       •  Robustness: ability of the solution to handle unexpected input and error conditions correctly as evidenced via
+          testing.                                                                
+                                                                                  
+     The following rubric will be used to assess your work:                       
+     Basic Requirements                                                           
+                                                                                  
+     In order to get full marks for this rubric category your code must:          
+                                                                                  
+       -  Be encapsulated into functions including `main()`, `calculate_overall_score()`, and `determine_category()`. (8)
+       -  Prompt users for an ID, name, D.o.B, and four student components, in that order. (8)
+       -  Accept data for exactly 3 students before stopping or if "end" was entered instead of an ID. (8)
+       -  Calculate the student's overall score. (2)                              
+       -  Calculate the student's category. (2)                                   
+       -  Calculate the students' ages. (8)                                       
+       -  Display a table of all the data passed to the program using `tabulate` (8)
+       -  Save this table to `students.txt` (8)                                   
+                                                                                  
+     Intermediate requirements                                                    
+                                                                                  
+     In order to get full marks for the rubric category your code must:           
+                                                                                  
+       -  Implement robust input validation for a student's ID, D.o.B., and overall score (6)
+       -  Display use of appropriate data structures for storing student information (5)
+       -  Display use of appropriate code structures for implementing the functionality (5)
+     Distinction Requirements:                                                    
+                                                                                  
+     Distinction work in the range of 72-78 should demonstrate:                   
+                                                                                  
+       -  Exemplary attainment of learning outcomes                               
+       -  A high level of insight and critical evaluation of the material         
+       -  A comprehensive and up-to-date account of relevant theoretical and empirical material
+       -  A thorough understanding and integration of material supporting a cogent argument
+       -  Excellent writing of a high academic standard                           
+                                                                                  
+     Distinction work in the range of 82-100 should demonstrate:                  
+                                                                                  
+       -  Attainment beyond the intended learning outcomes                        
+       -  An outstanding level of originality and creativity, providing a significant new perspective on the question or
+          topic                                                                   
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 8 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+       -  A clear, elegant and well supported argument, based on the integration and sophisticated critical evaluation of
+          a substantial body of knowledge                                         
+       -  Suitability for publication in high quality journal                     
+                                                                                  
+     Academic Misconduct: All submissions will be processed through a code plagiarism tool. If signs of misconduct are
+     found, all students involved will be contacted to discuss further steps. Please see here for information on academic
+     integrity at the university https://portal.roehampton.ac.uk/information/Pages/Academic-Integrity.aspx.
+                                                                                  
+     Our guiding principle is that academic integrity and honesty are fundamental to the academic work you produce at the
+     University of Roehampton. You are expected to complete coursework which is your own and which is referenced
+                                                                                  
+     appropriately. The university has in place measures to detect academic dishonesty in all its forms. If you are found to
+     be cheating or attempting to gain an unfair advantage over other students in any way, this is considered academic
+     misconduct and you will be penalised accordingly. Please don’t do it.        
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+--- Page 9 ---
+
+| - | Criteria | - | - | Excellent | - | - | Satisfactory | - | - | Not Satisfactory | - | - | Not Attempted | - |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Solution the completeness of the code, documentation and reflection to meet the specification given. | - | - | A completed solution meeting all the specifications. | - | - | A completed solution that does not quite meet all the specifications. | - | - | A completed solution is implemented and runs but lacks much of the specification. | - | - | Solution doesn’t run or does not meet the specifications defined. | - | - |
+| Design ability to decompose a problem into coherent and reusable parts. | - | - | The solution design decomposes the problem by using appropriate structures. The overall design is appropriate, and with a consideration of reusability. | - | - | The solution design generally uses appropriate structures. Program elements and documentation both exhibit good design. | - | - | Not all of the selected structures are appropriate. Some of the elements are appropriately designed. | - | - | Few if any of the selected structures are appropriate, or the problem is decomposed in ways that make little sense. | - | - |
+| Correctness ability to create solution that reliably produces correct answers or appropriate results. | - | - | Solution produces correct answers or appropriate results for all inputs tested. | - | - | Solution produces correct answers or appropriate results for most inputs. | - | - | Solution approaches correct answers or appropriate results for most inputs but can contain miscalculations. | - | - | Solution does not produce correct answers or appropriate results for most inputs. | - | - |
+| Logic ability to use correct program structures appropriate to the problem domain. | - | - | Solution logic is correct with no known boundary errors, and no redundant or contradictory conditions. | - | - | Solution logic is mostly correct but may contain an occasional boundary error or redundant or contradictory condition. | - | - | Solution logic is on the right track but shows no recognition of boundary conditions (such as < vs. <=). | - | - | Solution contains some conditions that specify the opposite of what is required (less than vs. greater than), confuse Boolean AND/OR operators, or lead to infinite loops. | - | - |
+| Clarity ability to format and document code for human consumption (Good Style) and reflection. | - | - | Program contains appropriate documentation for all major functions, variables, or non-trivial algorithms. Formatting, indentation, and other white space aids readability. | - | - | Program contains some documentation on major functions, variables, or non-trivial algorithms. Indentation and other formatting are appropriate. | - | - | Program contains some documentation (at least the student’s name and program’s purpose) but has occasionally misleading indentation. | - | - | Program contains no documentation, or grossly misleading indentation. | - | - |
+| Robustness ability of the solution to handle unexpected input and error conditions correctly as evidenced via testing. | - | - | Solution handles erroneous or unexpected input gracefully; action is taken without surprising the user. Boundary cases are considered and tested. | - | - | All obvious error conditions are checked for and appropriate action is taken. Nearly all boundary cases are considered and tested. | - | - | Some obvious error conditions are checked for and some sort of action is taken. Most boundary cases are considered and tested. | - | - | Solution often fails or fails completely. Boundary conditions are not tested for. | - | - |
+
+--- Page 10 ---

@@ -1,0 +1,626 @@
+School of Arts, Humanities and Social Science
+
+Module title and code: 2023.24 Cyber Security
+
+Title of coursework: Vulnerabilities, Account Management, Integrity and Confidentiality.
+
+
+| Learning outcomes: | LO1: Investigate and apply measures that can be taken to prevent or mitigate the undesirable effects of cyber-crime.  <br>  <br> LO2: Understand, analyse and practically apply the security properties of confidentiality, integrity, and availability through the use of cryptographic primitives and related techniques.   <br>  <br> LO3: Evaluate risks to privacy and anonymity in commonly used applications. |
+| --- | --- |
+| Assessment weighting | 30% |
+| Maximum mark | 100 |
+| Submission details (e.g. submission link) | Moodle Submission and Quiz Link |
+| Word limit (if applicable) | N/A |
+| Date set | Monday Group: 11/03/2024 & Tuesday Group: 12/03/2024 |
+| Deadline | Monday Group: 22/04/2024 and Tuesday Group: 23/04/2024 |
+| Feedback and marks | 13/05/2024 and 14/05/2024 |
+| Assessment setter’s name | Dr Charles Clarke |
+
+
+About this portfolio lab
+
+This portfolio lab is problem centred. Therefore, you will need to research and take responsibility
+
+for solving any technical challenges that you encounter. You are encouraged to work
+
+collaboratively with other students in your cohort. However, the work that you submit must be
+
+your own and any sources of assistance etc., must be acknowledged through referencing or where
+
+appropriate through code comments.
+
+PART 01. Web Application Vulnerabilities
+
+Getting started
+
+Establish a network between your Kali Linux virtual machine and your OWASP Juice Shop virtual machine.
+
+KALI
+
+The username to login is kali and the password is kali
+
+Give this machine an IP address of 192.168.123.100
+
+OWASP Juice Shop
+
+You can download the Juice Shop .ova file from here: https://moodle.roehampton.ac.uk/mod/url/view.php?id=1676558
+
+The username to login is student and the password is Student1
+
+This virtual machine already has an IP address of 192.168.123.111
+
+Ensure that your kali virtual machine and your OWASP Juice Shop virtual machine can ping each other.
+
+Login to the OWASP Juice Shop virtual machine.
+
+Change directory to the juice-shop folder by typing...
+
+cd juice-shop
+
+Start the webserver by typing...
+
+sudo npm start
+
+The server should start and will show the following status...
+
+From your Kali virtual machine, open a browser and visit...
+
+192.168.123.111:3000
+
+The following page should load:
+
+TASK 01: Carefully read, review and explore information about OWASP Juice Shop. Feel free to use any resources that you like. Here are a few links to get you started:
+
+https://owasp.org/www-project-juice-shop/
+
+https://pwning.owasp-juice.shop/
+
+https://pwning.owasp-juice.shop/appendix/solutions.html
+
+https://pwning.owasp-juice.shop/part1/challenges.html
+
+https://pwning.owasp-juice.shop/part2/
+
+https://akash-pawar.github.io/owasp-juice-shop/
+
+OWASP Juice Shop has many vulnerabilities. Having read and researched OWASP Juice Shop, your challenge is to:
+
+Decide on a vulnerability of your choice.
+
+Exploit ONE chosen vulnerability in the 1, 2, 3, 4, 5 OR 6 star rating
+
+Record a video of the end to end completion of the exploit that you have chosen, ensuring that you include  a narration of the video in your own words.
+
+Note: The higher the rating attempted, the higher the mark.
+
+PART 02. Identity and Credential Management in Linux
+This activity requires the following resources:
+
+Ubuntu Server 22.04 (NOT UBUNTU DESKTOP)
+
+Objective: To practice the issuance, management, verification, revocation, and auditing of identities and credentials for authorised devices, users, and processes in a Linux environment.
+
+You will need to complete the following activities:
+
+User Account Creation:
+
+Create a new user account named labuser with a home directory.
+
+Set a password for the new user.
+
+SSH Key Pair Generation:
+
+Generate an SSH key pair for labuser.
+
+Configure SSH to allow key-based authentication for labuser.
+
+Password Policy Setup:
+
+Implement a password policy that enforces complex passwords and regular password changes.
+
+Test the password policy by attempting to change the password for labuser.
+
+User Identity Verification:
+
+Verify the identity of labuser using the whoami command.
+
+Display information about the currently logged-in users using the w or who command.
+
+User Credential Revocation:
+
+Temporarily disable the account of labuser using the passwd command.
+
+Attempt to log in as labuser to ensure that access is denied.
+
+Process Identity and Credentials:
+
+Identify the processes running under the labuser account using the ps command.
+
+Review the process credentials using the following commands:
+
+ps -eo user
+
+groups
+
+Audit Logging:
+
+Enable audit logging for user-related events using the auditd service.
+
+Perform actions such as logging in, changing passwords, and revoking access for labuser.
+
+Review the audit logs to identify the recorded events.
+
+Clean-up:
+
+Re-enable the account of labuser.
+
+Remove the SSH key pair for labuser.
+
+Disable audit logging.
+
+TASK 02
+
+User Account Creation:
+
+sudo adduser labuser
+
+Set a password for the new user:
+
+sudo passwd labuser
+
+Generate an SSH key pair for labuser
+
+sudo -u labuser ssh-keygen
+
+Configure SSH to allow key-based authentication
+
+sudo cp /home/labuser/.ssh/id_rsa.pub /home/labuser/.ssh/authorised_keys
+
+sudo chown labuser:labuser /home/labuser/.ssh/authorised_keys
+
+sudo chmod 600 /home/labuser/.ssh/authorised_keys
+
+Password Policy Setup: Install the necessary tools
+
+sudo apt-get install libpam-pwquality
+
+Edit the password policy configuration file
+
+sudo nano /etc/security/pwquality.conf
+
+Add the following lines to pwquality.conf
+
+minclass = 3
+minlen = 8
+
+Edit the common-password file to enforce the password policy
+
+sudo nano /etc/pam.d/common-password
+
+Add the following line to common-password
+
+password requisite pam_pwquality.so retry=3
+
+TASK 03
+
+User Identity Verification: Verify the identity of labuser
+
+whoami
+
+Display information about the currently logged-in users
+
+who -u
+
+User Credential Revocation: Temporarily disable the account of labuser
+
+sudo passwd -l labuser
+
+Attempt to log in as labuser (verify access is denied)
+
+su - labuser
+
+TASK 04
+
+Process Identity and Credentials:
+
+Identify processes running under the labuser account
+
+ps aux | grep labuser
+
+Review process credentials
+
+ps -eo user
+
+TASK 05
+
+Audit Logging:
+
+Install auditd
+
+sudo apt-get install auditd
+
+Enable audit logging for user-related events
+
+sudo nano /etc/audit/audit.rules
+
+Add the following line to audit.rules
+
+-w /etc/passwd -p wa -k identity_changes
+
+Restart the auditd service
+
+sudo systemctl restart auditd
+
+Perform actions and review audit logs
+
+sudo su - labuser
+
+sudo passwd labuser  # Change password
+
+sudo passwd -l labuser  # Lock the account
+
+Review the audit logs
+
+sudo ausearch -k identity_changes
+
+TASK 06 (Clean Up)
+
+Re-enable the account of labuser
+
+sudo passwd -u labuser
+
+Remove the SSH key pair for labuser
+
+sudo rm -r /home/labuser/.ssh
+
+Disable audit logging
+
+sudo systemctl stop auditd
+
+Adjustments may be needed based on specific configurations or changes in future Ubuntu versions.
+
+PART 03: Data Integrity, Securing Data At-Rest and Data In-Flight
+
+Taskset 01: Cryptographic Hash Functions
+
+Objective: This activity introduces various hash functions available via the Linux command line and provides hands-on experience with generating hash values for files. By the end of this lab, you will be familiar with using hash functions to verify data integrity and generate unique identifiers for files.
+
+Requirements:
+
+A Ubuntu Server 22.04 virtual machine
+
+Start your Ubuntu 22.04 Server and from the terminal, generating a hash (digital fingerprint) from a sequence of alpha-numeric characters.
+
+NOTE: A unique hash (digital fingerprint) can be calculated for a sequence of any characters of an arbitrary length; using a command construct of echo –n your_characters | hash function where:
+
+echo is used to display text or output to the terminal (i.e. when you run the echo command followed by a string or variable, it prints that string or the value of the variable to the standard output (usually the terminal, but can also be to a file).
+
+-n option is used to suppress the trailing newline that is usually appended to the output of the echo command.
+
+your_characters represent the input to be hashed
+
+|: is the pipe operator that takes the standard output produced by the command on its left (echo) and passes it as the standard input to the command on its right (hash_function).
+
+hash function is the choice of cryptographic hash function that will be used to generate the hash (e.g. md5, sha-256, sha384 etc).
+
+1.1) In the terminal type
+
+echo -n cat|sha256sum
+
+In this example, the characters being hashed is the word cat, and the cryptographic hash function used to generate the hash, is sha256. The unique hash for the word cat is:77af778b51abd4a3c51c5ddd97204a9c3ae614ebccb75a606c3b6865aed6744e
+
+​1.2) In the terminal type
+
+echo -n cat|md5sum
+
+In this example, the characters being hashed is the word cat, and the cryptographic hash function used to generate the hash, is md5. The unique hash for the word cat is:d077f244def8a70e5ea758bd8352fcd8
+
+NOTE: Cryptographic hash functions are sensitive to case (i.e., upper, lower); punctuation and spaces etc. Therefore, “cat”, “Cat”, “cat.” and “cat”, will all generate different hashes.
+
+1.3) Modify the previous sha256 command example from step 1.1, so that it calculates a hash for the word cats. What is the sha-256 hash?
+
+1.4) Modify the previous md5 command example from step 1.2, so that it calculates a hash for the word cats. What is the md5 hash?
+
+​1.5) Repeat tasks 1.3 and 1.4, using your first and last name as the input.
+
+What is the sha-256 hash? What is the md5 hash?
+
+
+| ​ |
+| --- |
+
+
+​
+
+1.6) Confirm that the values for 1.5) are consistent by visiting an online hash calculator at: https://www.fileformat.info/tool/hash.htm. Confirm that the value that you derived is the same as that generated via the online hash calculator. ​
+
+1.7) As you will observer at https://www.fileformat.info/tool/hash.htm there are many cryptographic hash functions. Other than md5 and sha-256, list 3 other hash functions and the related hashes that they generate for your first name only.
+
+Hash Function 1: List the name of the hash function that you have chosen
+
+
+| ​ |
+| --- |
+
+
+Hash Function 2: List the name of the hash function that you have chosen
+
+
+| ​ |
+| --- |
+
+
+Hash Function 3: List the name of the hash function that you have chosen
+
+
+| ​ |
+| --- |
+
+
+Taskset 02: Generating a hash (digital fingerprint) from files.
+
+A unique hash (digital fingerprint) can be calculated for a file of any arbitrary size (theoretically); using a command construct of hash_function filename (where “hash function” is the choice of cryptographic hash function that will be used to generate the hash and “filename” represents the name of the file to be hashed).
+
+2.1) From a terminal, create a folder using your first name as the name for the new folder.
+
+mkdir yourname
+
+​2.2) Navigate to the new folder
+
+cd yourname
+
+​
+
+2.3) Create some content in the new folder using the echo command to make a file called file1.txt
+
+echo "Hello, World!" > file1.txt
+
+​
+
+2.4) Use the nano command line editor to create file called file2.txt and add the following content based on your own preferences:
+
+A favourite movie
+
+A favourite song
+
+A favourite food
+
+sudo nano file2.txt
+
+2.5) Generate a hash for file1.txt using the MD5 hash function:
+
+md5sum file1.txt
+
+What is the md5 hash?
+
+
+| ​ |
+| --- |
+
+
+2.6) Generate a hash for file1.txt using the sha384 hash function:
+
+What is the sha384 hash?
+
+
+| ​ |
+| --- |
+
+
+2.7) Generate a hash for file1.txt using the sha512 hash function:
+
+What is the sha512 hash?
+
+
+| ​ |
+| --- |
+
+
+2.8) Generate a hash for file2.txt using the MD5 hash function:
+
+What is the md5 hash?
+
+
+| ​ |
+| --- |
+
+
+2.9) Generate a hash for file2.txt using the sha384 hash function:
+
+What is the sha384 hash?
+
+
+| ​ |
+| --- |
+
+
+2.10) Generate a hash for file2.txt using the sha512 hash function:
+
+What is the sha512 hash?
+
+
+| ​ |
+| --- |
+
+
+2.11) Open file2.txt and save it as a file3.txt. Important: (ensure that you do not make any changes to the content).
+
+Generate a hash for file3.txt using the sha512 hash function:
+
+What is the sha512 hash?
+
+
+| ​ |
+| --- |
+
+
+2.12) Open file3.txt and make a SINGLE MINOR change. For example, add a space OR comma OR full stop to the end of single line. Save the file.
+
+Generate a hash for file3.txt using the sha512 hash function:
+
+What is the sha512 hash?
+
+
+| ​ |
+| --- |
+
+
+Taskset 03: Generate a Hash-based Message Authentication Code (HMAC)
+
+For this taskset you will use a hash function to generate a secret key that can be used to verify the integrity and the authenticity of a message.
+
+3.1) Read about the concept of HMACs here: https://www.ccexpert.us/catalyst-switch/hmac-explained.html.
+
+3.2) Generate a secret key for HMAC (Hash-based Message Authentication Code).
+
+At a terminal, type the following:
+
+openssl rand -hex 16
+
+Understanding this command: The openssl rand -hex 16 command generates a random hexadecimal string of 16 bytes (32 characters). A breakdown of the command is a s follows:
+
+openssl: This is the command-line tool for using the OpenSSL library, which provides cryptographic functions and tools.
+
+rand: This is a subcommand of OpenSSL used for generating random data.
+
+-hex: This option specifies that the output should be in hexadecimal format.
+
+16: This argument specifies the number of bytes to generate. In this case, it's generating 16 bytes of random data.
+
+What is the 16 bytes of random data that you generated?
+
+
+| ​ |
+| --- |
+
+
+3.3)  Use OpenSSL to generate a specific HMAC for a file of your own choice. Type:
+
+openssl dgst -sha256 -hmac "<secret_key>" file1.txt
+
+Replace <secret_key> with the 16 bytes of random data that you generated in task 3.2).
+
+Understanding this command: The openssl dgst command is used for message digest operations using OpenSSL. In this specific command:
+
+-sha256: Specifies the hash algorithm to be used, in this case, SHA-256.
+
+-hmac "<secret_key>": Specifies that the HMAC (Hash-based Message Authentication Code) should be computed, and it requires a secret key. Replace <secret_key> with the actual secret key you want to use.
+
+file1.txt: The name of the file for which the HMAC is calculated.
+
+What is the "HMAC-SHA2-256(your_file_name.txt) value? Where *your_file_name.txt *is the name of the file that you generated the HMAC for.
+
+
+| ​ |
+| --- |
+
+
+Taskset 04: File Encryption and Decryption
+
+For this taskset you will use gpg (GNU Privacy Guard) to perform file-level encryption.
+
+4.1) Encrypt a file
+
+gpg -c myfile.txt
+
+Understanding this command: gpg: This is the command-line interface for Gnu Privacy Guard, a widely used encryption tool.
+
+-c: This option tells GPG to encrypt the file.
+
+myfile.txt: This is the name of the file you want to encrypt. The specified file (myfile.txt) will be replaced with an encrypted version, and the original file will no longer be accessible without decrypting it.
+
+When you run this command, GPG will prompt you to enter a passphrase or password. This passphrase will be used to encrypt and later decrypt the file.
+
+4.2) Decrypt a file
+
+sudo gpg myfile.txt.gpg
+
+Where myfile.txt.gpg is the name of the encrypted file that you want to decrypt. You will be prompted for a passphrase to decrypt the file.
+
+Taskset 05: Secure File Deletion
+
+For this taskset you will use the shred tool to securely delete a file.
+
+5.1) Type the following command
+
+shred -u myfile.txt
+
+Understanding this command:
+
+The command shred -u myfile.txt does the following:
+
+Overwrites the content of the file myfile.txt with random data multiple times to securely delete its original content, making it more difficult for someone to recover the original data.
+
+After the overwriting process is complete, the -u option ensures that the file is unlinked or removed from the file system.
+
+This command is often used when there is a need to permanently delete sensitive information from a file and ensure that it cannot be easily recovered.
+
+IMPORTANT NOTE: The effectiveness of shred can depend on factors such as the file system and storage medium. In some cases, secure deletion may not be guaranteed due to features like wear leveling in solid-state drives (SSDs).
+
+​
+
+Taskset 06: Data-in-Flight Protection in Linux
+
+For this taskset you will establish a secure connection to a remote device using ssh and copy files between two systems securely using scp.
+
+Requirements:
+
+Kali Linux
+
+Ubuntu Gateway
+
+6.1) Connect from Kali to the Ubuntu Gateway using ssh. Type:
+
+sudo ssh student@<ip address of ubuntu gateway>
+
+You will be prompted for the Kali password, followed by the password for the Ubuntu Gateway VM (Student1). If connected successfully, your terminal prompt will change to that of the host you have connected to.
+
+Note: Once you have connected via SSH successfully, disconnect the SSH connection.
+
+​
+
+6.2) Use secure Copy (SCP) between the Kali VM and the Ubuntu Gateway VM. Type:
+
+scp /path/to/local/file user@destination_machine:/path/to/remote/directory
+
+Understanding this command: The scp command is used for secure copy, and it is typically used to copy files or directories between hosts over a secure, encrypted SSH connection.
+
+scp: The command itself, which stands for secure copy.
+
+/path/to/local/file: The path to the local file on the machine where the command is being executed. This is the file that you want to copy.
+
+user@destination_machine: The username (user) and the address (destination_machine) of the remote machine where you want to copy the file.
+
+:/path/to/remote/directory: The destination path on the remote machine where you want to copy the file. It can be a directory or a specific filename.
+
+Notes and Guidance
+
+Ensure you understand the purpose and implications of each command before executing them.
+
+Document your observations and any issues encountered during the lab activity.
+
+Reflect on the importance of these practices in enhancing security and managing identities and credentials effectively.
+
+Reflect on the importance of these practices in a real-world scenario and discuss potential security implications.
+
+The activities in this Portfolio will form part of the In-class Test
+
+Submission Tasks
+
+To receive a mark for this work, you must:
+
+Create a narrated video demonstration of your Juice Shop Part 01 requirement and save it to your OneDrive. 
+
+Important note: You must create your own video and narration of your own work. Students who submit the work of others using their own voice, will be referred for an academic misconduct meeting.
+
+Complete Part 02 and Part 03 of this coursework brief.
+
+Save this portfolio document using the following naming convention:
+
+Firstname_Lastname_ModuleCode_Portfolio_02.pdf
+
+Upload your saved portfolio document to the Portfolio 02 submission link on Moodle.
+
+Complete the Portfolio 02 Coursework Quiz
+
+End of Portfolio :-)

@@ -1,0 +1,127 @@
+--- Page 1 ---
+
+| Programme | MSc Web Development | - | - |
+| --- | --- | --- | --- |
+| Module Title | Web Design 2 | - | - |
+| Module Code | DIG-L002-0 | - | - |
+| - | Year 1 | Assessment | Web site |
+| Module Level | - | - | - |
+| - | - | Type(s) | - |
+| - | - | - | - |
+| Word Length / | N/A | % contribution to | 80 |
+| Duration | - | module mark | - |
+| Deadline (date & | See Assessment table on Moodle | - | Zip file, uploaded to Moodle |
+| - | - | Format/Location | - |
+| time) for | - | - | - |
+| - | - | of submission | - |
+| Submission | - | - | - |
+| - | - | - | - |
+| Assessment | See Moodle | - | - |
+| - | - | - | - |
+| Feedback date: | - | - | - |
+| - | - | - | - |
+| Learning Outcomes This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the learning outcomes listed below. By successfully completing this assessment, you will be able to: - Show a systematic understanding of the foundations of programming for front-end (client-side) Web design (HTML, CSS, JavaScript), and the technical infrastructure for making web sites available to the public - Incorporate Human-Computer Interaction (HCI) principles into technical work - Perform user research to enable digital product development - Show the ability to analyse own professional practice critically, to respond to feedback and to learn from this process. | - | Employability and Professional Skills This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skill(s) which is(are) critical in professional context and jobs. By successfully completing this assessment, you will be able to: - Develop professional-standard web sites - Draw from HCI and UX Design principles in the design and development of web solutions - Document your own work in a professional-standard portfolio | - |
+| Assessment Requirements | - | - | - |
+
+--- Page 2 ---
+
+| The goal of the project is to build an interactive website using JavaScript, showcasing their ability to apply the concepts and techniques learned in the class to create a functional and user-friendly website. This project will be evaluated based on design, functionality, code quality, and adherence to the requirements outlined in the brief. Build an interactive website using JavaScript, or any JS library/framework of your choice. Your website must include: • A landing page and at least three subpages linked via routing • Component-based project architecture • Fully responsive design • Global styling configuration • Shared state • Compliance with accessibility and GDPR guidelines • A form with input validation • Integration with an external API to fetch and display data, including: o At least one search filter, such as date range selection, search bar, category filters, or sorting o A list of public APIs can be found at https://github.com/public- apis/public-apis |
+| --- |
+| Marking Criteria • Technical skills [40%] o Does the website contain all of the required features, as given in the assessment? o Is the website fully functional, including responsiveness across devices? o Is the website reasonably bug-free and robust? • Design [40%] o Do the website’s aesthetic choices reflect the choice of users, as given in the Project Presentation? o Is the website consistent in its appearance and functionality between pages? o Does the design conform to accessibility requirements? • Code readability [20%] o Is your code accessible and readable? o Does your file structure demonstrate an understanding of the requirements of professional web development? |
+| Assessment Success Guidance • Take advantage of the feedback offered in the Project Presentation to enhance and develop your website. • Carefully examine the required features, in order to make sure there are no missing components. |
+| Assessment Guidance Support and Formative Feedback • Formative feedback will be available in class in the weeks leading up to the submission date. |
+
+--- Page 3 ---
+
+| • Students are expected to incorporate feedback from their Project Presentations into their final outcomes. |
+| --- |
+| Contact for Queries/ who you can contact for further information or queries Contact the module tutor Harry Solomons (harry.solomons@roehampton.ac.uk) |
+| Use of Artificial Intelligence (AI) 1. The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. 2025 AI Student Guide What AI Can and Can’t Do • AI can become a useful learning assistant and help you: • Summarise articles and concepts. • Brainstorm ideas. • Improve your writing (grammar, spelling, structure). • Find sources for initial searches (always verify them!). • Quiz you on your knowledge. • Help you develop a studying schedule. • Organise and summarise your notes. • Develop your critical thinking skills, through interactive dialogue. • Develop your inquiring skills. AI should not be used to: • Create entire assessments for you. Always check the assessment guidance about what is permitted and what is not. AI should not simply do the work for you. • Take exams or quizzes on your behalf. • Generate ideas or arguments that you don’t understand (although AI can explain ideas and arguments to you). • Fake citations or research. Stay Honest and Transparent • Acknowledge all use of AI, just as you would for other help; Cite AI generated content. • Don’t submit AI-generated work as your own—it’s considered academic misconduct. • Remember: AI can make mistakes! Always fact-check before using its output. • Remember: AI can be biased and reproduce inappropriate or excluding social stereotypes. • Make sure you read critically to verify the AI outputs. You are responsible for the outputs generated by AI tools. |
+
+--- Page 4 ---
+
+| • You need to have a good understanding and knowledge of the subject to critically evaluate AI outputs and prompt further. Use AI to Learn, Not as a Shortcut • AI is a tool, not a replacement for your own thinking. Use it to: • Get help structuring your thoughts. • Check your understanding of a topic. • Improve your writing, creative process or knowledge development while keeping your unique voice and using your own skills. • To test your knowledge. • Avoid relying on AI so much that you miss out on developing your skills and alienating your-self from your studies and education. • Early research studies on the effects of AI on people indicate that over-use and - reliance on AI can alienate people from their own tasks and negatively impact the long-term learning of students and professional development of workers. Learning about the subject of study well is paramount to check what AI is producing for accuracy and appropriateness and be able to prompt and interrogate it further, using your knowledge and critical skills. |
+| --- |
+| Referencing Any references should use the Harvard format. For help with this, please consult Cite Them Right in the “Useful Resources” section on Moodle. |
+| Mitigating circumstances/late penalties Sometimes circumstances outside of your control may affect your studies and might prevent you from submitting work on time or attending an exam. The University offers the ability for students to request additional time to complete an assessment or to defer an examination to a later date. If you are finding yourself in such a situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union (RSU) or someone in the Wellbeing team first, who can support you. Further details can be found on the mitigating circumstances portal. If you do not apply for or are not approved for Mitigating Circumstances, late penalties will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% (delete as appropriate); if it is over 14 days late, it will not be marked. |
+| Resubmissions and Reassessment If you are required to resubmit this assessment or take part in reassessment, you will be notified via Moodle and your student email. Please ensure you check both regularly. Any reassessment tasks will follow the same learning outcomes and criteria. |
+| Submission Checklist Before you submit, ask yourself: Have I fully answered the assessment brief? |
+
+| Sometimes circumstances outside of your control may affect your studies and might |
+| --- |
+| prevent you from submitting work on time or attending an exam. |
+| The University offers the ability for students to request additional time to complete an |
+| assessment or to defer an examination to a later date. If you are finding yourself in such a |
+| situation, please speak to your Academic Guidance Tutor, the Roehampton Student Union |
+| (RSU) or someone in the Wellbeing team first, who can support you. Further details can |
+| be found on the mitigating circumstances portal. |
+| If you do not apply for or are not approved for Mitigating Circumstances, late penalties |
+| will apply. If work is submitted up to 14 days late, the mark will be capped at 40%/50% |
+| (delete as appropriate); if it is over 14 days late, it will not be marked. |
+
+--- Page 5 ---
+
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+        •  Have I met the word count and formatting requirements?                 
+                                                                                  
+        •  Is my referencing complete and accurate?                               
+        •  Have I declared any AI use honestly?                                   
+                                                                                  
+        •  Have I proofread my work?                                              
+                                                                                  
+        •  Am I submitting through the correct platform before the deadline?      
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
