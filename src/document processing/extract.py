@@ -14,7 +14,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def iter_docx_blocks(doc):
-#Yields paragraphs and tables in their exact document reading order."""
+#Yields paragraphs and tables in their exact document reading order.
     for child in doc.element.body:
         if child.tag.endswith("p"):
             yield Paragraph(child, doc)
@@ -23,7 +23,7 @@ def iter_docx_blocks(doc):
 
 
 def format_complex_docx_table(table: Table) -> str:
-#Extracts DOCX tables while handling merged cells and side-by-side columns."""
+#Extracts DOCX tables while handling merged cells and side-by-side columns.
     rows_data = []
 
     for row in table.rows:

@@ -35,7 +35,7 @@ class SimpleVectorStore:
         print(
             f"Generating embeddings for {len(texts)} chunks using {self.model}..."
         )
-        # normalise_embeddings=True allows dot product to equal cosine similarity
+        # normalise_embeddings = True allows dot product to equal cosine similarity
         embeddings_matrix = self.model.encode(
             texts,
             show_progress_bar=True,

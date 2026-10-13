@@ -1,13 +1,13 @@
 #%%
 from pathlib import Path
-from pdf_exporter import markdown_to_pdf
+from notebooks.pdf_exporter import markdown_to_pdf
 import os
 import time
 from dotenv import load_dotenv
 from embedder import SimpleVectorStore
 from google import genai
 import streamlit as st
-from brief_generator import LecturerBriefGenerator
+from notebooks.brief_generator import LecturerBriefGenerator
 from student_feedback import StudentFeedbackEngine
 
 
