@@ -1,11 +1,4 @@
-"""db.py - all MySQL access for the RAG system.
 
-Other files (chunking.py, student_feedback.py, app.py) should import from here
-instead of opening their own connections.
-
-Set the password as an environment variable before starting Jupyter/Streamlit:
-    Windows (then restart the terminal):  setx MYSQL_PASSWORD "your-password"
-"""
 
 import os
 from typing import Any, cast

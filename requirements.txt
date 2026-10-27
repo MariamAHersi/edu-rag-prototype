@@ -1,4 +1,29 @@
-# Extraction
+# PDF / document extraction
 pdfplumber
+PyMuPDF
 python-docx
+
+# Data validation
+pydantic
+
+# AI / structured extraction
+google-genai
+
+# Environment variables
+python-dotenv
+
+# Database
+mysql-connector-python
+
+# RAG / embeddings
 sentence-transformers
+
+# Data processing
+pandas
+
+# Jupyter notebooks
+jupyter
+ipykernel
+
+# Prototype interface
+streamlit

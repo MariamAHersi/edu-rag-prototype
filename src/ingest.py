@@ -9,7 +9,11 @@ from google.genai import types
 from pydantic import ValidationError
 from dotenv import load_dotenv
 import mysql.connector
-from pathlib import Path
+from schema import AssessmentBrief
+
+
+#%%
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 
 # %%
 load_dotenv()
@@ -17,8 +21,9 @@ load_dotenv()
 def extract_text(pdf_path: str) -> str:
     doc = fitz.open(pdf_path)
     pages = []
-    for i, page in enumerate(doc, start=1):
-        pages.append(f"[PAGE {i}]\n{page.get_text()}")
+    for i in range(len(doc)):
+        page = doc[i]
+        pages.append(f"[PAGE {i + 1}]\n{page.get_text()}")
     return "\n\n".join(pages)
 
 def extract_brief(text, max_attempts=6):
@@ -40,9 +45,13 @@ def extract_brief(text, max_attempts=6):
                     response_schema=AssessmentBrief,
                 ),
             )
+            if response.text is None:
+                raise ValueError("Gemini returned no response text")
+            
             return AssessmentBrief.model_validate_json(response.text)
+        
         except errors.ServerError as e:
-            wait = 2 ** attempt * 5   # 5, 10, 20, 40, 80, 160 seconds
+            wait = 2 ** attempt * 5   
             print(f"Server error {e.code}, retrying in {wait}s (attempt {attempt + 1}/{max_attempts})")
             time.sleep(wait)
 
@@ -65,70 +74,6 @@ if __name__ == "__main__":
     print("\n=== EXTRACTED ===")
     print(brief.model_dump_json(indent=2))
 
-
-# %%
-def extract_images(pdf_path, out_root="extracted_images", min_size=100):
-    """Save meaningful images from a PDF and return a record of each one."""
-    pdf_path = Path(pdf_path)
-    out_dir = Path(out_root) / pdf_path.stem
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    doc = fitz.open(pdf_path)
-    seen_xrefs = set()
-    results = []
-
-    for page_index in range(len(doc)):
-        page = doc[page_index]
-        page_number = page_index + 1
-
-        for image_index, img in enumerate(page.get_images(full=True), start=1):
-            xref = img[0]
-            if xref in seen_xrefs:
-                continue  # same image repeated (e.g. logo in a header)
-            seen_xrefs.add(xref)
-
-            base = doc.extract_image(xref)
-            if base["width"] < min_size or base["height"] < min_size:
-                continue  # probably an icon or decoration
-
-            image_path = out_dir / f"page{page_number}_img{image_index}.{base['ext']}"
-            image_path.write_bytes(base["image"])
-
-            results.append({
-                "source_file": pdf_path.name,
-                "page_number": page_number,
-                "image_path": str(image_path),
-                "width": base["width"],
-                "height": base["height"],
-            })
-
-    print(f"{pdf_path.name}: saved {len(results)} images")
-    return results
-
-# %%
-MIME = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "webp": "image/webp"}
-
-def describe_image(image_path):
-    ext = Path(image_path).suffix.lstrip(".").lower()
-    if ext not in MIME:
-        return None  # unsupported format, skip for now
-
-    client = genai.Client()
-    prompt = (
-        "This image comes from a university assessment brief. Describe only what is visible. "
-        "Transcribe any text in it. If it is an example, diagram or screenshot, "
-        "explain what it shows. If it is purely decorative (logo, banner, icon), "
-        "reply with exactly: DECORATIVE"
-    )
-    response = client.models.generate_content(
-        model=MODEL,
-        contents=[
-            types.Part.from_bytes(data=Path(image_path).read_bytes(), mime_type=MIME[ext]),
-            prompt,
-        ],
-    )
-    return response.text.strip()
-
 # %%
 load_dotenv()
 
@@ -147,8 +92,8 @@ conn.close()
 def get_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",  # or your own MySQL user
-        password=os.environ["MYSQL_PASSWORD"],  # don't hard-code it
+        user="root",  
+        password=os.environ["MYSQL_PASSWORD"],  
         database="rag_system",
     )
 
@@ -213,7 +158,12 @@ def save_rubric(brief, source_file):
     try:
         cur = conn.cursor()
         cur.execute("SELECT id FROM assessments WHERE source_file = %s", (source_file,))
-        assessment_id = cur.fetchone()[0]
+        row = cur.fetchone()
+
+        if row is None:
+            raise ValueError(f"No assessment saved for {source_file}")
+
+        assessment_id = row[0]
 
         # clear old rubric so re-running doesn't duplicate rows
         cur.execute("DELETE FROM criteria WHERE assessment_id = %s", (assessment_id,))
@@ -233,49 +183,7 @@ def save_rubric(brief, source_file):
     finally:
         conn.close()
 
-# %%
-MIME = {"png": "image/png", "jpg": "image/jpeg", "jpeg": "image/jpeg", "webp": "image/webp"}
 
-def describe_image(image_path):
-    ext = Path(image_path).suffix.lstrip(".").lower()
-    if ext not in MIME:
-        return None  # unsupported format, skip for now
-
-    client = genai.Client()
-    prompt = (
-        "This image comes from a university assessment brief. Describe only what is visible. "
-        "Transcribe any text in it. If it is an example, diagram or screenshot, "
-        "explain what it shows. If it is purely decorative (logo, banner, icon), "
-        "reply with exactly: DECORATIVE"
-    )
-    response = client.models.generate_content(
-        model=MODEL,
-        contents=[
-            types.Part.from_bytes(data=Path(image_path).read_bytes(), mime_type=MIME[ext]),
-            prompt,
-        ],
-    )
-    return response.text.strip()
-
-# %%
-def save_images(source_file, image_records):
-    assessment_id = get_assessment_id(source_file)  # same helper you already have
-    conn = get_connection()
-    try:
-        cur = conn.cursor()
-        cur.execute("DELETE FROM task_images WHERE assessment_id = %s", (assessment_id,))
-        for rec in image_records:
-            description = describe_image(rec["image_path"])
-            if description is None or description == "DECORATIVE":
-                continue
-            cur.execute(
-                "INSERT INTO task_images (assessment_id, page_number, image_path, description) "
-                "VALUES (%s, %s, %s, %s)",
-                (assessment_id, rec["page_number"], rec["image_path"], description),
-            )
-        conn.commit()
-    finally:
-        conn.close()
 
 # %%
 brief = extract_brief(text)
@@ -295,6 +203,5 @@ save_rubric(brief, "my_brief.pdf")
 # %%
 pdf_path = "sample_pdf.pdf"
 filename = "my_brief.pdf" 
-images = extract_images(pdf_path)
-save_images(filename, images)
+
 

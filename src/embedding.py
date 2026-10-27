@@ -1,11 +1,3 @@
-"""embedding.py - local embeddings and semantic search (no API, no cost).
-
-Adapted from the old embedder.py (SimpleVectorStore). Changes:
-- chunks come straight from MySQL via chunking.py (no chunks.json step)
-- search is filtered to ONE assessment
-- the index rebuilds itself automatically when the stored text changes
-- the index is saved next to this file, so paths don't depend on where you run from
-"""
 
 import hashlib
 import json

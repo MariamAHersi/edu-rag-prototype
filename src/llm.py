@@ -1,16 +1,3 @@
-"""llm.py - the one place the app talks to Gemini.
-
-Features:
-- retries with a growing pause when Gemini is overloaded (503) or rate limited (429)
-- optional fallback model if the main one keeps failing or has been retired (404)
-- a disk cache, so the same request is never sent (or paid for) twice
-
-Environment variables:
-    GEMINI_API_KEY          required (the google-genai library reads it automatically)
-    GEMINI_MODEL            optional, defaults to gemini-3.8-flash
-    GEMINI_FALLBACK_MODEL   optional, e.g. a flash-lite model from client.models.list()
-"""
-
 import hashlib
 import os
 import time

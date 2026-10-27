@@ -1,15 +1,4 @@
-"""chunking.py - split the long text fields stored in MySQL into searchable chunks.
-
-Only the long free-text sections are chunked (task, success guidance, layout,
-referencing, ...). Facts, criteria, learning outcomes and the checklist stay in
-SQL, because they are already structured.
-
-Every chunk carries metadata so a search can be limited to one assessment:
-    chunk_id, assessment_id, module_code, module_title, source_file, field, content
-"""
-
 import re
-
 import db
 
 # Target size of a chunk in characters (roughly 150-200 words).

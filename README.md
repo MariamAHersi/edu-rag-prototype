@@ -2,167 +2,100 @@
 
 A prototype relational database developed during my **Data Analyst – Digital Repository Internship at the University of Roehampton**.
 
-The project explores how information contained within university assessment briefs can be extracted, standardised and stored in a centralised relational database.
+The project looks at how information from university assessment briefs can be extracted, organised and stored in one central database.
 
-The database is designed to provide a structured foundation for future applications involving assessment management, student support, curriculum analysis, educational analytics and AI.
+The idea is to make assessment information easier to work with and provide a base for things like assessment calendars, staff analysis, student tools and future AI applications.
 
 ---
 
-## 🎯 Project Aim
+## Project Aim
 
-The main aim of this project is to explore the feasibility of creating a **centralised database of university assessment information**.
+The main aim of this project is to explore whether assessment information from different university documents can be brought together into one structured database.
 
-Assessment information is often distributed across individual documents, making it difficult to obtain a consistent overview across modules, programmes or departments.
+At the moment, assessment information can be spread across different documents and modules. This makes it harder to get an overview of things such as assessment types, deadlines, weightings and requirements.
 
-This project addresses this by extracting key information from assessment briefs and converting it into a structured format using a **Pydantic schema** before storing it in a relational database.
+For this prototype, I extract information from assessment briefs, validate it using a **Pydantic schema**, and then store it in a **MySQL relational database**.
 
-The project explores how this centralised dataset could eventually support questions such as:
+Some of the questions this could eventually help answer are:
 
 - What assessments are taking place across different modules?
 - When are students' upcoming deadlines?
-- Are multiple assessments clustered around the same period?
-- How do assessment types and requirements vary between modules?
-- Are assessment briefs consistent across different modules or departments?
-- Could assessment data identify wider issues with modules, teaching or assessment design?
-- Could additional academic data be combined with assessment information to identify areas where students may be struggling?
-- Could students have a centralised view of their assessment deadlines and requirements?
-- Could the database provide a foundation for future AI-supported applications?
+- Are several assessments taking place around the same time?
+- How do assessment types and requirements differ between modules?
+- Are there differences in how assessment briefs are structured?
+- Can assessment data be used to support curriculum or assessment review?
+- Could additional university data be combined with assessment data to identify areas where students may need more support?
+- Could students have one place to view their assessment deadlines and requirements?
+- Could the database be used as the basis for future AI tools?
 
-The current project focuses on **building the data foundation**, rather than implementing all of these potential applications.
+The current project focuses on **building the database and data structure**, rather than implementing all of these ideas.
 
 ---
 
-# 🏗️ Project Architecture
+# How It Works
 
-The current workflow is:
+The current process is:
 
 ```text
-University Assessment Briefs
-          ↓
+Assessment Briefs
+       ↓
 Document Extraction
-          ↓
-Pydantic Data Validation
-          ↓
-Structured Assessment Records
-          ↓
-Relational Database
-          ↓
+       ↓
+Pydantic Validation
+       ↓
+Structured Assessment Data
+       ↓
+MySQL Database
+       ↓
 Future Applications
 ```
 
-The database is designed to separate the **data layer** from potential applications that may be built on top of it.
+The main idea is to keep the assessment data separate from any application that might use it later.
 
 For example:
 
 ```text
-                    ┌──────────────────────┐
-                    │ Assessment Briefs    │
-                    │ PDF / DOCX           │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Document Processing  │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Pydantic Schema      │
-                    │ Validation           │
-                    └──────────┬───────────┘
-                               ↓
-                    ┌──────────────────────┐
-                    │ Relational Database  │
-                    │ MySQL                │
-                    └──────────┬───────────┘
-                               ↓
-          ┌────────────────────┼────────────────────┐
-          ↓                    ↓                    ↓
-    Student Tools       Staff Analytics       AI Applications
+        Assessment Briefs
+          PDF / DOCX
+               ↓
+       Document Processing
+               ↓
+        Pydantic Schema
+          & Validation
+               ↓
+        MySQL Database
+               ↓
+      ┌────────┼────────┐
+      ↓        ↓        ↓
+   Student    Staff     AI
+    Tools    Analysis  Tools
 ```
+
+This means that future applications would not need to repeatedly process the original assessment documents.
 
 ---
 
-# 📊 Data Extraction
+# Data Extraction
 
-Assessment briefs contain information in different formats and layouts. The project therefore uses a structured **Pydantic schema** to standardise the information extracted from each document.
+Assessment briefs do not all follow the same format, so the project uses a **Pydantic model** to give the extracted information a consistent structure.
 
-The current schema captures information such as:
+The current schema includes:
 
 | Field | Description |
 |---|---|
-| Programme | Programme associated with the assessment |
-| Module | Module associated with the assessment |
+| Programme | Programme linked to the assessment |
+| Module | Module linked to the assessment |
 | Level | Academic level |
 | Assessment Type | Type of assessment |
-| Weight | Percentage contribution to the module |
-| Word Count | Required word count where applicable |
+| Weighting | Percentage contribution to the module |
+| Word Count | Required word count |
 | Duration | Assessment duration where applicable |
 | Deadline | Assessment deadline |
 | Submission Format | Required submission format |
 | Feedback | Information about feedback |
-| Source File | Original document used to create the record |
+| Source File | Original document |
 
-The schema can be modified depending on the requirements of future projects.
-
----
-
-# 🗄️ Relational Database
-
-The extracted information is stored in a **MySQL relational database**.
-
-A relational database was selected because the project requires structured, consistent and queryable information that can eventually be related across:
-
-- Modules
-- Programmes
-- Assessments
-- Departments
-- Assessment types
-- Deadlines
-- Assessment requirements
-
-The database can therefore act as a **single structured source of assessment information** rather than requiring applications to repeatedly process the original documents.
-
----
-
-# 🚀 Recreating the Database for a Future University Project
-
-The database structure is designed to be reusable for future university projects.
-
-The following process can be used to recreate the database using a new collection of assessment briefs.
-
-## 1. Collect the assessment documents
-
-Create a directory containing the assessment briefs you want to process.
-
-For example:
-
-```text
-assessment_briefs/
-├── module_a_brief.pdf
-├── module_b_brief.pdf
-├── module_c_brief.docx
-└── module_d_brief.pdf
-```
-
-Only use documents that you are authorised to process.
-
----
-
-## 2. Extract the document content
-
-Use the document-processing scripts to extract text and/or tables from the assessment briefs.
-
-The project currently supports documents such as:
-
-- PDF
-- DOCX
-
-The extraction process should preserve as much of the original assessment information as possible.
-
----
-
-## 3. Define the data schema
-
-Create or modify the Pydantic schema according to the information that needs to be captured.
+The schema can be changed depending on what information a future project needs.
 
 For example:
 
@@ -181,28 +114,80 @@ class AssessmentBrief(BaseModel):
     source_file: str
 ```
 
-The schema acts as a standard structure for converting different assessment documents into consistent records.
+Using a schema also makes it easier to spot missing or incorrectly formatted information before it is added to the database.
 
 ---
 
-## 4. Validate the extracted information
+# MySQL Database
 
-Before inserting records into the database, validate the extracted information against the Pydantic schema.
+The extracted information is stored in a **MySQL relational database**.
 
-This helps identify:
+A relational database was used because the information is structured and can be queried and related across things such as:
+
+- Modules
+- Programmes
+- Assessments
+- Assessment types
+- Deadlines
+- Assessment requirements
+
+The database can therefore act as one structured place for assessment information instead of having to search through individual documents each time.
+
+---
+
+# Recreating the Database
+
+One of the aims of the project is for the database structure to be reusable if the project is continued or used with another collection of university documents.
+
+The basic process is:
+
+### 1. Collect the assessment documents
+
+Place the assessment briefs you want to process into a folder.
+
+For example:
+
+```text
+assessment_briefs/
+├── module_a_brief.pdf
+├── module_b_brief.pdf
+├── module_c_brief.docx
+└── module_d_brief.pdf
+```
+
+Only use documents that you have permission to process.
+
+### 2. Extract the document content
+
+The document processing code extracts information from the assessment briefs.
+
+The current prototype works with:
+
+- PDF
+- DOCX
+
+The aim is to keep as much useful information from the original documents as possible.
+
+### 3. Create or update the schema
+
+The Pydantic model defines the information that should be stored.
+
+The fields can be changed depending on the requirements of the project.
+
+### 4. Validate the data
+
+The extracted information is checked against the Pydantic model before being added to MySQL.
+
+This helps identify things such as:
 
 - Missing information
 - Incorrect data types
 - Unexpected values
 - Inconsistent formatting
 
-Validation is particularly important when processing assessment briefs created by different people or departments.
+This is particularly useful when assessment briefs come from different modules or departments.
 
----
-
-## 5. Create the MySQL database
-
-Create a MySQL database for the project.
+### 5. Create the MySQL database
 
 For example:
 
@@ -210,17 +195,13 @@ For example:
 CREATE DATABASE assessment_repository;
 ```
 
-Then create the required tables according to the project's database schema.
+The required tables can then be created based on the database design.
 
-The database structure can be adapted depending on the requirements of the new university or department.
+### 6. Set up the database connection
 
----
+The Python code uses `mysql-connector-python` to connect to MySQL.
 
-## 6. Configure the database connection
-
-The Python application connects to MySQL using `mysql.connector`.
-
-Database credentials should be stored using environment variables rather than directly inside the source code.
+Database credentials should be kept outside the code using environment variables.
 
 For example:
 
@@ -231,17 +212,13 @@ DB_PASSWORD=your_password
 DB_NAME=assessment_repository
 ```
 
-**Do not commit passwords, API keys or other credentials to GitHub.**
+Do not commit passwords, API keys or other credentials to GitHub.
 
----
+### 7. Insert the data
 
-## 7. Insert the structured records
+Once the documents have been extracted and validated, the structured records can be inserted into MySQL.
 
-Once the documents have been processed and validated, the resulting records can be inserted into the MySQL database.
-
-The database should retain a reference to the original source document where possible.
-
-For example:
+The original source file is also kept with the record so that the database entry can be traced back to the document it came from.
 
 ```text
 Assessment Brief
@@ -255,11 +232,9 @@ Create structured record
 Insert into MySQL
 ```
 
----
+### 8. Query the database
 
-## 8. Query the database
-
-Once populated, the database can be queried using SQL.
+Once the data is stored, SQL can be used to retrieve information.
 
 For example:
 
@@ -273,33 +248,26 @@ FROM assessments
 ORDER BY deadline;
 ```
 
-This could provide a foundation for creating a centralised assessment calendar or dashboard.
+This could be used to create something like a centralised assessment calendar.
 
-Other possible queries could investigate:
+Other queries could look at:
 
-```sql
--- Assessments taking place within a particular period
-
--- Assessment types used across a programme
-
--- Modules with multiple assessments
-
--- Assessment weighting across modules
-
--- Missing assessment information
-
--- Assessment deadlines clustered around the same period
-```
+- Assessments within a particular time period
+- Assessment types across a programme
+- Modules with multiple assessments
+- Assessment weighting
+- Missing assessment information
+- Deadlines that are close together
 
 ---
 
-# 💡 Potential Applications
+# Potential Applications
 
-The database itself is not intended to be the final product. Instead, it provides a structured foundation that future applications can build upon.
+The database is the main part of this prototype, but there are several things that could potentially be built on top of it.
 
-## 👩‍🎓 Student Applications
+## Student Applications
 
-A student-facing application could provide a centralised view of assessment information across their modules.
+A student-facing application could bring assessment information from different modules into one place.
 
 For example:
 
@@ -307,22 +275,22 @@ For example:
 My Assessments
 
 Data Science
-  └── Coursework
-      Deadline: 12 November
-      Weighting: 40%
+└── Coursework
+    Deadline: 12 November
+    Weighting: 40%
 
 Artificial Intelligence
-  └── Project
-      Deadline: 18 November
-      Weighting: 50%
+└── Project
+    Deadline: 18 November
+    Weighting: 50%
 
 Software Development
-  └── Report
-      Deadline: 25 November
-      Weighting: 30%
+└── Report
+    Deadline: 25 November
+    Weighting: 30%
 ```
 
-Potential functionality could include:
+Possible features could include:
 
 - Upcoming deadlines
 - Assessment requirements
@@ -331,99 +299,98 @@ Potential functionality could include:
 - Assessment types
 - Workload planning
 - Identifying clusters of deadlines
-- Comparing assessment requirements across modules
+- Comparing requirements across modules
 
 ---
 
-## 👩‍🏫 Academic and Staff Applications
+## Staff Applications
 
-The database could also support staff-facing analysis.
+The same data could also be useful for academic and professional staff.
 
-Potential applications include:
+For example:
 
 - Comparing assessment structures across modules
-- Reviewing assessment types
-- Identifying assessment workload patterns
+- Looking at the types of assessment being used
+- Identifying periods with a high number of assessments
 - Checking consistency between assessment briefs
-- Identifying missing or unclear assessment information
+- Finding missing or unclear information
 - Supporting curriculum review
-- Analysing assessment design across programmes
+- Looking at assessment design across programmes
 
 ---
 
-## 📈 Educational Analytics
+# Educational Analytics
 
-The structured assessment data could potentially be combined with other university datasets to investigate wider academic issues.
+The assessment database could eventually be combined with other university data.
 
 For example:
 
 ```text
 Assessment Data
-       +
+      +
 Module Data
-       +
+      +
 Student Performance Data
-       +
+      +
 Feedback Data
-       ↓
+      ↓
 Educational Analytics
 ```
 
-This could eventually help investigate questions such as:
+This could allow the university to investigate questions such as:
 
-- Are assessments clustered within particular periods?
-- Are some assessment types associated with particular outcomes?
-- Are there recurring issues across assessment briefs?
+- Are assessments clustered around particular periods?
+- Are there recurring issues with assessment briefs?
 - Are there patterns in student performance?
-- Are there particular areas where students may require additional support?
+- Are there particular areas where students may need additional support?
 
-These applications would require appropriate additional data and permissions and are **outside the scope of the current prototype**.
+However, the current database **cannot answer all of these questions on its own**. Student performance and other academic data would need to be added, along with the appropriate permissions and data protection measures.
 
 ---
 
-# 🤖 Potential AI Applications
+# AI and RAG
 
-The structured database could also provide a foundation for future AI applications.
+The structured database could also be used for future AI applications.
 
-For example, a future RAG or AI assistant could retrieve assessment information from the database rather than repeatedly processing individual documents.
+For example, an AI assistant could retrieve assessment information from the database instead of having to process individual documents each time.
 
-Possible applications include:
+Possible uses include:
 
 - Answering questions about assessment requirements
 - Finding relevant assessment information
 - Comparing assessment briefs
-- Identifying similarities between assessments
+- Finding similarities between assessments
 - Summarising assessment requirements
-- Supporting staff in reviewing assessment documentation
+- Helping staff review assessment documentation
 
-The previous RAG exploration in this project therefore represents **one potential application of the centralised data**, rather than the primary purpose of the database.
+I previously explored a **RAG-based approach** as part of this project. The database changes the role of that work slightly. Rather than the RAG system being the main project, it can be treated as **one possible application of the centralised assessment data**.
 
 ---
 
-# 🔬 Research and Further Investigation
+# Research and Further Investigation
 
-The project also considers research around:
+Some of the areas I am interested in exploring further include:
 
 - Assessment workload and deadline clustering
 - Educational and learning analytics
-- Centralised educational data
+- Centralising educational data
 - Assessment design
 - Student access to assessment information
-- AI applications in higher education
+- AI in higher education
 - Data privacy and security
 - Ethical use of educational data
 
-The research is used to explore how a centralised assessment database could potentially support students, academics and the wider institution.
+The research helps explore whether a centralised assessment database could actually be useful to students, academics and the wider university.
 
 ---
 
-# 🧪 Testing and Evaluation
+# Testing and Evaluation
 
-When recreating the database with a new collection of documents, the extraction process should be evaluated for:
+If the project is continued with more assessment briefs, I would evaluate it based on:
 
 ### Data accuracy
 
-Does the extracted information accurately represent the original assessment brief?
+Does the extracted information match the original assessment brief?
 
 ### Data completeness
 
@@ -431,74 +398,79 @@ Are important fields missing?
 
 ### Consistency
 
-Are similar pieces of information represented in the same format across different documents?
+Are similar pieces of information stored in a consistent way?
 
 ### Scalability
 
-Can the system process assessment briefs from multiple modules and departments?
+Can the process handle assessment briefs from more modules and departments?
 
 ### Adaptability
 
-Can the schema accommodate different assessment types and document structures?
+Can the schema handle different assessment types and document formats?
 
 ### Database integrity
 
-Are the records correctly inserted and stored without duplication or data loss?
+Are records stored correctly without unnecessary duplication or data loss?
 
 ---
 
-# ⚠️ Limitations
+# Limitations
 
-The current prototype has several limitations.
+There are currently a few limitations to the prototype.
 
-### Document variation
+### Different document formats
 
-Assessment briefs may use different layouts, terminology and structures, making consistent extraction difficult.
+Assessment briefs can have very different layouts, wording and structures. This can make automated extraction difficult.
 
 ### Missing information
 
-Some assessment briefs may not contain all of the fields defined by the database schema.
+Not every assessment brief will contain all of the fields in the database.
 
 ### Data quality
 
-The quality of the database depends on the accuracy and consistency of the original documents.
+The quality of the database depends on the quality and consistency of the original documents.
 
 ### Scope
 
-The current prototype focuses primarily on assessment information and does not provide a complete picture of student academic experience.
+The current prototype focuses on assessment information. It does not provide a complete picture of a student's academic experience.
 
-### AI limitations
+### AI
 
-Any future AI functionality would need to consider hallucinations, retrieval accuracy, bias, privacy and security.
+Any future AI functionality would need to consider things such as hallucinations, retrieval accuracy, bias, privacy and security.
 
 ### Student data
 
-The current project does not attempt to make conclusions about individual students. More sensitive student-level analysis would require additional data, appropriate permissions and robust data protection measures.
+The current project does not make conclusions about individual students. Any future work involving student-level data would need additional permissions and appropriate data protection measures.
 
 ---
 
-# 🛠️ Technologies
+# Technologies
 
-The project uses technologies including:
+The project currently uses:
 
 - **Python**
 - **Pydantic** – data validation and structured schemas
 - **MySQL** – relational database
-- **mysql-connector-python** – database connectivity
-- **PDF/DOCX processing libraries** – document extraction
-- **SQL** – querying and managing structured data
+- **mysql-connector-python** – connecting Python to MySQL
+- **PyMuPDF / pdfplumber** – PDF processing
+- **python-docx** – DOCX processing
+- **Google Gemini API** – extracting structured information from assessment documents
+- **Sentence Transformers** – embeddings / previous RAG work
+- **SQL** – querying the database
 - **Git/GitHub** – version control
-
-Additional technologies may be used for future applications built on top of the database.
+- **Streamlit** – prototype interface
+- **Jupyter** – document exploration and testing
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 
-A simplified version of the project structure is:
+The project is still being developed, so the structure may change.
+
+A simplified version is:
 
 ```text
-rag-assessment-repository/
+edu-rag-prototype/
 │
 ├── assessment_briefs/
 │   ├── raw_docs/
@@ -520,11 +492,9 @@ rag-assessment-repository/
 └── README.md
 ```
 
-The exact structure may change as the prototype develops.
-
 ---
 
-# ▶️ Running the Project
+# Running the Project
 
 Clone the repository:
 
@@ -532,35 +502,35 @@ Clone the repository:
 git clone <repository-url>
 ```
 
-Navigate into the project:
+Move into the project folder:
 
 ```bash
-cd rag-assessment-repository
+cd edu-rag-prototype
 ```
 
-Create a Python environment:
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the environment on Windows:
+Activate it on Windows:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-Install the required dependencies:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Configure the required database environment variables.
+Set up the required database environment variables before running the ingestion code.
 
-Then run the relevant document-processing and database scripts.
+The relevant document-processing and database scripts can then be run from the project.
 
-If the optional Streamlit prototype is included, it can be launched with:
+If the Streamlit prototype is included:
 
 ```bash
 streamlit run app.py
@@ -568,28 +538,38 @@ streamlit run app.py
 
 ---
 
-# 🎓 Internship Context
+# Internship Context
 
 This project was developed as part of my **Data Analyst – Digital Repository Internship at the University of Roehampton**.
 
-The wider project explores how a centralised repository of university materials could improve access to educational and assessment information within the Computing Department.
+The wider internship project looks at how university materials could be organised and made easier to access within the Computing Department.
 
-The focus of this prototype is the **structured storage of assessment information**, providing a foundation for future student-facing, academic and analytical applications.
+My work has focused on assessment information and how it could be extracted from existing documents and stored in a more structured way.
 
 ---
 
-# 🚧 Project Status
+# Project Status
 
 **Status: Prototype / In Development**
 
-The current project demonstrates the extraction, validation and storage of assessment information in a relational database.
+The current prototype demonstrates the process of:
 
-It is **not a production-ready university system**.
+```text
+Assessment Documents
+        ↓
+Data Extraction
+        ↓
+Validation
+        ↓
+MySQL Database
+```
 
-Future implementations would require further work around:
+It is **not a production university system**.
+
+A production version would need further work around:
 
 - Data governance
-- Authentication and authorisation
+- Authentication and access control
 - Data protection
 - Database security
 - Data quality
@@ -600,37 +580,38 @@ Future implementations would require further work around:
 
 ---
 
-# 🔮 Future Development
+# Future Development
 
-Potential future development includes:
+Some possible next steps are:
 
-- Expanding the database schema
-- Processing assessment briefs from additional departments
-- Improving document extraction
-- Developing a student assessment dashboard
-- Creating assessment deadline visualisations
-- Analysing assessment workload and deadline clustering
-- Comparing assessment structures across modules
-- Integrating additional university datasets
-- Developing AI-supported search and analysis
-- Exploring Moodle integration
-- Adding authentication and access controls
-- Conducting user testing with students and academics
-- Evaluating privacy, security and ethical considerations
+- Add more assessment briefs
+- Expand the database schema
+- Improve document extraction
+- Process documents from other departments
+- Build a student assessment dashboard
+- Create assessment deadline visualisations
+- Analyse assessment workload and deadline clustering
+- Compare assessment structures across modules
+- Connect other university datasets
+- Explore AI-supported search and analysis
+- Explore Moodle integration
+- Add authentication and access controls
+- Test the system with students and academics
+- Further investigate privacy, security and ethical considerations
 
 ---
 
-# 📌 Data Protection and Responsible Use
+# Data Protection
 
-University assessment documents and educational data may contain sensitive or restricted information.
+University documents and educational data may contain information that should not be publicly shared.
 
-Anyone recreating or extending this project should:
+Anyone continuing this project should:
 
 - Only use documents they are authorised to access
 - Avoid committing confidential documents to GitHub
-- Avoid storing personally identifiable student information unnecessarily
-- Keep database credentials and API keys outside the repository
-- Follow the relevant university data protection and governance requirements
-- Obtain appropriate permissions before processing student-level data
+- Avoid storing student information unnecessarily
+- Keep passwords and API keys outside the repository
+- Follow the relevant university data protection requirements
+- Get the appropriate permissions before working with student-level data
 
-The repository should therefore be treated as a **technical prototype and framework for experimentation**, rather than a system approved for handling production university data.
+This repository should therefore be treated as a **prototype for development and experimentation**, rather than a production university system.

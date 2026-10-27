@@ -1,8 +1,3 @@
-"""app.py - Streamlit interface only; the logic lives in db.py, qa.py and llm.py.
-
-Run with:  python -m streamlit run src/app.py
-"""
-
 import os
 
 from dotenv import load_dotenv
@@ -184,7 +179,6 @@ assessment_id = st.sidebar.selectbox(
 if assessment_id is None:
     st.stop()
 st.sidebar.divider()
-st.sidebar.caption("🎓 Student mode: questions about your assessment brief.")
 
 use_retrieval = st.sidebar.checkbox(
     "Use retrieval (semantic search)",
@@ -198,9 +192,7 @@ if use_retrieval:
         store = get_store()
     except Exception as e:
         st.sidebar.error(f"Search index unavailable, using the baseline instead: {e}")
-if store is not None and st.sidebar.button("🔄 Rebuild search index"):
-    store.ensure_index(force=True)
-    st.sidebar.success("Search index rebuilt.")
+
 
 data = load_full(assessment_id)
 facts = data["facts"]

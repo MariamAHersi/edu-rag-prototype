@@ -51,7 +51,6 @@ class AssessmentBrief(BaseModel):
         default=None,
         description="Academic level of the module as a number, e.g. 4, 5, 6 or 7. Null if not stated."
     )
-
     assessment_type: str | None = Field(
         default=None,
         description="Type of assessment as written, e.g. 'Essay', 'Report', 'Presentation', 'Exam'."
@@ -60,7 +59,6 @@ class AssessmentBrief(BaseModel):
         default=None,
         description="How much this assessment contributes to the module mark, as a number only, e.g. 100 for '100%'. Null if not stated."
     )
-
     word_count: int | None = Field(
         default=None,
         description="Maximum word count as a number only. Null if the assessment is not word-limited."
@@ -69,7 +67,6 @@ class AssessmentBrief(BaseModel):
         default=None,
         description="Duration in minutes for timed assessments such as exams or presentations. Null if not timed."
     )
-
     deadline: date | None = Field(
         default=None,
         description="Submission deadline as an ISO date (YYYY-MM-DD). Null if only a week number or vague wording is given."
@@ -86,12 +83,10 @@ class AssessmentBrief(BaseModel):
         default=None,
         description="The feedback return date exactly as written in the document."
     )
-
     submission_format: str | None = Field(
         default=None,
         description="How and in what format the work is submitted, e.g. 'PDF via Turnitin'. Null if not stated."
     )
-
     learning_outcomes: list[str] = Field(
         default_factory=list,
         description="Each learning outcome assessed, as a separate string. Empty list if none are stated."

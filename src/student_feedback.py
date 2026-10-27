@@ -1,7 +1,7 @@
 #%%
 import json 
 from pathlib import Path 
-from embedder import SimpleVectorStore
+from embedding import SimpleVectorStore
 
 #%%
 class StudentFeedbackEngine:

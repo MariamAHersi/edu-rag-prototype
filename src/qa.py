@@ -1,13 +1,3 @@
-"""qa.py - answer student questions about one assessment brief.
-
-Two modes (so you can compare them):
-- Baseline (store=None): the whole stored record, including every long text
-  section, is put in the prompt.
-- Retrieval (store given): facts, criteria, learning outcomes and the checklist
-  come from SQL as before, but the long text sections are replaced by the few
-  chunks most relevant to the question.
-"""
-
 import db
 import llm
 
