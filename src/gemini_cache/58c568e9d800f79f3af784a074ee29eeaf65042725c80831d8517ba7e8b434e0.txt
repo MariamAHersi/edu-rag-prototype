@@ -1,0 +1,9 @@
+Based on the brief, your work will be assessed against five marking criteria:
+
+1. **Idea:** The suitability of your idea for a Relational Database Management System (RDBMS) and how well-specified it is.
+2. **Purpose of RDBMS:** How clearly defined the purpose of the DBMS is, and whether it represents a good use of a database.
+3. **Entity Relationship Diagram:** The quality, correctness, and completeness of the ERD for the problem.
+4. **Physical Data Model:** The quality of the physical data model, including whether it is correct, complete, and fully matches the ERD.
+5. **Submission:** Whether you provide a submission that meets the given requirements (submitting the correct files with no formatting issues).
+
+Each criterion is marked across four grade bands: **Excellent**, **Satisfactory**, **Not Satisfactory**, and **Not Attempted**.

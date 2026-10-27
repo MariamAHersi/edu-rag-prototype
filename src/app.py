@@ -1,20 +1,21 @@
-#%%
-from pathlib import Path
-from pdf_exporter import markdown_to_pdf
+"""app.py - Streamlit interface only; the logic lives in db.py, qa.py and llm.py.
+
+Run with:  python -m streamlit run src/app.py
+"""
+
 import os
-import time
+
 from dotenv import load_dotenv
-from embedder import SimpleVectorStore
-from google import genai
+
+load_dotenv()  # reads .env into environment variables (must run before importing llm)
+
 import streamlit as st
-from brief_generator import LecturerBriefGenerator
-from student_feedback import StudentFeedbackEngine
 
+import db
+import embedding
+import llm
+import qa
 
-load_dotenv()  # reads .env into environment variables
-
-
-#%%
 # --- Page Setup ---
 st.set_page_config(
     page_title="Academic RAG Prototype", page_icon="📚", layout="wide"
@@ -37,6 +38,10 @@ st.markdown(
             color: #f0f4f4 !important;
         }
         section[data-testid="stSidebar"] input {
+            color: #111111 !important;
+        }
+        /* Keep the selected value in the sidebar dropdown readable */
+        section[data-testid="stSidebar"] div[data-baseweb="select"] * {
             color: #111111 !important;
         }
 
@@ -90,6 +95,14 @@ st.markdown(
         .stChatInput {
             border-radius: 10px;
         }
+
+        /* Tabs: teal accent */
+        .stTabs [aria-selected="true"] {
+            color: #04656a;
+        }
+        .stTabs [data-baseweb="tab-highlight"] {
+            background-color: #04656a;
+        }
     </style>
     """,
     unsafe_allow_html=True,
@@ -106,158 +119,226 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# --- Initialize RAG System (Cached so it loads once) ---
-@st.cache_resource
-def init_rag_system():
-    store = SimpleVectorStore()
-    store.load_index()
-    return store, LecturerBriefGenerator(store), StudentFeedbackEngine(store)
-
-vector_store, brief_gen, feedback_engine = init_rag_system()
-
-# Function to be used  to handle API calls robustly
-def generate_with_retry(client, prompt, primary_model="gemini-1.5-flash", max_retries=3):
-    """Retries API calls and cascades through active supported Gemini models."""
-    # List of active, standard Gemini models
-    models_to_try = [primary_model, "gemini-2.0-flash", "gemini-1.5-pro"]
-    
-    for model_name in models_to_try:
-        for attempt in range(1, max_retries + 1):
-            try:
-                response = client.models.generate_content(
-                    model=model_name,
-                    contents=prompt
-                )
-                if response.text is None:
-                   raise ValueError(
-                        f"{model_name} returned an empty response (no text)."
-                    )
-                return response.text
-            except Exception as e:
-                err_msg = str(e)
-                # If model is not found, jump directly to the next model in the list
-                if "404" in err_msg or "NOT_FOUND" in err_msg:
-                    print(f"[Notice] Model '{model_name}' not available. Trying next model...")
-                    break
-                # Handle temporary traffic spikes
-                elif "503" in err_msg or "UNAVAILABLE" in err_msg:
-                    print(f"[Notice] {model_name} busy (Attempt {attempt}/{max_retries}). Retrying in 2s...")
-                    time.sleep(2 * attempt)
-                else:
-                    raise e
-                    
-    raise Exception("Gemini API is currently overloaded across all model tiers. Please wait a minute and try again.")
-
-# --- Sidebar: Role & Model Configuration ---
-st.sidebar.markdown("### ⚙️ Configuration")
-user_role = st.sidebar.radio(
-    "Select your role:",
-    ["👨‍🏫 Lecturer (Brief Generator)", "🎓 Student (Draft Feedback & Q&A)"],
-)
-
-st.sidebar.divider()
-
 # --- Fail fast if the API key isn't configured ---
-# Catches a missing/misnamed .env, a load_dotenv() ordering issue, or
-# running the app somewhere the key was never set — with a clear message
-# at startup instead of an UnboundLocalError deep inside the chat handler.
-api_key = os.getenv("GEMINI_API_KEY", "")
-if not api_key:
+if not os.getenv("GEMINI_API_KEY"):
     st.error("GEMINI_API_KEY is not set. Add it to your .env file before running the app.")
     st.stop()
 
-# --- Chat History State ---
-if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {
-            "role": "assistant",
-            "content": "Hello! I am your RAG Assistant. How can I help you today?",
-        }
-    ]
 
-# --- Quick suggestion chips (only before the conversation starts) ---
-if len(st.session_state.messages) == 1:
-    st.write("")
-    chip_cols = st.columns(4)
-    suggestions = [
-        "What are the learning outcomes for this module?",
-        "What does the assessment brief require?",
-        "Show me an example of a past assignment",
-        "Can I submit my work for checking?",
-    ]
+# --- helpers ---
+def show(value):
+    """Display a value, or a clear message if the brief didn't state it."""
+    return "Not stated in the brief" if value in (None, "", []) else str(value)
+
+
+def date_or_raw(date_value, raw_value):
+    """Prefer the exact wording from the brief, fall back to the parsed date."""
+    return raw_value or date_value
+
+
+@st.cache_data(ttl=60)
+def load_assessments():
+    return db.list_assessments()
+
+
+@st.cache_data(ttl=60)
+def load_full(assessment_id):
+    return db.get_full_assessment(assessment_id)
+
+
+@st.cache_resource(show_spinner="Loading the local embedding model and search index...")
+def get_store():
+    store = embedding.SimpleVectorStore()
+    store.ensure_index()
+    return store
+
+
+# --- Load assessments from MySQL ---
+assessments: list = []
+try:
+    assessments = load_assessments()
+except Exception as e:
+    st.error(
+        "Couldn't connect to the database. Check that MySQL is running and "
+        "that MYSQL_PASSWORD is set in your .env file."
+    )
+    st.exception(e)
+    st.stop()
+
+if not assessments:
+    st.warning("No assessments found. Run the ingestion notebook to add some briefs.")
+    st.stop()
+
+labels = {
+    a["id"]: f"{a['module_code'] or 'Unknown code'} - {a['module_title'] or a['source_file']}"
+    for a in assessments
+}
+
+# --- Sidebar: Configuration ---
+st.sidebar.markdown("### ⚙️ Configuration")
+assessment_id = st.sidebar.selectbox(
+    "Choose your assessment",
+    options=list(labels.keys()),
+    format_func=lambda i: labels[i],
+)
+if assessment_id is None:
+    st.stop()
+st.sidebar.divider()
+st.sidebar.caption("🎓 Student mode: questions about your assessment brief.")
+
+use_retrieval = st.sidebar.checkbox(
+    "Use retrieval (semantic search)",
+    value=True,
+    help="On: the long text sections are searched and only the relevant parts are sent. "
+    "Off: the whole brief is sent (the baseline).",
+)
+store = None
+if use_retrieval:
+    try:
+        store = get_store()
+    except Exception as e:
+        st.sidebar.error(f"Search index unavailable, using the baseline instead: {e}")
+if store is not None and st.sidebar.button("🔄 Rebuild search index"):
+    store.ensure_index(force=True)
+    st.sidebar.success("Search index rebuilt.")
+
+data = load_full(assessment_id)
+facts = data["facts"]
+
+st.subheader(labels[assessment_id])
+
+chat_tab, details_tab = st.tabs(["💬 Ask a question", "📋 Brief details"])
+
+# --- Chat ---
+SUGGESTIONS = [
+    "When is this assessment due?",
+    "What are the marking criteria?",
+    "Am I allowed to use AI?",
+    "What should I check before submitting?",
+]
+
+with chat_tab:
+    chat_key = f"chat_{assessment_id}"  # a separate conversation per assessment
+    if chat_key not in st.session_state:
+        st.session_state[chat_key] = []
+    messages = st.session_state[chat_key]
+
+    # Greeting and quick suggestion chips (only before the conversation starts)
     clicked_suggestion = None
-    for col, text in zip(chip_cols, suggestions):
-        with col:
-            if st.button(text, use_container_width=True):
-                clicked_suggestion = text
-else:
-    clicked_suggestion = None
-
-# Display prior chat history
-for msg in st.session_state.messages:
-    avatar = "📚" if msg["role"] == "assistant" else "🧑"
-    with st.chat_message(msg["role"], avatar=avatar):
-        st.markdown(msg["content"])
-
-# --- Chat Input Handling ---
-user_prompt = st.chat_input("Type your request or draft submission...") or clicked_suggestion
-
-if user_prompt:
-
-    # 1. Show User Message
-    st.session_state.messages.append({"role": "user", "content": user_prompt})
-    with st.chat_message("user", avatar="🧑"):
-        st.markdown(user_prompt)
-
-    # 2. Process according to selected Role
-    with st.chat_message("assistant", avatar="📚"):
-        with st.spinner("Retrieving document context and generating..."):
-
-            if "Lecturer" in user_role:
-                full_prompt, chunks = brief_gen.build_grounded_prompt(
-                    user_prompt
-                )
-            else:
-                full_prompt, chunks = feedback_engine.build_feedback_prompt(
-                    user_prompt
-                )
-
-            # Show retrieved citations in an expander
-            with st.expander("🔍 View retrieved context chunks (RAG)"):
-                for idx, c in enumerate(chunks, 1):
-                    st.write(
-                        f"**[{idx}] {c['source_file']}** (Score: {c['similarity_score']})"
-                    )
-                    st.caption(c["content"][:250] + "...")
-
-            # 3. Call LLM for final grounded response
-            # api_key is guaranteed set at this point (we st.stop() above if not),
-            # so this always runs and `answer` is always assigned.
-            try:
-                client = genai.Client(api_key=api_key)
-                answer = generate_with_retry(client, full_prompt)
-            except Exception as e:
-                answer = f"⚠️ **Service Notice:** {str(e)}"
-                st.markdown(answer)
-
-            if "Lecturer" in user_role:
-                pdf_filename = Path("generated_brief.pdf")
-                markdown_to_pdf(answer, pdf_filename)
-
-                with open(pdf_filename, "rb") as pdf_file:
-                    st.download_button(
-                        label="📄 Download Assessment Brief as PDF",
-                        data=pdf_file,
-                        file_name="Assessment_Brief_2026.pdf",
-                        mime="application/pdf",
-                    )
-
-            st.session_state.messages.append(
-                {"role": "assistant", "content": answer}
+    if not messages:
+        with st.chat_message("assistant", avatar="📚"):
+            st.markdown(
+                "Hello! I am your assessment assistant. Ask me anything about "
+                f"**{labels[assessment_id]}**."
             )
+        chip_cols = st.columns(len(SUGGESTIONS))
+        for i, (col, text) in enumerate(zip(chip_cols, SUGGESTIONS)):
+            with col:
+                if st.button(text, use_container_width=True, key=f"chip_{assessment_id}_{i}"):
+                    clicked_suggestion = text
 
+    # Display prior chat history
+    for msg in messages:
+        avatar = "📚" if msg["role"] == "assistant" else "🧑"
+        with st.chat_message(msg["role"], avatar=avatar):
+            st.markdown(msg["content"])
 
+    # Chat input handling
+    user_prompt = st.chat_input("Ask a question about this assessment...") or clicked_suggestion
 
+    if user_prompt:
+        history = list(messages)  # earlier turns only
 
+        with st.chat_message("user", avatar="🧑"):
+            st.markdown(user_prompt)
 
+        with st.chat_message("assistant", avatar="📚"):
+            answer, chunks = None, []
+            with st.spinner("Reading the brief and generating..."):
+                try:
+                    answer, chunks = qa.answer_question(
+                        user_prompt, assessment_id, history, store=store
+                    )
+                except llm.LLMUnavailable:
+                    answer = None
+                    st.warning(
+                        "⚠️ **Service Notice:** the AI service is busy right now. "
+                        "Please try again in a minute. The 'Brief details' tab still works."
+                    )
+                except Exception as e:
+                    answer = None
+                    st.error(f"Something went wrong: {e}")
 
+            if answer:
+                st.markdown(answer)
+                if store is not None:
+                    with st.expander("🔍 View retrieved context chunks (RAG)"):
+                        st.caption(
+                            "Facts, criteria, learning outcomes and the checklist come directly "
+                            "from the database. These long-text sections were retrieved by search:"
+                        )
+                        if chunks:
+                            for idx, c in enumerate(chunks, 1):
+                                section = c["field"].replace("_", " ").capitalize()
+                                st.write(f"**[{idx}] {section}** (Score: {c['similarity_score']})")
+                                st.caption(c["content"][:250] + ("..." if len(c["content"]) > 250 else ""))
+                        else:
+                            st.caption("No long-text sections were found for this assessment.")
+                else:
+                    with st.expander("🔍 View the brief data used (baseline)"):
+                        st.code(qa.format_context(data), language=None)
+                messages.append({"role": "user", "content": user_prompt})
+                messages.append({"role": "assistant", "content": answer})
+
+# --- Brief details (answered from SQL, no model) ---
+with details_tab:
+    st.markdown("**Quick answers**")
+    quick = {
+        "Deadline": lambda: date_or_raw(facts["deadline"], facts["deadline_raw"]),
+        "Word count": lambda: facts["word_count"],
+        "Weighting": lambda: f"{facts['weighting_percent']}%" if facts["weighting_percent"] is not None else None,
+        "Feedback date": lambda: date_or_raw(facts["feedback_date"], facts["feedback_date_raw"]),
+        "Submission format": lambda: facts["submission_format"],
+    }
+
+    cols = st.columns(len(quick))
+    for col, (label, getter) in zip(cols, quick.items()):
+        if col.button(label, use_container_width=True, key=f"quick_{label}"):
+            st.info(f"**{label}:** {show(getter())}")
+
+    with st.expander("All key facts"):
+        for key, value in facts.items():
+            if key != "id":
+                st.write(f"**{key.replace('_', ' ').capitalize()}:** {show(value)}")
+
+    with st.expander("Learning outcomes"):
+        outcomes = data["learning_outcomes"]
+        if outcomes:
+            for item in outcomes:
+                st.write(f"- {item}")
+        else:
+            st.write(show(None))
+
+    with st.expander("Marking criteria and grade bands"):
+        if data["criteria"]:
+            for c in data["criteria"]:
+                weight = f" ({c['weighting_percent']}%)" if c["weighting_percent"] is not None else ""
+                st.markdown(f"**{show(c['name'])}**{weight}")
+                if c["description"]:
+                    st.write(c["description"])
+                for band in c["grade_bands"]:
+                    st.write(f"- *{show(band['band_name'])}*: {show(band['descriptor'])}")
+        else:
+            st.write(show(None))
+
+    with st.expander("Submission checklist"):
+        checklist = data["submission_checklist"]
+        if checklist:
+            for item in checklist:
+                st.write(f"- {item}")
+        else:
+            st.write(show(None))
+
+    for field, text in data["text"].items():
+        with st.expander(field.replace("_", " ").capitalize()):
+            st.write(text)

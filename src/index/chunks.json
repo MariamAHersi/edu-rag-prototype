@@ -1,0 +1,56 @@
+[
+  {
+    "chunk_id": "1:task_description:1",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "task_description",
+    "content": "In this section, you are expected to describe an overview of your idea of the DBMS you want to design and develop, what are the business questions based on what you will cover in your system. You will need a good logical relational database management system representation (ERD) based on your proposed idea. This includes Formal Data Modelling with detailed features of your system.  \nYour submission must be a single report (PDF) and should contain: \n\u2022 Business system summary based on the chosen topic. \n\u2022 Describe your business idea in detail. \n\u2022 Describe work objectives.\n\u2022 An ERD (logical schema) of your proposed idea using an appropriate tool (It is required that you ERD contains 12-14 distinguish Entity sets in it).  \n\u2022 Indicate key attribute for each entity set. \n\u2022 Indicate cardinality for each relationship. \n\u2022 Indicate participation for each entity related to each relationship."
+  },
+  {
+    "chunk_id": "1:task_description:2",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "task_description",
+    "content": "\u2022 A diagram (physical data model) which fully match the ERD, should clearly shows:  \n\u2022 All tables \n\u2022 Columns within each table \n\u2022 Constraints including data types and Keys (Primary Key and Foreign Key) \nDeliverables (what you will need to submit): a single report (PDF) \nAdditional Information: \nTo properly design your business database, you may need to perform some literature review. If you have used ideas from anywhere other than the lecture notes and tutorial examples (e.g., from a book, the Internet, or a fellow student) then include a reference showing where ideas came from and label your content carefully to show which parts are borrowed.  \nPlease be aware that diagrams in your submission must be fully original."
+  },
+  {
+    "chunk_id": "1:success_guidance:1",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "success_guidance",
+    "content": "To achieve maximum success in this task: \n\u2022 Select a suitable business idea that clearly requires a relational database (complex data, multiple entities, clear relationships). \n\u2022 Define clear objectives and key business questions your system will address. \n\u2022 Develop a detailed and accurate ERD with 12\u201314 entities, showing primary keys, relationships, cardinality, and participation. \n\u2022 Create a consistent physical data model that fully matches your ERD, including tables, data types, and key constraints. \n\u2022 Present a professional, well-structured report (single PDF) with clear sections and original, well-labelled diagrams. \n\u2022 Demonstrate professionalism through clear communication, correct referencing, and attention to detail."
+  },
+  {
+    "chunk_id": "1:referencing:1",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "referencing",
+    "content": "Students do not need another resource, book, article to complete this assignment. In case they use another online/offline resource, they must cite it in the References section, at the end of the report. \nIf you do so, please use IEEE style: https://www.citethemrighttutorial.com/course-modules/ieee"
+  },
+  {
+    "chunk_id": "1:employability_professional_skills:1",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "employability_professional_skills",
+    "content": "This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skills, which are critical in professional contexts and employment settings. \nBy successfully completing this assessment, you will be able to: \n\u2022 Apply analytical and problem-solving skills to translate business requirements into effective database designs. \n\u2022 Use equivalent industry-standard tools and techniques to develop Entity Relationship Diagrams (ERDs) and physical data models. \n\u2022 Demonstrate attention to detail and accuracy in data modelling and documentation. \n\u2022 Communicate technical concepts clearly and professionally in a business context."
+  },
+  {
+    "chunk_id": "1:ai_use:1",
+    "assessment_id": 1,
+    "module_code": "CMP020C106S",
+    "module_title": "Database",
+    "source_file": "my_brief.pdf",
+    "field": "ai_use",
+    "content": "The assessment is designed so that the use of AI during the assessment is irrelevant or impossible. You are welcome to use AI to support learning and preparation for this assessment. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions.  \nYou can find the guidance on the use of AI by using the following link. \n \nPlease read and apply: \nhttps://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/4a%20AI%20principles%20and%20guidance%20-for%20Senate.docx \n \n *You can find the student guidance on the use of AI in the Library and Nest"
+  }
+]
