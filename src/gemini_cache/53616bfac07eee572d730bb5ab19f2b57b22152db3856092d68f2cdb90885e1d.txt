@@ -1,0 +1,164 @@
+{
+  "programme": "All BSc Computing Programmes",
+  "module_code": "CMP020C106S",
+  "module_title": "Database",
+  "module_level": 4,
+  "assessment_type": "Report",
+  "weighting_percent": 40,
+  "word_count": null,
+  "duration_minutes": null,
+  "deadline": "2026-03-04",
+  "deadline_raw": "4th of March 2026",
+  "feedback_date": "2026-04-01",
+  "feedback_date_raw": "1st of April, 2026",
+  "submission_format": "Moodle Report Submission",
+  "learning_outcomes": [
+    "LO1: Practise business database design"
+  ],
+  "marking_criteria": [
+    {
+      "name": "Idea:",
+      "description": "the suitability of the idea for a RDBMS",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "The idea requires a RDBMS and has been well specified."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "The idea would require a RDBMS to manage although the idea is not fully specified."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Idea is simple and could be managed without a RDBMS."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No idea provided or idea unsuitable."
+        }
+      ]
+    },
+    {
+      "name": "Purpose of RDBMS:",
+      "description": "how well defined the purpose of the DBMS is.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "The RDBMS purpose is clearly defined and represents a good use of a DBMS."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "The RDBMS purpose is clearly defined although does not clearly represent a good use for a DBMS."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "The RDBMS purpose is not clearly defined."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Purpose of the DBMS not given, or purpose ill defined."
+        }
+      ]
+    },
+    {
+      "name": "Entity Relationship Diagram:",
+      "description": "The quality of the physical data model provided.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "ERD provided is correct and fully complete for the problem at hand."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "ERD provided is basically correct, need improvement to fully address the defined database problem."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "ERD provided has some omissions and incorrect features."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No ERD provided or ERD is grossly misleading."
+        }
+      ]
+    },
+    {
+      "name": "Physical Data Model:",
+      "description": "The quality of the physical data model provided.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Data model is correct and fully match ERD provided Fully address the problem at hand."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Data model provided is correct although not fully complete."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Data model has some omissions and incorrect features."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No data model provided, or data model is grossly misleading."
+        }
+      ]
+    },
+    {
+      "name": "Submission:",
+      "description": "To provide a submission that meets the requirements given.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Correct files submitted with no issues."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Correct files submitted only but some issues with files provided, e.g. improper format of submission."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Correct files submitted but with unwanted files provided and possibly issues in files provided."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Incorrect files submitted."
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    "This is a group work (up to 2 students per group).",
+    "Each of team member may receive same mark for their submission.",
+    "Please clearly indicate all students’ name and IDs in your submission.",
+    "Your submission must be a single report (PDF).",
+    "It is required that you ERD contains 12-14 distinguish Entity sets in it.",
+    "Indicate key attribute for each entity set.",
+    "Indicate cardinality for each relationship.",
+    "Indicate participation for each entity related to each relationship.",
+    "A diagram (physical data model) which fully match the ERD, should clearly shows: All tables, Columns within each table, Constraints including data types and Keys (Primary Key and Foreign Key).",
+    "If you have used ideas from anywhere other than the lecture notes and tutorial examples (e.g., from a book, the Internet, or a fellow student) then include a reference showing where ideas came from and label your content carefully to show which parts are borrowed.",
+    "Diagrams in your submission must be fully original.",
+    "In case they use another online/offline resource, they must cite it in the References section, at the end of the report using IEEE style."
+  ],
+  "success_guidance": "To achieve maximum success in this task:\n• Select a suitable business idea that clearly requires a relational database (complex data, multiple entities, clear relationships).\n• Define clear objectives and key business questions your system will address.\n• Develop a detailed and accurate ERD with 12–14 entities, showing primary keys, relationships, cardinality, and participation.\n• Create a consistent physical data model that fully matches your ERD, including tables, data types, and key constraints.\n• Present a professional, well-structured report (single PDF) with clear sections and original, well-labelled diagrams.\n• Demonstrate professionalism through clear communication, correct referencing, and attention to detail.",
+  "layout_style_guidance": null,
+  "referencing": "Students do not need another resource, book, article to complete this assignment. In case they use another online/offline resource, they must cite it in the References section, at the end of the report.\n\nIf you do so, please use IEEE style: https://www.citethemrighttutorial.com/course-modules/ieee",
+  "employability_professional_skills": "This assessment has been designed to provide you with an opportunity to demonstrate your achievement of the following skills, which are critical in professional contexts and employment settings.\nBy successfully completing this assessment, you will be able to:\n• Apply analytical and problem-solving skills to translate business requirements into effective database designs.\n• Use equivalent industry-standard tools and techniques to develop Entity Relationship Diagrams (ERDs) and physical data models.\n• Demonstrate attention to detail and accuracy in data modelling and documentation.\n• Communicate technical concepts clearly and professionally in a business context.",
+  "ai_use": "The assessment is designed so that the use of AI during the assessment is irrelevant or impossible. You are welcome to use AI to support learning and preparation for this assessment. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions.\nYou can find the guidance on the use of AI by using the following link.\n\nPlease read and apply:\nhttps://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/4a%20AI%20principles%20and%20guidance%20-for%20Senate.docx\n\n*You can find the student guidance on the use of AI in the Library and Nest",
+  "ethical_requirements": null,
+  "submission_checklist": [
+    "Have I fully answered the assessment brief?",
+    "Have I met the word count and formatting requirements?",
+    "Is my referencing complete and accurate?",
+    "Have I declared any AI use honestly?",
+    "Have I proofread my work?",
+    "Am I submitting through the correct platform before the deadline?"
+  ],
+  "task_description": "In this section, you are expected to describe an overview of your idea of the DBMS you want to design and develop, what are the business questions based on what you will cover in your system. You will need a good logical relational database management system representation (ERD) based on your proposed idea. This includes Formal Data Modelling with detailed features of your system.\n\nYour submission must be a single report (PDF) and should contain:\n• Business system summary based on the chosen topic.\n• Describe your business idea in detail.\n• Describe work objectives.\n• An ERD (logical schema) of your proposed idea using an appropriate tool (It is required that you ERD contains 12-14 distinguish Entity sets in it).\n• Indicate key attribute for each entity set.\n• Indicate cardinality for each relationship.\n• Indicate participation for each entity related to each relationship.\n• A diagram (physical data model) which fully match the ERD, should clearly shows:\n• All tables\n• Columns within each table\n• Constraints including data types and Keys (Primary Key and Foreign Key)\n\nDeliverables (what you will need to submit): a single report (PDF)\n\nAdditional Information:\nTo properly design your business database, you may need to perform some literature review. If you have used ideas from anywhere other than the lecture notes and tutorial examples (e.g., from a book, the Internet, or a fellow student) then include a reference showing where ideas came from and label your content carefully to show which parts are borrowed.\n\nPlease be aware that diagrams in your submission must be fully original."
+}

@@ -1,5 +1,3 @@
-
-
 import os
 from typing import Any, cast
 
@@ -86,6 +84,15 @@ def find_assessment_id(module_code: str) -> int | None:
         (module_code,),
     )
     return row["id"] if row else None
+
+
+def find_assessment_id_by_file(source_file: str) -> int | None:
+    """Look up an assessment id by the file name it was ingested from (None if not found)."""
+    row = _fetch_one(
+        "SELECT id FROM assessments WHERE source_file = %s",
+        (source_file,),
+    )
+    return int(row["id"]) if row else None
 
 
 # ---------- facts ----------

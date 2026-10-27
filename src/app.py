@@ -1,3 +1,8 @@
+"""app.py - Streamlit interface only; the logic lives in db.py, qa.py and llm.py.
+
+Run with:  python -m streamlit run src/app.py
+"""
+
 import os
 
 from dotenv import load_dotenv
@@ -10,6 +15,7 @@ import db
 import embedding
 import llm
 import qa
+import student_feedback
 
 # --- Page Setup ---
 st.set_page_config(
@@ -179,6 +185,7 @@ assessment_id = st.sidebar.selectbox(
 if assessment_id is None:
     st.stop()
 st.sidebar.divider()
+st.sidebar.caption("🎓 Student mode: questions about your brief and feedback on your draft.")
 
 use_retrieval = st.sidebar.checkbox(
     "Use retrieval (semantic search)",
@@ -192,14 +199,18 @@ if use_retrieval:
         store = get_store()
     except Exception as e:
         st.sidebar.error(f"Search index unavailable, using the baseline instead: {e}")
-
+if store is not None and st.sidebar.button("🔄 Rebuild search index"):
+    store.ensure_index(force=True)
+    st.sidebar.success("Search index rebuilt.")
 
 data = load_full(assessment_id)
 facts = data["facts"]
 
 st.subheader(labels[assessment_id])
 
-chat_tab, details_tab = st.tabs(["💬 Ask a question", "📋 Brief details"])
+chat_tab, feedback_tab, details_tab = st.tabs(
+    ["💬 Ask a question", "📝 Draft feedback", "📋 Brief details"]
+)
 
 # --- Chat ---
 SUGGESTIONS = [
@@ -281,6 +292,76 @@ with chat_tab:
                         st.code(qa.format_context(data), language=None)
                 messages.append({"role": "user", "content": user_prompt})
                 messages.append({"role": "assistant", "content": answer})
+
+# --- Draft feedback ---
+with feedback_tab:
+    st.markdown(
+        "Paste your draft or upload it, and get feedback against this assessment's "
+        "marking criteria **before** you submit."
+    )
+    st.caption(
+        "Your draft is sent to the AI service to generate the feedback. It is not "
+        "saved by this app. The feedback is automated and your lecturer's marking may differ."
+    )
+
+    uploaded = st.file_uploader(
+        "Upload your draft (optional)",
+        type=["pdf", "docx", "txt"],
+        key=f"draft_file_{assessment_id}",
+    )
+    pasted = st.text_area(
+        "Or paste your draft here",
+        height=280,
+        key=f"draft_text_{assessment_id}",
+        placeholder="Paste the text of your draft...",
+    )
+
+    result_key = f"feedback_{assessment_id}"
+
+    if st.button("Get feedback on my draft", key=f"feedback_btn_{assessment_id}"):
+        draft_text = pasted
+        if uploaded is not None:
+            try:
+                draft_text = student_feedback.read_draft_file(uploaded.name, uploaded.getvalue())
+            except Exception as e:
+                draft_text = ""
+                st.error(f"Couldn't read that file: {e}")
+
+        if draft_text.strip():
+            with st.spinner("Comparing your draft with the marking criteria..."):
+                try:
+                    st.session_state[result_key] = student_feedback.give_feedback(
+                        draft_text, assessment_id
+                    )
+                except ValueError as e:
+                    st.session_state.pop(result_key, None)
+                    st.warning(str(e))
+                except llm.LLMUnavailable:
+                    st.session_state.pop(result_key, None)
+                    st.warning(
+                        "⚠️ **Service Notice:** the AI service is busy right now. "
+                        "Please try again in a minute."
+                    )
+                except Exception as e:
+                    st.session_state.pop(result_key, None)
+                    st.error(f"Something went wrong: {e}")
+        elif uploaded is None:
+            st.warning("Paste your draft or upload a file first.")
+
+    result = st.session_state.get(result_key)
+    if result:
+        st.info(f"**Length check:** {result['word_check']}")
+        with st.chat_message("assistant", avatar="📚"):
+            st.markdown(result["feedback"])
+        st.download_button(
+            "Download feedback",
+            data=result["feedback"],
+            file_name="draft_feedback.md",
+            mime="text/markdown",
+            key=f"feedback_dl_{assessment_id}",
+        )
+        with st.expander("🔍 View the brief data used for this feedback"):
+            st.code(qa.format_context(data), language=None)
 
 # --- Brief details (answered from SQL, no model) ---
 with details_tab:

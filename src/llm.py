@@ -1,4 +1,18 @@
+"""llm.py - the one place the app talks to Gemini.
+
+Features:
+- retries with a growing pause when Gemini is overloaded (503) or rate limited (429)
+- optional fallback model if the main one keeps failing or has been retired (404)
+- a disk cache, so the same request is never sent (or paid for) twice
+
+Environment variables:
+    GEMINI_API_KEY          required (the google-genai library reads it automatically)
+    GEMINI_MODEL            optional, defaults to gemini-3.8-flash
+    GEMINI_FALLBACK_MODEL   optional, e.g. a flash-lite model from client.models.list()
+"""
+
 import hashlib
+import json
 import os
 import time
 from pathlib import Path
@@ -33,19 +47,32 @@ def ask(
     system_instruction: str | None = None,
     use_cache: bool = True,
     attempts_per_model: int = 3,
+    response_schema=None,
 ) -> str:
-    """Send a prompt to Gemini and return the text of the answer."""
-    key = f"{system_instruction or ''}\n---\n{prompt}"
+    """Send a prompt to Gemini and return the text of the answer.
+
+    response_schema: a Pydantic class. If given, Gemini returns JSON matching it
+    (used by ingest.py for extraction). The schema is part of the cache key, so
+    changing the schema never returns an out-of-date cached extraction.
+    """
+    schema_key = (
+        json.dumps(response_schema.model_json_schema(), sort_keys=True)
+        if response_schema
+        else ""
+    )
+    key = f"{system_instruction or ''}\n---\n{schema_key}\n---\n{prompt}"
     cache_file = _cache_file(key)
     if use_cache and cache_file.exists():
         return cache_file.read_text(encoding="utf-8")
 
     client = genai.Client()
-    config = (
-        types.GenerateContentConfig(system_instruction=system_instruction)
-        if system_instruction
-        else None
-    )
+    config = None
+    if system_instruction or response_schema:
+        config = types.GenerateContentConfig(
+            system_instruction=system_instruction,
+            response_mime_type="application/json" if response_schema else None,
+            response_schema=response_schema,
+        )
 
     last_problem = "no attempt was made"
     for model in MODELS:

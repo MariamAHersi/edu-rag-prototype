@@ -1,0 +1,210 @@
+{
+  "programme": "All BSc Computing Programmes",
+  "module_code": "CMP-C106-0",
+  "module_title": "Databases",
+  "module_level": 4,
+  "assessment_type": "Coursework",
+  "weighting_percent": 60,
+  "word_count": null,
+  "duration_minutes": null,
+  "deadline": "2026-04-22",
+  "deadline_raw": "22/04/2026",
+  "feedback_date": "2026-05-20",
+  "feedback_date_raw": "20/05/2026",
+  "submission_format": "Moodle Submission via Coursework – 2 submission link",
+  "learning_outcomes": [
+    "LO1: Practice database implementation process.",
+    "LO2: Create a relational database schema in SQL that incorporates key, entity integrity, and referential integrity constraints.",
+    "LO3: Evaluate a set of query processing strategies and select the optimal strategy.",
+    "LO4: Use SQL to create tables and retrieve (SELECT) information from a database."
+  ],
+  "marking_criteria": [
+    {
+      "name": "SQL naming conventions",
+      "description": "how closely is the naming convention for tables, columns, etc. followed.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "All names are easy to understand, consistent and follow guidelines."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Names follow the conventions although some could be better."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Names need work and are sometimes unsuitable."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Names are too short or too cryptic, inconsistent, or do not follow any convention."
+        }
+      ]
+    },
+    {
+      "name": "Constraints:",
+      "description": "How Constrains are set for tables and reflect relationships between tables.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "All constraints are set properly. e.g. data types for column values are properly set, primary key and foreign key are correctly considered and set."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Most constraints are properly set, but some can be modified to most appropriate settings."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Constraints are set, but most of them are unsuitable, need to be modified."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Most of the constraints are not set. Like primary key and foreign keys are not set."
+        }
+      ]
+    },
+    {
+      "name": "SQL code Quality",
+      "description": "structures of code, use of enough complex queries with understanding.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Code quality follows guidelines."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Code quality needs work."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "SQL codes used are simple queries only."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No SQL code provided, or SQL code provided is very poorly formatted."
+        }
+      ]
+    },
+    {
+      "name": "SQL correctness",
+      "description": "how correct is the output of the SQL.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "All queries work correctly."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Almost all of the queries work correctly, or output is correct almost all the time."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Some queries do not work correctly, or output is incorrect."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No output provided from SQL, or output is incorrect."
+        }
+      ]
+    },
+    {
+      "name": "SQL execution",
+      "description": "how smoothly does the SQL execute – are there any bugs?",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Solutions executed correctly, obtain the desired results."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Queries executed correctly although there are some syntax errors, desired results are basically obtained."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Some query solutions have syntax errors that mean they do not execute properly."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No SQL solutions provided, or most have syntax errors causing problems."
+        }
+      ]
+    },
+    {
+      "name": "Submission",
+      "description": "ability to provide a submission that meets the requirements given.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Correct files submitted only with no issues."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Correct files submitted only but some issues with files provided."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Correct files submitted but with unwanted files provided and possibly issues in files provided."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Incorrect files submitted."
+        }
+      ]
+    },
+    {
+      "name": "Presentation",
+      "description": "ability to show the independently work on SQL",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Correct SQL solution prepared to question independently"
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Correct SQL solution prepared to question by discuss with others / Sudo SQL solution prepared independently"
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "No correct SQL solution prepared independently / Search solution online"
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "No solution is given."
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    "This is a continues work from coursework1. Please stay in the same group.",
+    "Please clearly indicate all students’ name and IDs in your submission.",
+    "Upload two files to Moodle: File1– Database Implementation Code (.SQL file OR .TXT file); File 2 – A single PDF file containing contributions and individual reflections.",
+    "Contribution from both group members: Student 1 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section); Student 2 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section).",
+    "Individual reflections from each member: Student 1 – individual reflection (250–300 words); Student 2 – individual reflection (250–300 words).",
+    "Each reflection should address: What you have learned from both coursework 1 and Coursework 2; The challenges you encountered during the database design and implementation process.",
+    "Modify ERD and physical data model according to feedback received for coursework1 if necessary. (NOT require submission on this)",
+    "Use SQL statement to implement database based on the revised physical data model in step1: Create tables; Set appropriate constraints which including column data types, primary key and foreign keys; Consider if each column allows NULL value or NOT; Insert meaningful values into each table (at least insert at least 5 records to each table for retrieving purpose in lab assessment).",
+    "Attend lab assessment conducted on week-13 and Week-14 for In Class Demonstration and Presentation."
+  ],
+  "success_guidance": "To achieve maximum success in this task:\n• Follow your revised design carefully: Ensure your database implementation strictly matches the improved physical data model from Coursework 1, including correct tables, relationships, and naming conventions.\n• Set constraints accurately: Apply appropriate data types, primary keys, foreign keys, and NULL/NOT NULL rules. This is essential for demonstrating correct relational structure and for meeting the rubric’s “Excellent” category.\n• Populate meaningful sample data: Insert at least five realistic and coherent records per table. This data will be used in your lab assessment queries, so make sure values make sense and reflect real-world scenarios.\n• Write clean, well-structured SQL code: Use clear formatting, consistent naming, and a variety of SQL features (joins, aggregations, nested queries, grouping, views). Demonstrate beyond basic SELECT queries to achieve full marks.\n• Prepare for the lab SQL demonstration: Understand your own database thoroughly, as each group member will answer one simple and one complex SQL question based on your implementation. Practice writing queries without relying on external help.\n• Submit the correct files and complete reflections: Upload both required files (SQL file + PDF). Clearly describe each member’s contribution and provide thoughtful reflections (250–300 words each) on learning, challenges, and skills gained.",
+  "layout_style_guidance": null,
+  "referencing": "Students do not need another resource, book, article to complete this assignment. In case they use another online/offline resource, they must cite it in the References section, at the end of the report.\nIf you do so, please use IEEE style: https://www.citethemrighttutorial.com/course-modules/ieee",
+  "employability_professional_skills": "This assessment develops students’ employability and professional competencies by requiring them to apply database design principles to a real-world implementation scenario, mirroring industry-level tasks and collaborative workflows. It strengthens both technical capability and professional behaviours essential for workplace readiness.\n• Applying technical knowledge to build a functional, industry-standard relational database\n• Using SQL effectively for database creation, constraint management, and data manipulation\n• Problem-solving and debugging during the implementation of a physical data model\n• Working collaboratively, demonstrating contribution, teamwork, and shared responsibility",
+  "ai_use": "The assessment is designed so that the use of AI during the assessment is irrelevant. You are welcome to use AI to support learning and preparation for this assessment. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI by using the following link.\nPlease read and apply:\nhttps://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/4a%20AI%20principles%20and%20guidance%20-for%20Senate.docx *You can find the student guidance on the use of AI in the Library and Nest",
+  "ethical_requirements": null,
+  "submission_checklist": [
+    "Have I fully answered the assessment brief?",
+    "Have I met the word count and formatting requirements?",
+    "Is my referencing complete and accurate?",
+    "Have I declared any AI use honestly?",
+    "Have I proofread my work?",
+    "Am I submitting through the correct platform before the deadline?"
+  ],
+  "task_description": "Task:\nIn this coursework, you are required to implement the database you designed in Coursework 1. You will use DDL statements to create the database and develop the necessary data structures to fulfil its intended purpose. Your work will be assessed through both a written submission and a lab-based SQL assessment. This coursework contributes 60% of the overall module grade and is divided into two components:\nSupport file and Reflection Report submission worth 20% and\nIn Class lab-based SQL demonstration and Presentation worth 40%.\n\nSubmission Requirements (20%)\nIn this submission, you are required to upload two files to Moodle:\n• File1– Database Implementation Code (.SQL file OR .TXT file)\n• File 2 – A single PDF file containing the following:\n• Contribution from both group members:\no Student 1 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section)\no Student 2 – contribution to the project (250–300 words) (Student Name and ID mentioned on the top of this section)\n• Individual reflections from each member:\no Student 1 – individual reflection (250–300 words)\no Student 2 – individual reflection (250–300 words)\n• Each reflection should address:\no What you have learned from both coursework 1 and Coursework 2\no The challenges you encountered during the database design and implementation process\n\nTo do this, you should:\n1. First, modify ERD and physical data model according to feedback received for coursework1 if necessary. (NOT require submission on this)\n2. Then, use SQL statement to implement database based on the revised physical data model in step1：\na. Create tables.\nb. Set appropriate constraints which including column data types, primary key and foreign keys.\nc. Consider if each column allows NULL value or NOT.\nd. Insert meaningful values into each table (at least insert at least 5 records to each table for retrieving purpose in lab assessment).\n\nNOTE: you can use ‘EmployeeInfo’ schema as example to prepare your SQL code that you chose for your Coursework.\n\nIn Class Demonstration and Presentation (40%)\nLab assessment will be conducted on week-13 and Week-14, the implemented database will be examined in this assessment from 3 perspectives (20%):\n1. All tables are created properly based on physical data model.\n2. Appropriate constraints are set including data types, primary and foreign keys.\n3. Meaningful sample data is populated into each table.\nThe understanding of SQL will be also examined in lab session in the form of (20%):\n1. Tutor makes 1 question for each student based on the content of your database SQL operations.\n2. You are expected to write SQL solutions to obtain the request results by executing the query in the given time (5 to 7minutes)\n3. The examined SQL coverage as follow:\na. Inserting appropriate values into tables.\nb. Perform SELECT operations using:\ni. Special operators.\nii. Comparison/mathematical operators.\niii. Logical operators.\niv. Aggregation functions.\nv. Ordering operations.\nvi. Grouping operations.\nvii. Joining tables (inner, outer, self, and/or left/right).\nviii. Nested queries.\nc. Defining database views."
+}

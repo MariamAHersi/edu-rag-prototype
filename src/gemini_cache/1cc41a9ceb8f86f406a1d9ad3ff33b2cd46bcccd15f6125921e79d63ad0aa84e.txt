@@ -1,0 +1,31 @@
+{
+  "programme": null,
+  "module_code": null,
+  "module_title": "Romantic & Victorian Literature",
+  "module_level": null,
+  "assessment_type": "Presentation",
+  "weighting_percent": 40.0,
+  "word_count": null,
+  "duration_minutes": 15,
+  "deadline": null,
+  "deadline_raw": "Thursday the 19th of November",
+  "feedback_date": null,
+  "feedback_date_raw": null,
+  "submission_format": "delivered during our seminar; submit a cover sheet with your name and topic to the Turnitin portal",
+  "learning_outcomes": [],
+  "marking_criteria": [],
+  "requirements": [
+    "form groups of four",
+    "take for its theme an individual part of the body, for example the heart, brain or hand",
+    "tackle the science, history, and literary representation of your body part",
+    "submit a cover sheet with your name and topic to the Turnitin portal by 2pm on Friday the 20thof November"
+  ],
+  "success_guidance": "You will be assessed according to the sensitivity and complexity of your ideas, your attention to the subtleties of language and imagery, and your ability to bring historical and scientific information, or historical sources, into conversation with literary sources.",
+  "layout_style_guidance": null,
+  "referencing": null,
+  "employability_professional_skills": null,
+  "ai_use": null,
+  "ethical_requirements": null,
+  "submission_checklist": null,
+  "task_description": "For your first assessment, you will form groups of four and devise a 15-min presentation. The presentation accounts for 40% of your grade, and is be delivered during our seminar on Thursday the 19th of November.\nYour presentation should take for its theme an individual part of the body, for example the heart, brain or hand.\nYou should tackle the science, history, and literary representation of your body part.\nTell us about how this limb or organ was understood scientifically in the 19th Century, and how its function is explored imaginatively in literature.\nOn the historical side, you may want to think about whether any new discoveries were made about this body part in the course of the century, or what diseases could affect it and how they were treated.\nOn the literary side, a good place to start may be the cultural associations between certain body parts and certain emotions or personal characteristics (e.g. heart = love). Or you might want to consider changing ideals of physical beauty, how descriptions of physiognomy are used to represent a person’s inner character, or how particular bodily features become racialized and are used to denote “higher” or “lower” types. Or how, you might want to ask, do literary treatments address the absence of certain body parts, or with the disabling or disfigurement of individuals by accident, illness or violence?\nYou can use as many or as few texts as you think proper as long as your focus remains on the embodied experience, in the 19th Century, of one specific body part. But you are also encouraged to consider in your conclusions how your research links to real-world questions and problems with which we grapple today.\nYour choice of body parts includes (but is not limited to) the following: heart, brain, lungs, liver, stomach, hand, fingers, leg, sexual organs, skin, nerves, blood, eyes, ears, nose, hair."
+}

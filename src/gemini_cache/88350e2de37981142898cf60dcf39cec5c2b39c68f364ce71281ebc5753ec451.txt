@@ -1,0 +1,188 @@
+{
+  "programme": null,
+  "module_code": null,
+  "module_title": "Software Development 1",
+  "module_level": null,
+  "assessment_type": "Coursework",
+  "weighting_percent": 100,
+  "word_count": null,
+  "duration_minutes": null,
+  "deadline": "2025-12-11",
+  "deadline_raw": "11th Dec 2025 via CodeGrade in Moodle by 17:00 hours GMT.",
+  "feedback_date": null,
+  "feedback_date_raw": null,
+  "submission_format": "Submit your code via Codegrade as a Jupyter notebook named: student_category.ipynb",
+  "learning_outcomes": [
+    "1- Design, implement, test, and debug a program that uses each of the following fundamental programming constructs; basic computation, simple I/O, standard conditional and iterative structures, the definition of functions, and parameter passing.",
+    "2- Analyse and explain the behaviour of simple programs involving the fundamental programming constructs, such as variables, expressions, assignments, I/O, control constructs, functions, and parameter passing.",
+    "3- Identify the relative strengths and weaknesses among multiple designs or implementations for a problem.",
+    "4- Use a programming language to implement, test, and debug algorithms for solving simple problems."
+  ],
+  "marking_criteria": [
+    {
+      "name": "Solution",
+      "description": "the completeness of the code, documentation and reflection to meet the specification given.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "A completed solution meeting all the specifications."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "A completed solution that does not quite meet all the specifications."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "A completed solution is implemented and runs but lacks much of the specification."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Solution doesn’t run or does not meet the specifications defined."
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "description": "ability to decompose a problem into coherent and reusable parts.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "The solution design decomposes the problem by using appropriate structures. The overall design is appropriate, and with a consideration of reusability."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "The solution design generally uses appropriate structures. Program elements and documentation both exhibit good design."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Not all of the selected structures are appropriate. Some of the elements are appropriately designed."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Few if any of the selected structures are appropriate, or the problem is decomposed in ways that make little sense."
+        }
+      ]
+    },
+    {
+      "name": "Correctness",
+      "description": "ability to create solution that reliably produces correct answers or appropriate results.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Solution produces correct answers or appropriate results for all inputs tested."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Solution produces correct answers or appropriate results for most inputs."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Solution approaches correct answers or appropriate results for most inputs but can contain miscalculations."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Solution does not produce correct answers or appropriate results for most inputs."
+        }
+      ]
+    },
+    {
+      "name": "Logic",
+      "description": "ability to use correct program structures appropriate to the problem domain.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Solution logic is correct with no known boundary errors, and no redundant or contradictory conditions."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Solution logic is mostly correct but may contain an occasional boundary error or redundant or contradictory condition."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Solution logic is on the right track but shows no recognition of boundary conditions (such as < vs. <=)."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Solution contains some conditions that specify the opposite of what is required (less than vs. greater than), confuse Boolean AND/OR operators, or lead to infinite loops."
+        }
+      ]
+    },
+    {
+      "name": "Clarity",
+      "description": "ability to format and document code for human consumption (Good Style) and reflection.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Program contains appropriate documentation for all major functions, variables, or non-trivial algorithms. Formatting, indentation, and other white space aids readability."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "Program contains some documentation on major functions, variables, or non-trivial algorithms. Indentation and other formatting are appropriate."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Program contains some documentation (at least the student’s name and program’s purpose) but has occasionally misleading indentation."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Program contains no documentation, or grossly misleading indentation."
+        }
+      ]
+    },
+    {
+      "name": "Robustness",
+      "description": "ability of the solution to handle unexpected input and error conditions correctly as evidenced via testing.",
+      "weighting_percent": null,
+      "grade_bands": [
+        {
+          "band_name": "Excellent",
+          "descriptor": "Solution handles erroneous or unexpected input gracefully; action is taken without surprising the user. Boundary cases are considered and tested."
+        },
+        {
+          "band_name": "Satisfactory",
+          "descriptor": "All obvious error conditions are checked for and appropriate action is taken. Nearly all boundary cases are considered and tested."
+        },
+        {
+          "band_name": "Not Satisfactory",
+          "descriptor": "Some obvious error conditions are checked for and some sort of action is taken. Most boundary cases are considered and tested."
+        },
+        {
+          "band_name": "Not Attempted",
+          "descriptor": "Solution often fails or fails completely. Boundary conditions are not tested for."
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    "Submit your code via Codegrade as a Jupyter notebook named: student_category.ipynb",
+    "The program file should contain full documentation explaining your implementation (comment your code).",
+    "Your file should have your name, ID number and date of last update.",
+    "Split and pack up your Coursework Midpoint Review code into functions. The program must contain a main() function and at least two other functions called \"calculate_overall_score()\" and \"determine_category()\".",
+    "Adjust your program to ask users to enter a student ID (2-digit number), name and date-of-birth (D.o.B) by sequence, before asking for the 4 component scores from Coursework Midpoint Review (Coursework1, Coursework 2, Coursework 3 and Final Exam). D.o.B should be in ISO format YEAR-MONTH-DAY.",
+    "Your program should use a loop to ask for the information of three students, or until the input for user ID is \"end\".",
+    "Calculate the students' overall scores and store them for later use.",
+    "Determine the students' categories and store them for later use.",
+    "Calculate students' ages: According to each user's year of birth, your program should calculate the age of the student and store it for later use. Hint: the library datetime can be used here to make your job easier.",
+    "Display a table that summarises the input data (ascending order with user ID) using the tabulate library.",
+    "Save the table into a new local file named \"students.txt\"",
+    "Implement robust input validation for a student's ID, D.o.B., and scores. Your program should give a warning that says \"The input you entered was invalid\" for any input errors",
+    "Display use of appropriate data structures for storing student information",
+    "Display use of appropriate code structures for implementing the functionality",
+    "Implement a function called round_to_category(score) that takes a numerical score and rounds it to the nearest category.",
+    "Extend your program with one more function called advanced() for a distinction grade.",
+    "Implement a function called setup_module() that allows the user to define the assessment criteria for any module (Distinction level)."
+  ],
+  "success_guidance": "While fully functioning programs and its documentation that meet all the requirements are the goal of the test, the programs and the rationale for their design, implementation, testing and debugging will be assessed for efficiency, simplicity, creativity, and good style. Please read the Grading Rubric and bring any questions you may have to your tutor during the class.",
+  "layout_style_guidance": null,
+  "referencing": null,
+  "employability_professional_skills": null,
+  "ai_use": null,
+  "ethical_requirements": null,
+  "submission_checklist": null,
+  "task_description": "To complete this coursework, you will design the behaviour of complex programs involving the fundamental programming constructs, such as functions, operations, and file reading/writing. A template Jupyter notebook and a text file are provided to complete the tasks. Time in class can be used to troubleshoot and get feedback on your program. \n\nThe university that hired our Software Development company is very pleased with the outcome of Coursework Midpoint Review and has requested an extension. The program that you have crafted for Coursework Midpoint Review takes in scores for 4 components of student assessment in the Computer Programming module: \n1. Coursework 1: Flowchart concepts (10%) \n2. Coursework 2: Basic Programming concepts (20%) \n3. Coursework 3: Complex program implementation (30%) \n4. Test: Theoretical and practical assessment (40%) \n\nThe program uses these individual component scores to calculate an overall score out of 100 using the formula: \nOverall_score = (coursework1 * 0.10)+ (coursework2 * 0.20) + (coursework3 * 0.30) + (final_exam * 0.40) \n\nThe resulting number (should be between 0 and 100) is then used to estimate the category using the categorical marking dataset: \nNo. Category Overall Mark \n1 Gold Standard 100 \n2 Upper First 82, 85, 92 \n3 First 72, 75, 78 \n4 Upper Second 62, 65, 68 \n5 Lower Second 52, 55, 58 \n6 Third 42, 45, 48 \n7 Condonable Fail 32, 35, 38 \n8 Fail 5, 15, 25 \n9 No Submission 0 \n\nFrom the dataset above, \n- If the overall score is equal to 100, the output should be \"Gold Standard\". \n- If the overall score is between 82 and 92, the output should be \"Upper First\". \n- If the overall score is between 72 and 78, the output should be \"First \". \n- If the overall score is between 62 and 68, the output should be \"Upper Second\". \n- If the overall score is between 52 and 58, the output should be \"Lower Second\". \n- If the overall score is between 42 and 48, the output should be \"Third” \n- If the overall score is between 32 and 38, the output should be \"Condonable Fail\". \n- If the overall score is between 5 and 25, the output should be \"Fail\". \n- If the overall score is 0, the output should be \"No Submission\". \n\nYou are asked to add the following functionality: \n\n1. Functions (8 points): Split and pack up your Coursework Midpoint Review code into functions. The program must contain a main() function and at least two other functions called \"calculate_overall_score()\" and \"determine_category()\". \n2. Input expansion (8 points): Adjust your program to ask users to enter a student ID (2-digit number), name and date-of-birth (D.o.B) by sequence, before asking for the 4 component scores from Coursework Midpoint Review (Coursework1, Coursework 2, Coursework 3 and Final Exam). D.o.B should be in ISO format YEAR-MONTH-DAY. \n3. Loop your code (8 points): Your program should use a loop to ask for the information of three students, or until the input for user ID is \"end\". \n4. Calculate the students' overall scores and store them for later use (2 points). \n5. Determine the students' categories and store them for later use (2 points). \n6. Calculate students' ages (8 points): According to each user's year of birth, your program should calculate the age of the student and store it for later use. Hint: the library datetime can be used here to make your job easier. \n7. Tabulate (8 points): Display a table that summarises the input data (ascending order with user ID) using the tabulate library. It should look like: \n\n                         UID Name D.o.B Age Score Category \n    -- ----------------- ---------- --- ------- -------------- \n   13 Lieke Martens 1992-12-16 29 86.6667 Upper-First \n   02 Cristiano Ronaldo 1985-02-05 37 73.3333 First \n   24 Lucy Bronze 1991-10-28 31 50 Third \n\n8. File writing (8 points): Save the table into a new local file named \"students.txt\" \n9. Make sure that you: a. Implement robust input validation for a student's ID, D.o.B., and scores. Your program should give \na. Warning that says \"The input you entered was invalid\" for any input errors (6 points) \nb. Display use of appropriate data structures for storing student information (5 points) \nc. Display use of appropriate code structures for implementing the functionality (5 points) \n10. Implement a function called `round_to_category(score)` that takes a numerical score and rounds it to the nearest category. This function should (10 points): \na. Accept a float or integer score as input. \nb. Determine the two nearest category boundaries. \nc. Round the score to the nearest category based on which boundary it's closer to. \nd. Return the rounded score and the corresponding category. \n\nFor example: \n- If the input score is 73.7, it should return (75, \"First\") because 73.7 is closer to 75 than to 72. \n- If the input score is 69.2, it should return (68, \"Upper Second\") because 69.2 is closer to 68 than to 72. \n-Your implementation should handle edge cases, such as scores exactly halfway between two categories (round up in these cases), and scores at or beyond the extremes of the scale. \n\n                    UID Name D.o.B Age Raw Score Rounded Score Category \n -- ------------ -------- ---- ---- ---- ------------ \n 13 Lieke Martens 1992-12-16 29 86.6667 85 Upper-First \n 02 Cristiano Ronaldo 1985-02-05 37 73.3333 75 First \n 24 Lucy Bronze 1991-10-28 31 50 52 Third \n\n11. Distinction Advanced Function: Once everything in requirements 1-10 has been completed, for a distinction grade, extend your program with one more function called advanced(). This function should: \na. Be a complementary main() method that, instead of taking user input, uses the provided file as input. \nb. Accepts in its argument (filename) the name of the text file to read. \nc. Read the student information record from the provided file \"StudentData.txt\", which contains student IDs, names, and date-of-births. The function should then use this data as the input for the program. \nd. Runs all the other functions used and produces a text file output (requirement 8). \n12. Advanced Generalization Function (Distinction level): Implement a function called `setup_module()` that allows the user to define the assessment criteria for any module. This function should: \na. Ask the user to input the module name. \nb. Ask the user how many assessment components the module has. \nc. For each component: \n- Ask for the component name (e.g., \"Coursework 1\", \"Final Exam\") \n- Ask for the component's weight as a percentage (ensure all weights sum to 100%) \nd. Store this information in an appropriate data structure. \ne. Return the module configuration."
+}
