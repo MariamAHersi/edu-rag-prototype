@@ -1,16 +1,3 @@
-"""student_feedback.py - formative feedback on a student's draft, grounded in the stored brief.
-
-Replaces the old StudentFeedbackEngine. Instead of searching for rubric chunks,
-it loads the selected assessment's criteria and grade bands straight from MySQL
-(so every criterion is always checked) and adds the task and the rules.
-
-The word count is calculated here in Python, not by the model, because models
-are unreliable at counting.
-
-Privacy: a student's draft is never cached or saved by this module
-(use_cache=False), so it does not end up in the gemini_cache folder.
-"""
-
 import re
 import tempfile
 from pathlib import Path

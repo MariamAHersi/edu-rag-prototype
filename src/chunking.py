@@ -1,11 +1,9 @@
 import re
 import db
 
-# Target size of a chunk in characters (roughly 150-200 words).
 MAX_CHARS = 1000
 
-# A short field is kept whole as a single chunk (e.g. the AI-use rule), so a
-# rule is never split in half. Up to this many characters.
+
 KEEP_WHOLE_UP_TO = 1500
 
 

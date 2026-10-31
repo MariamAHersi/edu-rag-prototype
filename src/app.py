@@ -1,13 +1,8 @@
-"""app.py - Streamlit interface only; the logic lives in db.py, qa.py and llm.py.
-
-Run with:  python -m streamlit run src/app.py
-"""
-
 import os
 
 from dotenv import load_dotenv
 
-load_dotenv()  # reads .env into environment variables (must run before importing llm)
+load_dotenv()  
 
 import streamlit as st
 

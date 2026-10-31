@@ -1,17 +1,3 @@
-"""ingest.py - extract assessment briefs and save them to MySQL.
-
-Usage (from the src folder, venv active):
-    python ingest.py path/to/brief.pdf
-    python ingest.py path/to/folder        # every .pdf and .docx inside it
-
-Pipeline per file:
-    extract text -> Gemini fills the AssessmentBrief schema -> save to MySQL
-
-Re-running on the same file updates its rows instead of duplicating them, and
-Gemini answers are cached on disk, so a re-run doesn't call Gemini again
-unless the file text or the schema has changed.
-"""
-
 import sys
 from datetime import date
 from pathlib import Path
@@ -19,9 +5,9 @@ from typing import Any, cast, get_args, get_origin
 
 from dotenv import load_dotenv
 
-load_dotenv()  # must run before importing llm (it reads GEMINI_MODEL at import time)
+load_dotenv()  
 
-import pymupdf  # PyMuPDF (the newer import name; 'fitz' still works but is deprecated)
+import pymupdf  
 from docx import Document
 from docx.table import Table
 from docx.text.paragraph import Paragraph
@@ -33,7 +19,7 @@ from schema import AssessmentBrief
 
 SUPPORTED = {".pdf", ".docx"}
 
-# Tables that hold one row of text per list item (see save_list_items).
+
 LIST_TABLES = {"learning_outcomes", "submission_checklist"}
 
 
@@ -56,16 +42,16 @@ def extract_text_docx(path: Path) -> str:
     for child in doc.element.body.iterchildren():
         tag = child.tag.rsplit("}", 1)[-1]
         if tag == "p":
-            text = Paragraph(child, doc).text.strip()  # type: ignore[arg-type]
+            text = Paragraph(child, doc).text.strip() 
             if text:
                 lines.append(text)
         elif tag == "tbl":
-            table = Table(child, doc)  # type: ignore[arg-type]
+            table = Table(child, doc) 
             for row in table.rows:
                 seen = set()
                 cells = []
                 for cell in row.cells:
-                    if cell._tc in seen:  # a merged cell is reported once per column it spans
+                    if cell._tc in seen:  
                         continue
                     seen.add(cell._tc)
                     cells.append(cell.text.strip().replace("\n", " "))

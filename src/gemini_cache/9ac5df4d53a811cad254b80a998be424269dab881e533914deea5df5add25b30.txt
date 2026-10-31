@@ -1,0 +1,16 @@
+Your work will be assessed against five main criteria, each graded across four bands (*Excellent*, *Satisfactory*, *Not Satisfactory*, and *Not Attempted*):
+
+1. **Idea**
+   * Assesses the suitability of the idea for a Relational Database Management System (RDBMS) and how well specified it is.
+
+2. **Purpose of RDBMS**
+   * Assesses how clearly defined the purpose of the DBMS is and whether it represents a good use of a database management system.
+
+3. **Entity Relationship Diagram (ERD)**
+   * Assesses the quality, correctness, and completeness of the ERD provided for the problem.
+
+4. **Physical Data Model**
+   * Assesses the quality of the physical data model, ensuring it is correct, fully matches the ERD, and addresses the problem at hand.
+
+5. **Submission**
+   * Assesses whether your submission meets the requirements (e.g. submitting the correct files in the proper format without unwanted files).
