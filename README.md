@@ -147,7 +147,7 @@ You can look at the prototype without installing anything.
 
 | What | Link |
 |---|---|
-| **Demo walkthrough** (screenshots of the pipeline, database, chatbot and draft feedback) | [View the demo on GitHub Pages](https://mariamahersi.github.io/edu-rag-prototype/) |
+| **Student Moodle** (an example moodle page with a widget in the right-hand corner that leads to Streamlit) | [View on GitHub Pages](https://mariamahersi.github.io/edu-rag-prototype/) |
 | **Live chatbot** (Streamlit) | [Open the live app](https://edu-rag-prototype-dgy7pgcyyfybxy4wnqbappg.streamlit.app/) |
 
 **What you will see**
