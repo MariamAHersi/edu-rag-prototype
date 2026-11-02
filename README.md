@@ -30,7 +30,7 @@ Assessment information is currently spread across separate documents and modules
 | Question | What the prototype provides | Where it stands |
 |---|---|---|
 | Can assessment information from different documents be brought into one structured database? | Extraction pipeline, validated schema, MySQL database | Tested on a small set of briefs. Other departments are not tested yet |
-| Can staff and students get an overview across modules (deadlines, weightings, types, clashes)? | SQL queries in [`database/example_queries.sql`](database/example_queries.sql) | Works on the data ingested so far |
+| Can staff and students get an overview across modules (deadlines, weightings, types, clashes)? | SQL queries in [`src/examples/example_queries.sql`](src/examples/example_queries.sql) | Works on the data ingested so far |
 | Can the data be used to spot gaps or inconsistencies in assessment briefs? | "Missing information" queries | Basic version only |
 | Can students and lecturers get answers and feedback from the data? | A chatbot with question answering and draft feedback | Working prototype |
 | Could educational analytics identify where students struggle, to improve the curriculum? | Not covered. Needs student performance data, permissions and data protection work | Open |
@@ -103,7 +103,7 @@ erDiagram
 | `learning_outcomes` | One row per learning outcome |
 | `submission_checklist` | One row per checklist item |
 
-The full definition is in [`database/schema.sql`](database/schema.sql).
+The full definition is in ['src/schema.sql`](src/schema.sql).
 
 **Design decisions worth knowing about**
 
@@ -129,15 +129,23 @@ The full definition is in [`database/schema.sql`](database/schema.sql).
 ```text
 edu-rag-prototype/
 ├── README.md
-├── .env.example              ← copy to .env and fill in
 ├── requirements.txt
-├── database/
-│   ├── schema.sql            ← creates the whole database
+├── index.html
+├── examples/
+│   ├── .env.example         ← copy to .env and fill in
 │   └── example_queries.sql   ← ready-made questions to ask it
-├── briefs/                   ← your assessment documents (not committed)
+├── example_briefs/            ← your assessment documents (not committed)
+├── docs                      ← documents like report and flowcharts 
 └── src/
-    ├── schema.py   ingest.py   db.py   llm.py
-    ├── chunking.py   embedding.py   qa.py   student_feedback.py
+    ├── schema.py   
+    ├── ingest.py   
+    ├── db.py
+    ├── llm.py
+    ├── chunking.py   
+    ├── embedding.py   
+    ├── qa.py   
+    ├── student_feedback.py
+    ├── schema.sql
     └── app.py
 ```
 
@@ -214,7 +222,7 @@ Copy `.env.example` to `.env` and fill in your Gemini key and MySQL password. Th
 mysql -u root -p < database/schema.sql
 ```
 
-Or open `database/schema.sql` in MySQL Workbench (File, Open SQL Script) and run it. This creates the `rag_system` database, every table, and the grade scale.
+Or open `src/schema.sql` in MySQL Workbench (File, Open SQL Script) and run it. This creates the `rag_system` database, every table, and the grade scale.
 
 **5. Check the connection**
 
@@ -236,7 +244,7 @@ For each file it prints what it saved, for example `saved assessment 3: 4 learni
 
 **7. Explore the data**
 
-Run the queries in `database/example_queries.sql`, for example:
+Run the queries in `src/examples/example_queries.sql`, for example:
 
 ```sql
 -- A centralised assessment calendar
