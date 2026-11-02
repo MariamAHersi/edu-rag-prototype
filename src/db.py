@@ -38,10 +38,13 @@ FACT_FIELDS = [
 
 def get_connection():
     return mysql.connector.connect(
-        host=os.environ.get("MYSQL_HOST", "localhost"),
-        user=os.environ.get("MYSQL_USER", "root"),
+        host=os.environ.get("MYSQL_HOST"),
+        user=os.environ.get("MYSQL_USER""),
         password=os.environ["MYSQL_PASSWORD"],
-        database=os.environ.get("MYSQL_DATABASE", "rag_system"),
+        database=os.environ.get("MYSQL_DATABASE"),
+        port=int(st.secrets["MYSQL_PORT"]),
+        ssl_ca="ca.pem",
+        ssl_verify_cert=True
     )
 
 
