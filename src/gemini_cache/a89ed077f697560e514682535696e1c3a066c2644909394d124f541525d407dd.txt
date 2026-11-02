@@ -1,0 +1,241 @@
+{
+  "programme": "BSc (Hons) Computer Science",
+  "module_code": "CMP020N302A",
+  "module_title": "Full-Stack Web Development and Software Architecture",
+  "module_level": null,
+  "assessment_type": "Software Application, Technical Report, and Code Repository",
+  "weighting_percent": 60,
+  "word_count": 1500,
+  "duration_minutes": null,
+  "deadline": "2026-12-11",
+  "deadline_raw": "Friday, 11 December 2026",
+  "feedback_date": "2027-01-15",
+  "feedback_date_raw": "15 January 2027",
+  "submission_format": "GitHub Classroom Repository Link & PDF Report via Turnitin",
+  "learning_outcomes": [
+    "LO1: Design and develop full-stack software applications utilizing industry-standard design patterns and modern web frameworks.",
+    "LO2: Implement robust cybersecurity principles, including identity management, input validation, and secure data storage.",
+    "LO3: Apply software engineering practices including version control, automated testing, continuous integration, and clear technical documentation."
+  ],
+  "marking_criteria": [
+    {
+      "name": "Criterion 1: Application Architecture & Implementation (LO1)",
+      "description": null,
+      "weighting_percent": 30,
+      "grade_bands": [
+        {
+          "band_name": "100 Exemplary",
+          "descriptor": "Exceptionally engineered, production-ready system exhibiting exemplary design patterns and performance."
+        },
+        {
+          "band_name": "80+ Outstanding",
+          "descriptor": "High-quality, robust codebase with clean architecture and fully functioning features."
+        },
+        {
+          "band_name": "70–79 Excellent",
+          "descriptor": "Solid application implementation; minor edge cases or UI/UX flaws present."
+        },
+        {
+          "band_name": "60–69 Very Good",
+          "descriptor": "Functional system with minor bugs; acceptable adherence to framework patterns."
+        },
+        {
+          "band_name": "50–59 Good",
+          "descriptor": "Basic working application; incomplete features or messy architecture."
+        },
+        {
+          "band_name": "40–49 UG Adequate",
+          "descriptor": "Barely functional system; major bugs and poor design patterns."
+        },
+        {
+          "band_name": "30–39 Limited Fail",
+          "descriptor": "Incomplete application with severe structural flaws."
+        },
+        {
+          "band_name": "0–29 Limited/No Evidence Fail",
+          "descriptor": "Non-functional or unsubmitted application code."
+        }
+      ]
+    },
+    {
+      "name": "Criterion 2: Security & Data Management (LO2)",
+      "description": null,
+      "weighting_percent": 20,
+      "grade_bands": [
+        {
+          "band_name": "100 Exemplary",
+          "descriptor": "Flawless security controls, comprehensive data validation, and optimal database indexing and schema design."
+        },
+        {
+          "band_name": "80+ Outstanding",
+          "descriptor": "Strong implementation of authentication, authorization, and input sanitization."
+        },
+        {
+          "band_name": "70–79 Excellent",
+          "descriptor": "Effective security and data handling with minor configuration oversights."
+        },
+        {
+          "band_name": "60–69 Very Good",
+          "descriptor": "Basic security implemented (e.g. standard auth); minor validation gaps."
+        },
+        {
+          "band_name": "50–59 Good",
+          "descriptor": "Functional database connection but minimal security or missing route protection."
+        },
+        {
+          "band_name": "40–49 UG Adequate",
+          "descriptor": "Vulnerable implementation; weak auth or lack of input validation."
+        },
+        {
+          "band_name": "30–39 Limited Fail",
+          "descriptor": "Major security flaws (e.g. plain text passwords, open SQLi)."
+        },
+        {
+          "band_name": "0–29 Limited/No Evidence Fail",
+          "descriptor": "Total lack of data validation or security implementation."
+        }
+      ]
+    },
+    {
+      "name": "Criterion 3: Testing & Version Control (LO3)",
+      "description": null,
+      "weighting_percent": 20,
+      "grade_bands": [
+        {
+          "band_name": "100 Exemplary",
+          "descriptor": "Flawless Git workflow with clear commit history; comprehensive test suite exceeding 85% coverage."
+        },
+        {
+          "band_name": "80+ Outstanding",
+          "descriptor": "Excellent Git commit frequency and detailed unit/integration testing suites."
+        },
+        {
+          "band_name": "70–79 Excellent",
+          "descriptor": "Good test coverage (>70%) and logical Git history and branching."
+        },
+        {
+          "band_name": "60–69 Very Good",
+          "descriptor": "Adequate unit tests present; git history shows bulk commits near deadline."
+        },
+        {
+          "band_name": "50–59 Good",
+          "descriptor": "Minimal tests written; basic git usage with sparse commit logs."
+        },
+        {
+          "band_name": "40–49 UG Adequate",
+          "descriptor": "Few or non-functional tests; code submitted in a single bulk commit."
+        },
+        {
+          "band_name": "30–39 Limited Fail",
+          "descriptor": "Missing automated tests; chaotic source control."
+        },
+        {
+          "band_name": "0–29 Limited/No Evidence Fail",
+          "descriptor": "No tests or version control evidence provided."
+        }
+      ]
+    },
+    {
+      "name": "Criterion 4: Technical Documentation & Diagrams (LO1, LO3)",
+      "description": null,
+      "weighting_percent": 20,
+      "grade_bands": [
+        {
+          "band_name": "100 Exemplary",
+          "descriptor": "Professional-grade technical report with clear ERD/UML diagrams and exhaustive API specs."
+        },
+        {
+          "band_name": "80+ Outstanding",
+          "descriptor": "Clear, highly detailed documentation with accurate system diagrams and setup steps."
+        },
+        {
+          "band_name": "70–79 Excellent",
+          "descriptor": "Well-structured report detailing endpoints and schemas with minor omissions."
+        },
+        {
+          "band_name": "60–69 Very Good",
+          "descriptor": "Complete documentation but lacking visual clarity in architecture diagrams."
+        },
+        {
+          "band_name": "50–59 Good",
+          "descriptor": "Satisfactory report; missing detailed API specifications or setup instructions."
+        },
+        {
+          "band_name": "40–49 UG Adequate",
+          "descriptor": "Minimal report provided; brief setup notes and weak architectural diagrams."
+        },
+        {
+          "band_name": "30–39 Limited Fail",
+          "descriptor": "Very poor documentation; lacks core sections or clear system explanations."
+        },
+        {
+          "band_name": "0–29 Limited/No Evidence Fail",
+          "descriptor": "Unsubmitted or completely inadequate documentation."
+        }
+      ]
+    },
+    {
+      "name": "Criterion 5: Code Quality & Formatting (LO3)",
+      "description": null,
+      "weighting_percent": 10,
+      "grade_bands": [
+        {
+          "band_name": "100 Exemplary",
+          "descriptor": "Fully linted, clean code following strict conventions with comprehensive online documentation."
+        },
+        {
+          "band_name": "80+ Outstanding",
+          "descriptor": "Highly readable code following consistent formatting and clear variable naming."
+        },
+        {
+          "band_name": "70–79 Excellent",
+          "descriptor": "Well-organized code with minor formatting inconsistencies."
+        },
+        {
+          "band_name": "60–69 Very Good",
+          "descriptor": "Acceptable code readability; sparse inline documentation."
+        },
+        {
+          "band_name": "50–59 Good",
+          "descriptor": "Disorganized code structure; inconsistent indentation and style."
+        },
+        {
+          "band_name": "40–49 UG Adequate",
+          "descriptor": "Hard-to-read code; lacks comments or basic naming conventions."
+        },
+        {
+          "band_name": "30–39 Limited Fail",
+          "descriptor": "Extremely messy codebase; unformatted and difficult to parse."
+        },
+        {
+          "band_name": "0–29 Limited/No Evidence Fail",
+          "descriptor": null
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    "Initialize and push source code to the official GitHub Classroom repository provided for this module with atomic commits.",
+    "Build a responsive front-end interface integrated with a backend RESTful API.",
+    "Implement token-based authentication (JWT or OAuth2) and proper password hashing (bcrypt/Argon2).",
+    "Write automated unit and integration tests achieving at least 70% code coverage.",
+    "Include clear system setup instructions via a README.md and standard Dockerfile or configuration scripts.",
+    "Access your individual code assignment via the GitHub Classroom Module Portal.",
+    "Submit your technical documentation PDF to the Turnitin Submission Link on the CMP020N302A Moodle page."
+  ],
+  "success_guidance": "Key Tips for Success \n1. Architectural Separation: Ensure clean separation of concerns between your front-end presentation layer, backend routes, controller logic, and data storage layers. \n2. Security First: Sanitize all input fields to prevent SQL injection and Cross-Site Scripting (XSS); never commit sensitive secrets or API keys to repository history. \n3. Comprehensive Testing: Provide test suites for major API endpoints, covering both successful queries and boundary/error cases (e.g., 400 Bad Request, 401 Unauthorized). \n4. Git Hygiene: Demonstrate consistent version control practices through meaningful commit messages and functional feature branches rather than a single bulk upload. \n5. Clear Documentation: Structure your technical report with system diagrams (UML/ERD) to visually map out data models and component architecture. \nResources & Exemplars \n• Starter templates and architecture diagrams are available on the Module Moodle Resources Section.",
+  "layout_style_guidance": "Layout Requirements \nYour technical report must adhere to the following layout: \n• System Architecture & Data Modelling (Include Entity-Relationship Diagrams & UML diagrams) \n• REST API Endpoint Specifications (HTTP methods, request payloads, response codes) \n• Security & Authentication Strategy (Data encryption, CORS, route protection mechanisms) \n• Testing & Quality Assurance (Coverage summary, test run results, and validation) \n• Deployment & Setup Guide (Environment variables, installation steps, build instructions) \nFormatting Expectations \n• Font: Consolas / Courier New for code listings; Calibri or Arial 11pt for body text \n• Spacing: 1.5-line spacing \n• Margins: Standard 1 inch (2.54 cm) \n• File Format: Source code in GitHub; documentation as PDF or Word (.docx)",
+  "referencing": "Reference Style Requirements \nThis module requires IEEE Referencing Style for code libraries, framework documentation, and technical literature. \n• In-text example: \"As noted by M. Fowler, microservices allow decoupled deployment cycles [1].\" \n• Reference list example: [1] M. Fowler, Building Microservices, 2nd ed. Sebastopol, CA: O'Reilly Media, 2021. \nRefer to the Roehampton Library IEEE Style Guide for formatting rules.",
+  "employability_professional_skills": "By successfully completing this assessment, you will demonstrate: \n• Software Engineering Practice: Mastery of industry-standard tools (Git, REST APIs, databases, automated test runners) used in modern dev environments. \n• Problem Solving & Security Awareness: Ability to audit system vulnerabilities and write resilient code against common web exploits. \n• Technical Writing: Skills to communicate complex technical designs, schemas, and system workflows to fellow developers and project stakeholders.",
+  "ai_use": "AI Referencing \nThe use of AI tools (e.g., GitHub Copilot, ChatGPT) for code generation or debugging is permitted but must be declared. Include an AI Usage Appendix in your report providing key prompts used, lines of code impacted, and evidence of manual code review and validation.\n\nUse of Artificial Intelligence (AI) \nPlease see University guidelines here: \nhttps://roehamptonprod.sharepoint.com/sites/portal/information/LTEU/Documents/4a%20AI%20principles%20and%20guidance%20-for%20Senate.docx \n• The assessment is designed so that the use of AI during the assessment is possible. You must acknowledge any use of AI and appropriately cite all AI generated outputs. Please make sure you read and understand the assessment guidelines and ask your Module Leader if you have any questions. You can find the guidance on the use of AI here*.",
+  "ethical_requirements": "All software developed within this assessment must adhere to data privacy regulations (e.g., UK GDPR). Applications must use synthetic, dummy data during testing and development. Real-world personal user data must not be stored or processed within public GitHub repositories or test environments.",
+  "submission_checklist": [
+    "Have I fully answered the assessment brief?",
+    "Have I met the word count and formatting requirements for the technical report?",
+    "Is my referencing complete and accurate according to IEEE guidelines?",
+    "Have I declared any AI use honestly in the appendix?",
+    "Have I proofread my work and tested my code build?",
+    "Am I submitting through the correct platforms (GitHub Classroom & Turnitin) before the deadline?"
+  ],
+  "task_description": "You are required to design, implement, and document a secure, full-stack RESTful web application using a modern web framework stack (e.g., React/Node.js or Next.js with PostgreSQL/MongoDB). The application must include user authentication, role-based access control, CRUD operations, API validation, and automated unit testing. Additionally, you must produce a technical documentation report detailing system architecture, API endpoints, database schemas, and deployment configurations."
+}

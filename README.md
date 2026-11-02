@@ -141,6 +141,29 @@ edu-rag-prototype/
     └── app.py
 ```
 
+## See the prototype
+
+You can look at the prototype without installing anything.
+
+| What | Link |
+|---|---|
+| **Demo walkthrough** (screenshots of the pipeline, database, chatbot and draft feedback) | [View the demo on GitHub Pages](https://mariamahersi.github.io/edu-rag-prototype/) |
+| **Live chatbot** (Streamlit) | [Open the live app](https://edu-rag-prototype-dgy7pgcyyfybxy4wnqbappg.streamlit.app/) |
+
+**What you will see**
+
+- **Chatbot:** pick an assessment and ask a question. Facts come from the database, and longer text comes from search.
+- **Draft feedback:** paste a draft and see feedback against that assessment's marking criteria and grade bands.
+- **Example queries:** cross-module questions such as clashing deadlines and missing information.
+
+**Please note**
+
+- The demo uses **sample briefs only**, not real student work.
+- The live chatbot calls an external AI service, so responses may be slow, and you may see temporary "busy" (503) errors.
+- To run it yourself, with your own briefs and database, go to [Section 3](#3-run-it-without-rebuilding-it).
+
+---
+
 ---
 
 ## 3. Run it without rebuilding it
